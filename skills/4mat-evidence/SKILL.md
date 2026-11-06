@@ -1,6 +1,6 @@
 ---
 name: 4mat-evidence
-description: "Turn research papers, theses, course handouts, notes, Markdown, DOCX or PDF sources into a traceable 4MAT claim ledger (evidence.md): atomic claims with locators and status, prototype vs. vision vs. hypothesis separation, tense and modality checks, contradictions, gaps and safe wording. Use before any presentation states facts, results or personal history."
+description: "Turn theses, papers, notes or PDFs into a traceable claim ledger: what exists, what is planned, what is illustrative or hypothetical, with locators, tense checks and gaps."
 ---
 
 # Evidence extraction and verification

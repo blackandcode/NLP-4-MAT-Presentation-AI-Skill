@@ -1,6 +1,6 @@
 ---
 name: 4mat-sleight-of-mouth
-description: "Objection and limiting-belief workshop for presentations: list this audience's strongest objections from the evidence gaps, separate legitimate concerns (answer honestly) from misunderstandings and limiting beliefs (where Sleight of Mouth reframing patterns may help), and write spoken answers with claim IDs for WHAT, HOW, WHAT IF and Q&A."
+description: "Prepare for objections: list this audience's strongest ones, answer legitimate concerns honestly, reframe only misunderstandings or limiting beliefs, cite claim IDs."
 ---
 
 # Objections and reframing (`4mat-sleight-of-mouth`)

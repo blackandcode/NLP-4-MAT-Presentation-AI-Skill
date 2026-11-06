@@ -1,6 +1,6 @@
 ---
 name: 4mat-storyboard
-description: "Design and time an audience-centred 4MAT narrative from a brief and claim ledger: backward planning from the audience outcome, two contrasting narrative options, explicit phase transitions, format-specific shapes (defense, pitch, workshop with nested cycles, speech without slides, demo, web, recorded) and a realistic time budget."
+description: "Plan and time a 4MAT talk backward from the audience outcome: two narrative options, explicit bridges, a format-specific shape (incl. nested workshop cycles), realistic minutes."
 ---
 
 # 4MAT storyboard

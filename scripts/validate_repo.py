@@ -4,7 +4,7 @@
 Checks: plugin/marketplace manifests, skill and agent inventory, Agent Skills frontmatter rules
 (name format/length/directory match, description length), that every referenced knowledge/,
 scripts/ and references/ file exists, that generic skills/agents/knowledge contain no
-example-specific personal content, the orchestrator/alias wiring, and example deck structure.
+example-specific personal content, the orchestrator command table, and example deck structure.
 """
 import json
 import re
@@ -12,10 +12,11 @@ import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-ORCHESTRATOR = "4-mat-to-nlp-presentation"
-ALIAS = "4mat-start"
+# One short command for everything: /nlp-4-mat [command]. Plugin name == orchestrator skill name.
+ORCHESTRATOR = "nlp-4-mat"
+ORCHESTRATOR_COMMANDS = ("help", "new", "status", "review", "pitch", "workshop", "rehearse", "route")
 EXPECTED_SKILLS = {
-    ORCHESTRATOR, ALIAS, "4mat-route", "4mat-interview", "4mat-evidence", "4mat-storyboard",
+    ORCHESTRATOR, "4mat-interview", "4mat-evidence", "4mat-storyboard",
     "4mat-nlp", "4mat-produce", "4mat-review", "4mat-rehearse",
     "4mat-perceptual-positions", "4mat-disney-strategy", "4mat-logical-levels",
     "4mat-sleight-of-mouth", "4mat-nested-loops", "4mat-state-anchor",
@@ -26,7 +27,9 @@ EXPECTED_AGENTS = {
 }
 # Agent Skills spec (agentskills.io): 1-64 chars, lowercase alphanumerics and single hyphens.
 SKILL_NAME = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
-MAX_DESCRIPTION = 1024
+# claude.ai skill upload allows at most 200 characters (stricter than the spec's 1024), so every
+# description must fit; Claude Code-only trigger detail goes in `when_to_use`.
+MAX_DESCRIPTION = 200
 # Generic, reusable files must not carry one presenter's personal story or family names.
 # Those belong in examples/ only (see examples/danilo-wonderland-70-30/ as a fixed test input).
 PERSONAL_TERMS = re.compile(
@@ -66,19 +69,30 @@ def check_generic(path, text, errors):
 def main():
     errors = []
     try:
+        config = json.loads((ROOT / "distribution/config.json").read_text(encoding="utf-8"))
         plugin = json.loads((ROOT / ".claude-plugin/plugin.json").read_text(encoding="utf-8"))
         market = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text(encoding="utf-8"))
-        codex = json.loads((ROOT / ".codex-plugin/plugin.json").read_text(encoding="utf-8"))
-        if plugin.get("name") != ORCHESTRATOR:
+        agents_market = json.loads((ROOT / ".agents/plugins/marketplace.json").read_text(encoding="utf-8"))
+        if plugin.get("name") != ORCHESTRATOR or config.get("name") != ORCHESTRATOR:
             errors.append("Incorrect plugin name")
+        if plugin.get("version") != config.get("version"):
+            errors.append("Root plugin.json version differs from distribution/config.json")
         entry = market.get("plugins", [{}])[0]
-        if entry.get("source") != "./":
-            errors.append("Marketplace source must refer to the plugin root")
         if entry.get("name") != plugin.get("name"):
             errors.append("Plugin and marketplace names differ")
-        if codex.get("version") != plugin.get("version"):
-            errors.append("Claude and Codex manifest versions differ")
-    except (OSError, ValueError, IndexError) as exc:
+        built = ROOT / entry.get("source", "")
+        built_manifest = built / ".claude-plugin" / "plugin.json"
+        if not built_manifest.is_file():
+            errors.append(f"Claude marketplace source {entry.get('source')!r} has no .claude-plugin/plugin.json (run scripts/build_dist.py)")
+        elif json.loads(built_manifest.read_text(encoding="utf-8")).get("version") != config.get("version"):
+            errors.append("Built Claude plugin version differs from config (run scripts/build_dist.py)")
+        oa_entry = agents_market.get("plugins", [{}])[0]
+        oa_manifest = ROOT / oa_entry.get("source", {}).get("path", "") / "plugin.json"
+        if not oa_manifest.is_file():
+            errors.append(".agents/plugins/marketplace.json source has no plugin.json (run scripts/build_dist.py)")
+        elif json.loads(oa_manifest.read_text(encoding="utf-8")).get("version") != config.get("version"):
+            errors.append("Built OpenAI plugin version differs from config (run scripts/build_dist.py)")
+    except (OSError, ValueError, IndexError, AttributeError) as exc:
         errors.append(str(exc))
 
     skills = {p.name for p in (ROOT / "skills").iterdir() if p.is_dir() and (p / "SKILL.md").is_file()}
@@ -114,12 +128,14 @@ def main():
             check_references(ref, text, errors)
             check_generic(ref, text, errors)
 
-    if ORCHESTRATOR in headers and headers[ORCHESTRATOR].get("disable-model-invocation") == "true":
-        errors.append(f"{ORCHESTRATOR} must stay model-invocable: it is the natural-language front door")
-    if ALIAS in headers:
-        alias_body = (ROOT / "skills" / ALIAS / "SKILL.md").read_text(encoding="utf-8")
-        if ORCHESTRATOR not in alias_body:
-            errors.append(f"{ALIAS} must delegate to {ORCHESTRATOR}")
+    if ORCHESTRATOR in headers:
+        hdr = headers[ORCHESTRATOR]
+        if hdr.get("disable-model-invocation") == "true" or hdr.get("user-invocable") == "false":
+            errors.append(f"{ORCHESTRATOR} must be invocable by both the user (/{ORCHESTRATOR}) and the model")
+        body = (ROOT / "skills" / ORCHESTRATOR / "SKILL.md").read_text(encoding="utf-8")
+        missing = [c for c in ORCHESTRATOR_COMMANDS if f"`{c}" not in body]
+        if missing:
+            errors.append(f"{ORCHESTRATOR} command table lacks: {', '.join(missing)}")
 
     for name in sorted(agents):
         path = ROOT / "agents" / f"{name}.md"

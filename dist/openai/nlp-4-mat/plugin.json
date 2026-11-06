@@ -1,0 +1,46 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "nlp-4-mat",
+  "version": "0.4.0",
+  "description": "Interactive 4MAT presentation studio: progressive interview, source-grounded claim ledger, audience and format adaptation, storyboard, production, independent review and rehearsal, with optional evidence-aware NLP communication tools.",
+  "author": {
+    "name": "4MAT NLP Skills Contributors",
+    "url": "https://github.com/blackandcode"
+  },
+  "homepage": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill",
+  "repository": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill",
+  "license": "MIT",
+  "keywords": [
+    "4mat",
+    "presentation",
+    "public-speaking",
+    "storytelling",
+    "nlp",
+    "academic-defense",
+    "pitch",
+    "workshop"
+  ],
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "NLP-4MAT Presentation Studio",
+        "shortDescription": "Plan evidence-based 4MAT talks",
+        "longDescription": "Turn an idea, a thesis, research notes or an existing deck into an audience-specific presentation using the 4MAT sequence: Mini What, Why, What, How, What If / What If Not.\n\nThe studio reads your material first, asks only the decisions it cannot answer (with a recommended option each time), and keeps a decision log so you can revise one choice without starting over. It builds a claim ledger that separates what exists today from what is planned, illustrative or still a hypothesis, so nothing is overclaimed in front of examiners, investors or your audience.\n\nIt adapts structure, proof and the ask to the audience and format: academic defense, investor pitch, interactive workshop with nested cycles, speech without slides, live demo, web or recorded talk. Optional NLP-informed tools (perceptual positions, Disney creative strategy, logical levels, objection reframing, narrative loops, presenter state) are used only when they solve a diagnosed problem, with honest evidence labels. It finishes with an independent critique and rehearsal drills.",
+        "developerName": "4MAT NLP Skills Contributors",
+        "category": "Productivity",
+        "websiteURL": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill",
+        "supportURL": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill/issues",
+        "privacyPolicyURL": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill/blob/main/PRIVACY.md",
+        "termsOfServiceURL": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill/blob/main/LICENSE",
+        "defaultPrompt": [
+          "Help me turn my thesis and notes into a 15-minute 4MAT defense for my examiners.",
+          "Review my existing slide deck against the 4MAT structure and tell me what to fix first.",
+          "Adapt my presentation into a 5-minute pitch for funders without overclaiming."
+        ],
+        "brandColor": "#3B5BDB",
+        "composerIcon": "./assets/icon.png",
+        "logo": "./assets/logo.png"
+      }
+    }
+  }
+}

@@ -4,3 +4,6 @@ __pycache__/
 .pytest_cache/
 outputs/
 *.log
+
+# Upload ZIPs are rebuilt on demand (python scripts/build_dist.py --zips)
+dist/zips/

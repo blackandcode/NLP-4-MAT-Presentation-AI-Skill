@@ -2,12 +2,18 @@
 
 ## Plugin packaging
 
-The Claude Code plugin root contains `.claude-plugin/plugin.json`, `.claude-plugin/marketplace.json`, `skills/<name>/SKILL.md` and `agents/<name>.md`. Skills and agents reach the shared folders through `${CLAUDE_PLUGIN_ROOT}/knowledge/` and `${CLAUDE_PLUGIN_ROOT}/scripts/`.
+The repository root is the **development** plugin (`claude --plugin-dir .`). Its skills reach the shared folders through `${CLAUDE_PLUGIN_ROOT}/knowledge/` and `${CLAUDE_PLUGIN_ROOT}/scripts/`.
+
+**Distribution** uses the generated, self-contained builds in `dist/`:
+- the marketplace `source` points at `./dist/claude/nlp-4-mat`;
+- ChatGPT and Codex use `dist/openai/…`.
+
+Rebuild with `python scripts/build_dist.py` after any source change. Publishing steps are in `docs/DISTRIBUTION.md`.
 
 ```sh
 claude plugin validate .
 claude plugin marketplace add .
-claude plugin install 4-mat-to-nlp-presentation@4mat-studio-marketplace
+claude plugin install nlp-4-mat@nlp-4-mat
 ```
 
 `python scripts/validate_repo.py` is not the Claude CLI validator.
@@ -34,14 +40,14 @@ The unit tests cover:
 - the deck auditor: phase order, nested cycles, time, evidence cross-check, speaking-rate overrun, Mini What share;
 - the renderer: escaping, cycle labels;
 - the installer;
-- repository validation: spec-compliant names, references, personal-content lint, orchestrator/alias wiring;
+- repository validation: spec-compliant names, references, personal-content lint, the orchestrator command table;
 - the e2e scenario decks in `tests/e2e/`.
 
 ## Still manual (needs a real Claude Code account)
 
 1. `claude plugin validate`, then install.
-2. Natural-language triggering of the orchestrator, and `/4mat-start` alias resolution.
+2. Natural-language triggering of the orchestrator; the bare `/nlp-4-mat` vs. `/nlp-4-mat:nlp-4-mat` in a plugin install; sub-command dispatch (`help`, `review`, `pitch` …).
 3. AskUserQuestion rendering and round behaviour.
-4. Native subagent delegation, namespacing (`4-mat-to-nlp-presentation:<agent>`) and permissions.
+4. Native subagent delegation, namespacing (`nlp-4-mat:<agent>`) and permissions.
 5. A full user-led session with real sources, compared against a single-prompt baseline. The protocol is in `IMPLEMENTATION_ROADMAP.md`.
 6. Accessibility of the rendered HTML with a screen reader.

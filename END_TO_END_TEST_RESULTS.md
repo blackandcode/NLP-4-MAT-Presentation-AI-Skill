@@ -1,5 +1,7 @@
 # End-to-end test results
 
+> **Naming update (v0.4.0, 2026-11-07):** the orchestrator `4-mat-to-nlp-presentation` and the commands `/4mat-start` and `/4mat-route` were merged into one command, `/nlp-4-mat [command]`, and the plugin was renamed `nlp-4-mat`. This report keeps the names that were current when it was written.
+
 **Date:** 2026-11-06
 **Environment:**
 - Windows 11, with Python 3.12.16 in a `python:3.12-slim` Docker container (the host has no Python);

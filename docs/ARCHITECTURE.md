@@ -2,10 +2,9 @@
 
 ## What is implemented
 
-- **16 SKILL.md skills**:
-  - one model-invocable orchestrator (`4-mat-to-nlp-presentation`);
-  - two user-invoked commands (`4mat-start`, an alias; `4mat-route`, a path recommender);
-  - eight workflow skills (`interview`, `evidence`, `storyboard`, `nlp`, `produce`, `review`, `rehearse`);
+- **14 SKILL.md skills**:
+  - one orchestrator, `nlp-4-mat`: a single short command (`/nlp-4-mat [command]`, `@nlp-4-mat` in ChatGPT, `$nlp-4-mat` in Codex), invocable by both the user and the model, with sub-commands for every stage, format preset and NLP tool;
+  - seven workflow skills (`interview`, `evidence`, `storyboard`, `nlp`, `produce`, `review`, `rehearse`);
   - six optional NLP pocket skills.
 - **6 read-only Claude Code agents** with a shared request/report contract (`knowledge/AGENT_CONTRACT.md`).
 - **Shared knowledge**: method, formats, NLP selection, deliverables and protocol.
@@ -18,7 +17,7 @@ There is no bespoke runtime, server, PPTX generator or web form. The host model 
 These are adapted from mattpocock/skills:
 
 - The **orchestrator** is model-invocable, so plain-language requests reach it.
-- **User-invoked commands** (`4mat-start`, `4mat-route`) may load model-invocable skills, but never another user-invoked one.
+- **One command, many sub-commands.** `nlp-4-mat` reads the first word of the input (`help`, `review`, `pitch`, `perspectives` …) and dispatches to the matching stage, preset or pocket skill. Anything else is treated as a free-text request. Separate alias and router commands were folded in (v0.4.0), so users remember one name.
 - **Workflow and pocket skills** are model-invocable, usable on their own, and communicate only through workspace files: `brief.md`, `evidence.md`, `storyboard.md`, and so on.
 - **Facts** are found by the agent (or the `evidence-librarian`). **Decisions** are asked of the user, as a decision frontier.
 

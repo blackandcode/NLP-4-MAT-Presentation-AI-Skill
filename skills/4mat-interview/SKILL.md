@@ -1,6 +1,6 @@
 ---
 name: 4mat-interview
-description: "Progressive presentation-strategy interview: separates facts found in the user's material from decisions only the user can make, then asks the decision frontier in short rounds with recommended options. Writes brief.md with a decision log. Use to define audience, outcome, time, format, story strategy, HOW mode and the ask for any talk, pitch, defense or workshop."
+description: "Interview the presenter in short rounds: find facts in their material, ask only open decisions with a recommended option, and write brief.md with a decision log."
 ---
 
 # 4MAT interview (decision frontier)

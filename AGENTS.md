@@ -1,6 +1,6 @@
 # 4MAT studio — shared operating instructions
 
-- Start presentation work with the `4-mat-to-nlp-presentation` skill. It is the single orchestrator; `4mat-start` is its slash alias.
+- Start presentation work with the `nlp-4-mat` skill, the single orchestrator. Users call it as `/nlp-4-mat [command]` (Claude Code), `@nlp-4-mat` (ChatGPT) or `$nlp-4-mat` (Codex). `help` lists the commands.
 - The user owns decisions. Do not manufacture proof, outcomes, numbers, quotes or personal stories, and never turn a plan, wish or illustrative example into a completed fact.
 - Keep the order MINI WHAT → WHY → WHAT → HOW → WHAT IF / IF NOT, with explicit bridges between phases. This is an instructional design choice, not a claim about fixed learner types.
 - Label claims `[SOURCE]`, `[INTERPRETATION]`, `[PROPOSAL]`, `[HYPOTHESIS]` or `[UNVERIFIED]`.

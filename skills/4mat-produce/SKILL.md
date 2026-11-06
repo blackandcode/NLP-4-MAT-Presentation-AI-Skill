@@ -1,6 +1,6 @@
 ---
 name: 4mat-produce
-description: "Produce the chosen 4MAT deliverable from an approved brief, claim ledger and storyboard: presentation.json rendered to HTML slides with speaker notes, verbatim script, cue cards for speech without slides, workshop facilitator guide, investor pitch, live-demo run sheet, web page outline, recorded-video script, and qa.md."
+description: "Produce the chosen 4MAT deliverable from an approved storyboard: HTML slides with notes, script, cue cards, workshop guide, pitch, demo run sheet, web outline or qa.md."
 ---
 
 # Presentation production (format first)

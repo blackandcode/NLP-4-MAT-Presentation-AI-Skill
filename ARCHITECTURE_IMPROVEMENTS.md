@@ -1,5 +1,7 @@
 # Architecture improvements
 
+> **Naming update (v0.4.0, 2026-11-07):** the orchestrator `4-mat-to-nlp-presentation` and the commands `/4mat-start` and `/4mat-route` were merged into one command, `/nlp-4-mat [command]`, and the plugin was renamed `nlp-4-mat`. This report keeps the names that were current when it was written.
+
 This document records the changes made in v0.3.0 and the reasoning behind each one, plus the proposals that still need approval. The owner approved the four structural decisions on 2026-11-06:
 - `4-mat-to-nlp-presentation` is the orchestrator;
 - the generic skills are de-personalised;

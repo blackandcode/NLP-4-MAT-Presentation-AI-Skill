@@ -1,6 +1,6 @@
 ---
 name: 4mat-perceptual-positions
-description: "Interactive NLP perceptual-positions exercise (1st presenter, 2nd each audience or stakeholder, 3rd neutral observer, 4th wider system) to research a presentation topic from several perspectives, sharpen an audience-specific WHY, surface objections and plan the ecology check in WHAT IF."
+description: "Explore a presentation topic from four perspectives (presenter, each audience, neutral observer, wider system) to sharpen the WHY, surface objections and check ecology."
 ---
 
 # Perceptual positions (`4mat-perceptual-positions`)

@@ -35,7 +35,7 @@ class RepoValidationTest(unittest.TestCase):
         self.assertEqual(ok, [])
 
     def test_skill_name_rule(self):
-        self.assertTrue(validate_repo.SKILL_NAME.match("4-mat-to-nlp-presentation"))
+        self.assertTrue(validate_repo.SKILL_NAME.match("nlp-4-mat"))
         for bad in ("4MAT-start", "-lead", "trail-", "double--hyphen", "has space"):
             self.assertIsNone(validate_repo.SKILL_NAME.match(bad), bad)
 

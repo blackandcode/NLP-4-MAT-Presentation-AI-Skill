@@ -1,6 +1,6 @@
 ---
 name: 4mat-nested-loops
-description: "Narrative and language pass for 4MAT scripts: a truthful common-ground opening, up to three genuine open story loops closed in reverse order, metaphor, open vs. precise language (Milton/Meta Model) and sensory concreteness. Use to give long talks a narrative thread and make abstract scripts vivid without manipulation."
+description: "Narrative and language pass for a 4MAT script: truthful common-ground opening, up to three genuine open story loops, one metaphor, precise vs. open language, concreteness."
 ---
 
 # Narrative mechanics and language (`4mat-nested-loops`)

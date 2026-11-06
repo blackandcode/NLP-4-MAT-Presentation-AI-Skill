@@ -154,13 +154,13 @@ class DeckTest(unittest.TestCase):
         with tempfile.TemporaryDirectory() as d:
             base = Path(d)
             n = install("claude", scope="project", destination=base, dry_run=True)
-            self.assertEqual(n, 16 + 2 + 6)
+            self.assertEqual(n, 14 + 2 + 6)
             self.assertFalse((base / ".claude").exists())
             install("claude", scope="project", destination=base)
-            for skill in ("4-mat-to-nlp-presentation", "4mat-start", "4mat-perceptual-positions",
+            for skill in ("nlp-4-mat", "4mat-interview", "4mat-perceptual-positions",
                           "4mat-disney-strategy", "4mat-logical-levels"):
                 self.assertTrue((base / f".claude/skills/{skill}/SKILL.md").is_file(), skill)
-            self.assertTrue((base / ".claude/skills/4-mat-to-nlp-presentation/references/4mat-architecture.md").is_file())
+            self.assertTrue((base / ".claude/skills/nlp-4-mat/references/routes.md").is_file())
             self.assertTrue((base / ".claude/agents/devils-advocate.md").is_file())
             self.assertTrue((base / ".claude/agents/nlp-coach.md").is_file())
             self.assertFalse((base / ".claude/agents/perspective-explorer.md").exists())
@@ -174,8 +174,8 @@ class DeckTest(unittest.TestCase):
     def test_gemini_no_claude_agents(self):
         with tempfile.TemporaryDirectory() as d:
             install("gemini", scope="project", destination=Path(d))
-            self.assertTrue((Path(d) / ".gemini/skills/4-mat-to-nlp-presentation/SKILL.md").is_file())
-            self.assertTrue((Path(d) / ".gemini/skills/4mat-start/SKILL.md").is_file())
+            self.assertTrue((Path(d) / ".gemini/skills/nlp-4-mat/SKILL.md").is_file())
+            self.assertTrue((Path(d) / ".gemini/skills/4mat-interview/SKILL.md").is_file())
             self.assertFalse((Path(d) / ".claude/agents").exists())
 
 

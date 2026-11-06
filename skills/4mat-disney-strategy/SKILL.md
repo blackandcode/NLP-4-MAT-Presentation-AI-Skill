@@ -1,6 +1,6 @@
 ---
 name: 4mat-disney-strategy
-description: "Interactive Disney creative strategy (Dreamer → Realist → Critic) for presentations: expand the vision for WHY and WHAT IF, turn abstract ideas into a concrete, time-boxed HOW demonstration structured as a T.O.T.E. loop, and stress-test claims, risks and safeguards without killing the idea."
+description: "Dreamer, Realist and Critic pass for a talk: expand the vision, turn it into a concrete timed HOW demo (a T.O.T.E. loop) and stress-test risks without killing the idea."
 ---
 
 # Disney creative strategy (`4mat-disney-strategy`)

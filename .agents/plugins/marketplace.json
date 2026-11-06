@@ -1,0 +1,17 @@
+{
+  "name": "nlp-4-mat",
+  "plugins": [
+    {
+      "name": "nlp-4-mat",
+      "source": {
+        "source": "local",
+        "path": "./dist/openai/nlp-4-mat"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 ---
 name: 4mat-rehearse
-description: "Coach a 4MAT rehearsal: phase cue cards, timing estimate, audience-specific hard Q&A simulation derived from the claim ledger's gaps, live-demo failure drills, opening/closing practice and honest feedback."
+description: "Rehearse a 4MAT talk: timing estimate, audience-specific hard Q&A drills drawn from the claim ledger, demo-failure drills, opening and closing practice, honest feedback."
 ---
 
 # Rehearsal and defense loop

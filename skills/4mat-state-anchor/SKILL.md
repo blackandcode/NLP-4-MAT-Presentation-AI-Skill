@@ -1,6 +1,6 @@
 ---
 name: 4mat-state-anchor
-description: "Presenter preparation and delivery coaching: associated mental rehearsal with success criteria, a short state routine (breathing, posture, resource cue, wide-angle gaze), optional stage map for past/present/future and objections, and optional gesture vocabulary, injected as process cues into script and speaker notes."
+description: "Prepare the presenter: mental rehearsal, a short state routine, an optional stage map and gesture cues, written as process notes beside the script."
 ---
 
 # Presenter state and stage use (`4mat-state-anchor`)

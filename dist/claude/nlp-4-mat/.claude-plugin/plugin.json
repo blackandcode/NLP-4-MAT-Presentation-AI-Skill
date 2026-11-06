@@ -1,0 +1,28 @@
+{
+  "name": "nlp-4-mat",
+  "displayName": "NLP-4MAT Presentation Studio",
+  "version": "0.4.0",
+  "description": "Interactive 4MAT presentation studio: progressive interview, source-grounded claim ledger, audience and format adaptation, storyboard, production, independent review and rehearsal, with optional evidence-aware NLP communication tools.",
+  "author": {
+    "name": "4MAT NLP Skills Contributors",
+    "url": "https://github.com/blackandcode"
+  },
+  "homepage": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill",
+  "repository": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill",
+  "license": "MIT",
+  "keywords": [
+    "4mat",
+    "presentation",
+    "public-speaking",
+    "storytelling",
+    "nlp",
+    "academic-defense",
+    "pitch",
+    "workshop"
+  ],
+  "icon": "./assets/icon.png",
+  "documentationUrl": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill/blob/main/README.md",
+  "supportUrl": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill/issues",
+  "privacyPolicyUrl": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill/blob/main/PRIVACY.md",
+  "termsOfServiceUrl": "https://github.com/blackandcode/NLP-4-MAT-Presentation-AI-Skill/blob/main/LICENSE"
+}

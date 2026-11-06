@@ -67,7 +67,7 @@ def main(argv=None):
             if not 0 < duration <= 10080: raise ValueError
             break
         except ValueError: print("Enter a positive number (maximum one week in minutes).")
-    out={"title":title,"language":language,"duration_minutes":duration,**answers,"status":"user choices; research and content not yet verified","next_step":"Use /4mat-start with this JSON as briefing context"}
+    out={"title":title,"language":language,"duration_minutes":duration,**answers,"status":"user choices; research and content not yet verified","next_step":"Use /nlp-4-mat with this JSON as briefing context"}
     args.out.parent.mkdir(parents=True,exist_ok=True)
     args.out.write_text(json.dumps(out,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")
     print("\nBrief saved:",args.out)

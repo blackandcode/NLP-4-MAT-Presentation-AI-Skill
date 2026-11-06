@@ -1,14 +1,14 @@
 {
-  "name": "4mat-studio-marketplace",
+  "name": "nlp-4-mat",
   "description": "Composable 4MAT presentation skills with optional NLP communication tools and coordinated review agents",
-  "owner": {"name": "4MAT NLP Skills Contributors"},
+  "owner": {"name": "4MAT NLP Skills Contributors", "url": "https://github.com/blackandcode"},
   "plugins": [
     {
-      "name": "4-mat-to-nlp-presentation",
-      "source": "./",
+      "name": "nlp-4-mat",
+      "source": "./dist/claude/nlp-4-mat",
       "description": "Interactive 4MAT presentation design: progressive interview, claim ledger, audience/format adaptation, storyboard, production, independent review and rehearsal",
       "category": "productivity",
-      "keywords": ["4mat", "4-mat-to-nlp-presentation", "presentation", "learning", "nlp", "claude-code"]
+      "keywords": ["4mat", "presentation", "learning", "nlp", "claude-code"]
     }
   ]
 }

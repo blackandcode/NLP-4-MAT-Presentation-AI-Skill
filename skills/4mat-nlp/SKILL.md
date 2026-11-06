@@ -1,6 +1,6 @@
 ---
 name: 4mat-nlp
-description: "Select a small set of transparent, evidence-aware NLP-informed communication techniques for a 4MAT presentation, based on diagnosed problems, audience and format; route to a pocket skill only when deeper work is needed. Produces nlp-plan.md with content and process tracks. Use when a talk needs stronger relevance, clarity, objection handling, narrative thread or delivery."
+description: "Pick 0–4 transparent, evidence-aware NLP communication techniques for diagnosed problems in a talk, and route to a pocket skill only when deeper work is needed."
 ---
 
 # NLP selection: content and process

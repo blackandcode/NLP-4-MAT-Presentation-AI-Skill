@@ -1,6 +1,6 @@
 ---
 name: 4mat-review
-description: "Independent quality gate for a 4MAT talk, script, slide deck or storyboard (new or existing): fixed 12-dimension rubric, source-fidelity check of personal and project claims, deterministic deck audit, devil's-advocate challenge, and concrete fixes. Use to critique and improve an existing presentation as well as to gate a new one."
+description: "Independent quality gate for a new or existing talk or deck: devil's-advocate challenge, source-fidelity check, fixed 12-point 4MAT rubric, deck audit and concrete fixes."
 ---
 
 # The 4MAT quality gate

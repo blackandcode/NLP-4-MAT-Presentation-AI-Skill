@@ -1,5 +1,7 @@
 # Gap analysis
 
+> **Naming update (v0.4.0, 2026-11-07):** the orchestrator `4-mat-to-nlp-presentation` and the commands `/4mat-start` and `/4mat-route` were merged into one command, `/nlp-4-mat [command]`, and the plugin was renamed `nlp-4-mat`. This report keeps the names that were current when it was written.
+
 **Priorities:** P0 = a fundamental failure or broken critical workflow · P1 = blocks high-quality presentations · P2 = a valuable improvement · P3 = optional.
 
 **Status:** **Fixed** (changed in v0.3.0 and covered by tests where possible) · **Fixed, unverified live** · **Mitigated** · **Open**.
@@ -40,10 +42,11 @@
 | G20 | The HTML has no presenter view (notes, timer, next slide) | Open (R4) |
 | G21 | `visual` is a text direction only; no image or asset pipeline | Open (R4) |
 | G22 | PDF and DOCX ingestion is untested (the author's DOCX and PDF versions exist) | Open (R5) |
-| G23 | Claude-only frontmatter (`disable-model-invocation`, `argument-hint`) is outside the Agent Skills spec | Documented in `docs/CROSS_PLATFORM.md`; Open (R6) |
+| G23 | Claude-only frontmatter (`disable-model-invocation`, `argument-hint`) is outside the Agent Skills spec | **Fixed**: `scripts/build_dist.py` strips it from the portable packages; descriptions are 200 characters or fewer for claude.ai |
 | G24 | The agents are not adapted to Gemini's `.gemini/agents` tool names | Open (R6) |
 | G25 | `brief_wizard.py` lacks the outcome type (know/feel/do), interaction and Q&A fields | Open (minor) |
-| G26 | The Codex manifest uses the fallback location (`.codex-plugin/`) | Documented; Open (R6) |
+| G26 | The Codex manifest uses the fallback location (`.codex-plugin/`) | **Fixed**: replaced by a self-contained Agent Plugins package (`dist/openai/…`) that validates against the official schema, for ChatGPT and Codex |
+| G34 | No route to claude.ai, Cowork or ChatGPT, and no global listing | **Fixed (packaging)**: Claude plugin plus skill ZIPs, an OpenAI plugin ZIP, marketplaces and `docs/DISTRIBUTION.md`. **Open**: the submissions themselves (the owner's accounts) |
 | G27 | No accessibility check of the generated HTML (contrast, screen reader) | Open (R4) |
 | G28 | "Calibration / audience feedback" was missing from the techniques | **Fixed** (`NLP_TECHNIQUES.md`) |
 

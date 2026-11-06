@@ -1,6 +1,6 @@
 ---
 name: 4mat-logical-levels
-description: "Interactive Dilts logical-levels alignment (environment, behaviour, capabilities, beliefs/values, identity, purpose) for presentations; connects concrete demos to meaning and, only when the user asks, braids a personal story with a model or method at a blend ratio the user chooses."
+description: "Align a talk across Dilts' logical levels (environment to purpose) and, only on request, braid a personal story with a model at the ratio the user picks."
 ---
 
 # Logical levels and story-to-model blend (`4mat-logical-levels`)

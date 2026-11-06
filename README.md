@@ -1,14 +1,32 @@
-# 4-MAT-to-NLP Presentation Studio (`4-mat-to-nlp-presentation`)
+# NLP-4MAT Presentation Studio (`/nlp-4-mat`)
 
 A set of composable agent skills that help someone turn an idea, documents or an existing deck into an **audience-specific, evidence-grounded 4MAT presentation**: **Mini What → Why → What → How → What If / What If Not**. NLP-informed communication tools are available, but they are optional.
 
 The architecture is inspired by [mattpocock/skills](https://github.com/mattpocock/skills): small single-purpose skills, a decision-frontier interview ("grill me" style), facts gathered by the agent and decisions made by the user, and state kept in files so later skills (and later sessions) can pick it up.
 
-**Status: v0.3.0.** 16 skills (one orchestrator, one slash alias, eight workflow skills, six NLP pocket skills), 6 read-only specialist agents, Claude Code plugin manifests, a portable installer (Claude Code / Gemini CLI / Codex), an HTML slide renderer, a deterministic deck auditor and repository validator, unit tests, and two worked examples that serve as fixed test inputs. See `VISION_QA_REPORT.md` for what has and hasn't been verified.
+**Status: v0.4.0.** One command, `/nlp-4-mat`, with sub-commands. 14 skills (the `nlp-4-mat` orchestrator, seven workflow skills, six NLP pocket skills), 6 read-only specialist agents, Claude Code plugin manifests, a portable installer (Claude Code / Gemini CLI / Codex), an HTML slide renderer, a deterministic deck auditor and repository validator, unit tests, and two worked examples that serve as fixed test inputs. See `VISION_QA_REPORT.md` for what has and hasn't been verified.
 
-## Start here
+## Start here: one command
 
-Say what you need in plain language, for example *"Help me turn my thesis and these notes into a 15-minute defense for my examiners"*. The **`4-mat-to-nlp-presentation`** skill is the single entry point. It:
+```text
+/nlp-4-mat                                    start, or resume where you left off
+/nlp-4-mat help                               show all commands
+/nlp-4-mat 15-min defense from thesis.md      describe what you need; anything that isn't a command is a request
+/nlp-4-mat review slides.pdf                  check an existing deck
+/nlp-4-mat pitch | workshop | talk | defense  start with a format preset
+/nlp-4-mat rehearse                           timing and hard-question drills
+```
+
+| Host | Syntax |
+|---|---|
+| Claude Code | `/nlp-4-mat …` |
+| ChatGPT | `@nlp-4-mat …` |
+| Codex | `$nlp-4-mat …` |
+| claude.ai or Cowork | Just say "use nlp-4-mat to …" |
+
+In a Claude Code plugin install, the bare `/nlp-4-mat` works unless another command has the same name. Then use `/nlp-4-mat:nlp-4-mat`. The full command list is in [skills/nlp-4-mat/SKILL.md](skills/nlp-4-mat/SKILL.md).
+
+You can also just say what you need in plain language, for example *"Help me turn my thesis and these notes into a 15-minute defense for my examiners"*. The **`nlp-4-mat`** skill is the single entry point. It:
 
 1. reads everything you supplied before asking anything;
 2. asks only the decisions still open, in short rounds with a recommended option first;
@@ -17,20 +35,21 @@ Say what you need in plain language, for example *"Help me turn my thesis and th
 5. produces only the deliverables you ask for;
 6. runs an independent critique before calling anything ready.
 
-`/4mat-start` is a slash alias for the same orchestrator, and `/4mat-route` suggests the shortest path.
-
 ## Install
 
-### Claude Code plugin (recommended)
+**The full guide covering every platform and both global directories is [docs/DISTRIBUTION.md](docs/DISTRIBUTION.md).**
 
-```bash
-# from the directory that contains this repository
-claude plugin validate ./nlp-4-mat-presentation-skill
-claude plugin marketplace add ./nlp-4-mat-presentation-skill
-claude plugin install 4-mat-to-nlp-presentation@4mat-studio-marketplace
-```
+| Where | How |
+|---|---|
+| Claude Code (any machine) | `claude plugin marketplace add blackandcode/NLP-4-MAT-Presentation-AI-Skill`, then `claude plugin install nlp-4-mat@nlp-4-mat` |
+| claude.ai web, Desktop, mobile, Cowork | Customize → Plugins → Upload plugin: `dist/zips/claude-plugin-…zip` (build with `python scripts/build_dist.py --zips`). Skills you enable there also sync into Claude Code. |
+| Everyone on Claude | Anthropic directory: claude.ai/directory/manage, plugin path `dist/claude/nlp-4-mat` |
+| ChatGPT desktop / Codex | `dist/openai/personal-marketplace.json` → `~/.agents/plugins/marketplace.json`, or `codex plugin marketplace add blackandcode/NLP-4-MAT-Presentation-AI-Skill` |
+| Everyone on ChatGPT (web, desktop, mobile) | OpenAI Plugin Directory: platform.openai.com/plugins → upload `dist/zips/openai-plugin-…zip` |
 
-Inside a session, plugin skills are namespaced: `/4-mat-to-nlp-presentation:4mat-start` or `/4-mat-to-nlp-presentation:4mat-review`. A natural-language request also triggers the orchestrator. Shared files are resolved through `${CLAUDE_PLUGIN_ROOT}`.
+`dist/` is generated from the sources by `scripts/build_dist.py`. Every skill there is self-contained: it bundles its own references and scripts.
+
+For a guaranteed bare `/nlp-4-mat` in Claude Code, you can also copy-install the skills into your user scope (`~/.claude/skills`) with `python scripts/install.py --target claude --scope user`.
 
 ### Copy into a project or user scope
 
@@ -46,9 +65,7 @@ The installer copies skills, the shared `knowledge/` and `scripts/` folders (int
 
 | Skill | Role |
 |---|---|
-| **`4-mat-to-nlp-presentation`** | Orchestrator: classify the request → readiness map → decision-frontier interview → stages → specialists in proportion to the stakes → resume, revise or retarget |
-| `4mat-start` | Slash alias for the orchestrator (user-invoked) |
-| `4mat-route` | Recommends the shortest skill path (user-invoked) |
+| **`nlp-4-mat`** | The one command. Sub-commands (`help`, `new`, `status`, `review`, `pitch`, `workshop`, `rehearse`, `route` …) or free text. Orchestrates: classify → readiness map → decision-frontier interview → stages → specialists in proportion to the stakes → resume, revise or retarget |
 | `4mat-interview` | Separates facts from decisions; progressive rounds; writes `brief.md` with a decision log |
 | `4mat-evidence` | Claim ledger: locators, exists / planned / illustrative / hypothesis layers, tense and modality checks, gaps |
 | `4mat-storyboard` | Backward planning from the outcome, two narratives, bridges, format shapes, time budget |

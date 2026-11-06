@@ -1,6 +1,6 @@
 {
-  "name": "4-mat-to-nlp-presentation",
-  "version": "0.3.0",
+  "name": "nlp-4-mat",
+  "version": "0.4.0",
   "description": "Interactive 4MAT presentation studio (Mini What -> Why -> What -> How -> What If) with evidence-grounded claim ledgers, audience/format adaptation, optional NLP communication tools and 6 read-only specialist agents",
   "author": {
     "name": "4MAT NLP Skills Contributors"
@@ -8,7 +8,7 @@
   "license": "MIT",
   "keywords": [
     "4mat",
-    "4-mat-to-nlp-presentation",
+    "nlp-4-mat",
     "presentations",
     "nlp",
     "storyboarding",
