@@ -1,0 +1,60 @@
+{
+  "title": "Wonderland — Validation-Stage Funding Pitch",
+  "audience": "Validation-stage funders (grant bodies, impact investors, pilot partners)",
+  "duration_minutes": 5,
+  "language": "en",
+  "medium": "investor-pitch",
+  "slides": [
+    {
+      "phase": "mini-what", "minutes": 0.25,
+      "title": "Wonderland",
+      "headline": "A creative-thinking companion where the child stays the author — seeking funding to validate it",
+      "body": ["Early demonstrator exists", "No outcome data yet — that is what we are raising for"],
+      "speaker_notes": "In the next five minutes: the problem, what exists today, a 45-second demo, and exactly what we need to find out whether it works.",
+      "evidence_ids": ["C002", "C016"]
+    },
+    {
+      "phase": "why", "minutes": 1.0,
+      "title": "Ideas die at the first answer",
+      "headline": "\"That can't work\" is often the first thing a child's idea hears",
+      "body": ["Creative thinking is now assessed internationally (OECD PISA 2022)", "A pretty AI-made drawing is not evidence a child learned anything", "Hypothesis (untested): families want tools that ask rather than answer"],
+      "speaker_notes": "Adults, with the best intentions, answer children's ideas too fast. Creative thinking — generating, evaluating and improving ideas — is now on the international education agenda. And a beautiful drawing made mostly by AI tells us nothing about what the child learned. Our hypothesis — not yet tested — is that families want tools that ask rather than answer. I started Wonderland because I want to leave the next generation better equipped than we were.",
+      "evidence_ids": ["C028", "C026", "C012", "C001"]
+    },
+    {
+      "phase": "what", "minutes": 1.0,
+      "title": "What exists today",
+      "headline": "A voice-to-drawing demonstrator built on one rule: the child decides every change",
+      "body": ["Exists: child speaks → drawing appears → child revises", "Designed: guide asks questions instead of generating", "Not yet: users, outcome data, market sizing"],
+      "speaker_notes": "Today there is a demonstrator: a child says what they imagine, sees it drawn, and changes it step by step. The design rule is that the guide asks rather than generates. To be direct: we have no users, no outcome data and no market sizing yet. Those are what this round should produce.",
+      "evidence_ids": ["C003", "C011", "C016"]
+    },
+    {
+      "phase": "how", "minutes": 1.0,
+      "title": "45 seconds of the demonstrator",
+      "headline": "Watch who makes each decision",
+      "body": ["\"Draw a car\" → \"Add a dog\" → \"Make the dog smaller\""],
+      "diagram": {"type": "steps", "nodes": ["Say", "See", "Compare", "Change"]},
+      "visual": "Recorded 45 s clip with captions marking each child decision",
+      "speaker_notes": "[Play clip.] Each change you see was the child's call. Next comes age-adapted interaction — short voice turns for six-year-olds, more control for ten-year-olds.",
+      "evidence_ids": ["C003", "C018"]
+    },
+    {
+      "phase": "what-if", "minutes": 1.25,
+      "title": "The ask: fund the validation ladder",
+      "headline": "[AMOUNT — to be decided by presenter] to reach two milestones",
+      "body": ["M1: usability study with adult testers", "M2: small parent-consented pilot with independent raters", "Risk: the guide may not improve child-initiated ideas — M2 is designed to find out", "If not funded: continue with low-cost parent–child workshops first"],
+      "diagram": {"type": "roadmap", "nodes": ["M1 Usability", "M2 Consented pilot", "Independent rating", "Decide: scale or stop"]},
+      "speaker_notes": "We are not asking you to believe it works. We are asking you to fund finding out: first a usability study with adults, then a small, parent-consented pilot measuring how many ideas and changes come from the child rather than the tool, rated by independent people. If it does not help, we change it or stop. Without funding, the work continues more slowly through workshops. It is not therapy, and every study needs consent.",
+      "evidence_ids": ["C015", "C017", "C023"]
+    },
+    {
+      "phase": "what-if", "minutes": 0.5,
+      "title": "Partner with us on the first pilot",
+      "headline": "One decision today: a conversation about M1–M2",
+      "body": ["Longer term: drawing and shape input, 3D, shared worlds — only if M2 says yes"],
+      "speaker_notes": "Longer-term ideas like 3D and shared worlds only matter if the pilot says yes. The decision I'm asking for today is small: a follow-up conversation about funding M1 and M2.",
+      "evidence_ids": ["C014"]
+    }
+  ]
+}

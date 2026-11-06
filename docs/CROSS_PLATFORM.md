@@ -1,26 +1,22 @@
 # Cross-platform support matrix
 
-| Feature | Claude Code plugin | Gemini CLI copied skills | Codex / ChatGPT environments |
-|---|---|---|---|
-| Discover SKILL.md | Yes (`skills/`) | Yes (`.gemini/skills`) | Codex `.agents/skills`; ChatGPT/plugin support depends on environment |
-| `/4mat-start` invocation | `/4mat-nlp:4mat-start` when plugin-installed; `/4mat-start` when copied | Natural language activation or CLI skill flow | Instruct agent to load skill; project/API setup dependent |
-| Native select/pick UI | AskUserQuestion **if exposed** | CLI-specific interaction, may differ | Interface-dependent; fallback numbered choices |
-| Native 6-agent files | Yes (`agents/`) | Not automatically compatible | Not automatically compatible |
-| Sequential specialist lenses | Yes | Yes, via skill text | Yes, via skill text |
-| Slide JSON generator script | Python (local) | Python (local) | Python where file execution is available |
-| HTML slides and notes | Yes with Python | Yes with Python | Yes with Python |
-| PowerPoint export | Not bundled | Not bundled | Not bundled |
+Status key: **Implemented** (the files exist), **Verified** (checked against official documentation on 2026-11-06), **Tested** (exercised end to end on that platform), **Not tested**.
 
-The skills are a portable **instruction standard**, not a guarantee that every UI exposes the same orchestration, tools or installation method. Claude native plugin installer is the intended full-feature path. The source reference files are not embedded for privacy/copyright reasons; supply them when working on your own material.
+| Capability | Claude Code | Gemini CLI | Codex CLI | ChatGPT (chat) |
+|---|---|---|---|---|
+| SKILL.md discovery | Implemented; Verified (`skills/<name>/SKILL.md` in a plugin, or `.claude/skills`) | Implemented; Verified (`.gemini/skills` or `.agents/skills`; `.agents` takes precedence) | Implemented; Verified (`.agents/skills`, repo or user scope) | No skill discovery; paste the skill text |
+| Orchestrator from natural language | Implemented (model-invocable); **Not tested** in a live session | Not tested | Not tested | Manual |
+| Slash invocation | `/4-mat-to-nlp-presentation:4mat-start` (plugin) or `/4mat-start` (copied); Not tested | Not tested | Not tested | n/a |
+| Multiple-choice picker | `AskUserQuestion` when exposed; Not tested here | `ask_user` exists (Verified); Not tested | Not verified | Numbered options |
+| Custom subagents | 6 agent files; Verified format; **Not tested** live | Gemini has `.gemini/agents/*.md` (Verified), but these files have not been adapted or tested | Not verified | No; sequential lenses |
+| Sequential-lens fallback | Yes (skill text) | Yes | Yes | Yes |
+| Shared files | `${CLAUDE_PLUGIN_ROOT}` (Verified substitution in skill and agent bodies) or `.4mat-studio/` | `.4mat-studio/` | `.4mat-studio/` | Upload |
+| Deck audit / render | Python 3 standard library; Tested (unit tests) | same | same | Where code execution is available |
+| PPTX / PDF export | Not bundled (print to PDF from the browser) | same | same | same |
 
-## OpenAI Codex / Agents API
+## Platform notes
 
-The `.codex-plugin/plugin.json` manifest declares `skills: ./skills/` and can be used as a starting point for OpenAI Agents API plugin packaging. Follow current OpenAI plugin upload and sandbox registration documentation; this repository has not been submitted to any plugin directory. The same agent team requires redesign using the OpenAI environment's own subagent orchestration and question/approval mechanisms.
-
-## ChatGPT note
-
-Uploading this repository to a conversation as a file does not install a Claude subagent system. If ChatGPT's available plugin/skill system permits importing SKILL.md workflows, use it under those constraints. For ordinary chat, provide `skills/4mat-start/SKILL.md` and the source materials and request the exact 4MAT process with explicit choice rounds; the assistant can simulate sequential specialist perspectives, not spawn Claude plugin agents.
-
-## Gemini CLI
-
-Install via this repo's copying script or from a published Git URL using `gemini skills install`. On copy, Gemini's standard skill discovery includes `.gemini/skills`. Verify with `/skills list` or `gemini skills list`. Use natural-language prompt: `Use the 4mat-start skill to interview me about my academic defense using the attached sources.`
+- **Frontmatter portability**: the Agent Skills spec allows `name`, `description`, `license`, `compatibility`, `metadata` and `allowed-tools`. This repository also uses the Claude-specific `disable-model-invocation` and `argument-hint` fields on `4mat-start`, `4mat-route` and the orchestrator. Claude ignores unknown fields; other hosts may ignore them or warn. Names follow the spec (lowercase, hyphens, 64 characters or fewer, matching the directory) and descriptions stay at 1024 characters or fewer. `scripts/validate_repo.py` enforces both.
+- **Codex plugins**: `.codex-plugin/plugin.json` is documented as a *compatibility fallback*; the portable manifest is a root `plugin.json` with `$schema`. This repository has not been packaged or tested as a Codex plugin.
+- **Gemini CLI**: install by copying (`scripts/install.py --target gemini`) or with `gemini skills install <git-url> --path skills/<name>`. Verify with `gemini skills list`. Google's documentation notes that some Gemini CLI tiers moved to Antigravity CLI on 2026-06-18; that environment is not tested.
+- **ChatGPT**: uploading this repository does not install anything. Provide `skills/4-mat-to-nlp-presentation/SKILL.md`, its `references/` and your sources, and ask it to follow the process with explicit choice rounds. It can simulate the specialist lenses one after another; it cannot run the Claude agents.

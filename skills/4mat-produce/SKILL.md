@@ -1,20 +1,35 @@
 ---
 name: 4mat-produce
-description: "Produce the selected 4MAT delivery artifact (slide storyboard, narrated talk, HTML slides, investor pitch, website outline, or workshop) with speaker notes and evidence labels."
+description: "Produce the chosen 4MAT deliverable from an approved brief, claim ledger and storyboard: presentation.json rendered to HTML slides with speaker notes, verbatim script, cue cards for speech without slides, workshop facilitator guide, investor pitch, live-demo run sheet, web page outline, recorded-video script, and qa.md."
 ---
 
-# Presentation production — medium-first
+# Presentation production (format first)
 
-Load user-approved `brief.md`, `evidence.md` and `storyboard.md`. Don't invent a new narrative in this step. Follow the order Mini What → WHY → WHAT → HOW → WHAT IF. Adapt proof depth and diction to the audience; retain caution on claimed impacts.
+**Shared files**: resolve `knowledge/…` and `scripts/…` under `${CLAUDE_PLUGIN_ROOT}/`, then `.4mat-studio/`, then the repository root. Schema and gates: `knowledge/DELIVERABLES.md`. Format shapes: `knowledge/FORMATS.md`.
 
-**Delivery contracts**:
-- `slides+speech`: write `slides.json` (schema in `knowledge/DELIVERABLES.md` or `.4mat-studio/knowledge/DELIVERABLES.md`), script/speaker notes and a source-key. Each slide has **one headline insight**, at most a few bullets, an optional `diagram` for a visual actually displayed in the HTML slide; the `visual` field gives a production direction only (it is not projected) and timed notes. Use `python scripts/render_deck.py <slides.json> --out <presentation.html>` (or `python .4mat-studio/scripts/render_deck.py ...` after manual installation) if the local renderer exists. This outputs web slides, not a PPTX.
-- `speech only`: a full natural spoken script plus 1-page cue cards; include pauses and audience prompts, no forced slide count.
-- `web/interactive`: responsive section structure with optional demo interactions, accessibility and fallback when JS/tools fail; every screen serves one 4MAT job.
-- `investor pitch`: distinguish market hypothesis from measured traction, include who decides, a credible ask, milestones and risks; no imaginary TAM/ROI.
-- `academic defense`: trace thesis to argument, theory, implemented demonstrator, evaluation limits, learning, future tests. Critical reflection is more credible than overstated efficacy.
-- `workshop`: provide facilitator guide, timed audience activity, instructions, materials, expected variations, debrief and transfer.
+Load the approved `brief.md`, `evidence.md` and `storyboard.md`. **Do not invent a new narrative here.** Keep the 4MAT order and the bridge sentences. Use the author's voice samples from the brief. Cite claim IDs on every factual, personal or numeric statement.
 
-**Dual track**: `speaker_notes` = words to say; `process_notes` = optional presenter actions, such as `[pause for question]` or `[live-demo fallback: screenshot]`; `audience_prompt` = voluntary participation. Clearly mark hypothetical scenarios.
+## Delivery contracts (produce only what the user chose)
 
-Check exact session-time totals and evidence for all numbers. Create `qa.md` containing hard audience questions and verified/honest responses. Give user real preview files or clear instructions, never claim PDF/PPTX created unless it exists.
+- **Slides + speech**: `presentation.json` (one headline insight per slide, at most a few bullets, an optional projected `diagram`, a `visual` production note that is *not* projected, timed `speaker_notes`, `evidence_ids`). Render with `python scripts/render_deck.py presentation.json --out presentation.html`. That produces HTML web slides plus `speaker-notes.md`, not a PPTX. Validate with `python scripts/audit_deck.py presentation.json --strict --evidence evidence.md`.
+- **Speech without slides**: a natural spoken `script.md` plus `cue-cards.md` (one card per phase: opening line, three beats, transition line, closing line). Signpost every phase aloud. No forced slide count.
+- **Academic defense**: trace thesis → research questions → theory → method → demonstrator (labelled) → limitations → validation plan. Critical reflection is more credible than overstated effects.
+- **Investor pitch**: separate measured traction from market hypotheses. Include who decides, the specific ask, use of funds, milestones and risks. No imaginary market size or ROI.
+- **Workshop**: a facilitator guide with a timed agenda per `cycle`, activity instructions, materials, expected variations, debrief questions and a transfer task.
+- **Live demo**: a run sheet with the scripted click path, prepared data, a time box, the pre-frame ("watch for…"), and a fallback (video or screenshots) with the exact line to say if the demo fails.
+- **Web / interactive**: section structure (one 4MAT job each), interaction states, accessibility notes, and a no-JavaScript fallback.
+- **Recorded / async**: chunked scripts (8 minutes or less each), on-screen signposts, caption-ready text, "pause and try" prompts, and a link-based call to action.
+
+## Speaker notes and process
+
+- `speaker_notes` are the words to say. If they are only cues, label them `CUE NOTES`.
+- `process_notes` hold optional presenter actions, such as `[pause]`, `[ask for a show of hands]`, or `[fallback: screenshot 3]`.
+- `audience_prompt` holds participation, which is always voluntary.
+- Mark hypothetical scenarios and illustrative dialogues as such where the audience can see or hear the label.
+
+## Checks before handing over
+
+1. **Time**: the minutes sum to the duration. Verbatim text ≈ minutes × 130 words, minus demo and activity time. `audit_deck.py` warns about overruns.
+2. **Fidelity**: every personal anecdote, prototype capability and result matches its claim ID in tense and modality, with no embellishment.
+3. **Q&A**: write `qa.md` containing the hardest questions this audience will ask, honest answers with claim IDs, and explicit limits.
+4. **Honest file list**: tell the user exactly which files exist and how to preview them. Never claim a PDF, PPTX or video was created unless it exists.

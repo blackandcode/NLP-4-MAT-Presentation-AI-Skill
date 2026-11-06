@@ -1,0 +1,103 @@
+{
+  "title": "Ask Instead of Answer — Supporting Children's Ideas",
+  "audience": "Teachers and parents of 6–10 year olds",
+  "duration_minutes": 45,
+  "language": "en",
+  "medium": "workshop",
+  "slides": [
+    {
+      "phase": "mini-what", "minutes": 2, "cycle": "frame",
+      "title": "Two skills, practised in pairs",
+      "headline": "Ask before answering · Separate dreaming from checking",
+      "body": ["Everything is voluntary — you can observe instead", "This is a learning format we are trying, not therapy"],
+      "speaker_notes": "Welcome. Agenda in one sentence. Ground rules: voluntary, not therapy, phones away for 45 minutes.",
+      "evidence_ids": ["C017"]
+    },
+    {
+      "phase": "why", "minutes": 5, "cycle": "frame",
+      "title": "\"That can't work\"",
+      "headline": "Remember a moment when a quick answer stopped an idea",
+      "body": ["Pair-share, 3 minutes", "One line each from a few volunteers"],
+      "audience_prompt": "Turn to your neighbour: a moment when an adult's quick answer stopped an idea — yours or a child's.",
+      "speaker_notes": "Introduce the three common adult replies. Run the pair-share. Collect two or three one-liners. Bridge: what could the adult have said instead?",
+      "evidence_ids": ["C028"]
+    },
+    {
+      "phase": "why", "minutes": 1, "cycle": "m1-ask",
+      "title": "Module 1 — Ask instead of answer",
+      "headline": "When we ask, the child keeps authorship",
+      "body": ["The adult asks; the child decides"],
+      "speaker_notes": "One minute: why questions keep the child as the author of the idea.",
+      "evidence_ids": ["C011"]
+    },
+    {
+      "phase": "what", "minutes": 4, "cycle": "m1-ask",
+      "title": "Three questions and one loop",
+      "headline": "What exactly? · Compared to what? · How will you know?",
+      "body": ["Goal → try → re-check → continue or finish", "The child makes the last call"],
+      "diagram": {"type": "cycle", "nodes": ["Goal", "Try", "Re-check", "Continue or finish"]},
+      "speaker_notes": "Model each question with one child sentence: 'I want a huge house' — huge compared to what? Then walk the loop with the bridge-between-two-towers example.",
+      "evidence_ids": ["C008", "C007"]
+    },
+    {
+      "phase": "how", "minutes": 8, "cycle": "m1-ask",
+      "title": "Practice: questions only",
+      "headline": "Partner A is the child with an idea card; partner B may only ask",
+      "body": ["3.5 minutes, then swap", "No solutions, no suggestions — only questions"],
+      "audience_prompt": "Pick an idea card. B: ask, don't answer.",
+      "speaker_notes": "Hand out idea cards. Time two rounds of 3.5 minutes. Walk around; note good questions to quote in the debrief.",
+      "evidence_ids": ["C007", "C008"]
+    },
+    {
+      "phase": "what-if", "minutes": 2, "cycle": "m1-ask",
+      "title": "Debrief",
+      "headline": "What changed when you could not give the answer?",
+      "body": ["What was hard?", "What did the 'child' do that surprised you?", "Limit: one round tells us little — this is practice, not proof"],
+      "speaker_notes": "Collect two observations. Name the limit: one round shows a feel, not an effect.",
+      "evidence_ids": ["C022"]
+    },
+    {
+      "phase": "why", "minutes": 1, "cycle": "m2-rooms",
+      "title": "Module 2 — Dreamer, Realist, Critic",
+      "headline": "Big ideas often get criticised before they exist",
+      "body": ["Separate the moments, protect the idea"],
+      "speaker_notes": "One minute: questions help detail an idea; but some ideas die before they form.",
+      "evidence_ids": ["C006"]
+    },
+    {
+      "phase": "what", "minutes": 3, "cycle": "m2-rooms",
+      "title": "Three rooms",
+      "headline": "Dream without critique · Plan the steps · Check what's missing",
+      "body": ["The Critic critiques the plan, never the person", "An assumption worth testing, not a proven method"],
+      "diagram": {"type": "cycle", "nodes": ["Dreamer", "Realist", "Critic"]},
+      "speaker_notes": "Explain each room with one question. Say clearly that this structure is a working assumption.",
+      "evidence_ids": ["C006"]
+    },
+    {
+      "phase": "how", "minutes": 9, "cycle": "m2-rooms",
+      "title": "Practice: walk the rooms",
+      "headline": "Trios rotate roles on one child idea — 3 minutes per room",
+      "body": ["Dreamer: 'What else could it do?'", "Realist: 'What do we build first?'", "Critic: 'What's missing — and how do we protect the idea?'"],
+      "audience_prompt": "In trios, take one idea card through all three rooms.",
+      "speaker_notes": "Time three rounds. Remind Critics to praise specific choices, not labels.",
+      "evidence_ids": ["C006", "C029"]
+    },
+    {
+      "phase": "what-if", "minutes": 2, "cycle": "m2-rooms",
+      "title": "Debrief",
+      "headline": "Which room do you usually start in with children?",
+      "body": ["What happens to ideas if we start in the Critic's room?", "Risk: rooms become rigid — children move between them"],
+      "speaker_notes": "Two or three answers. Bridge: how will you use this on Monday?",
+      "evidence_ids": ["C029"]
+    },
+    {
+      "phase": "what-if", "minutes": 8, "cycle": "close",
+      "title": "One week, one question",
+      "headline": "Pick one situation where you will ask before you answer",
+      "body": ["Fill in your transfer card (2 min)", "Limit: we don't yet know whether this changes creativity long term", "Your notes are personal observations, not research data — share only if you wish", "Closing round: one word each"],
+      "audience_prompt": "Write one situation and one question you will try this week.",
+      "speaker_notes": "Transfer card, then the honest limit, then the optional sharing invitation with consent, then a closing word round.",
+      "evidence_ids": ["C016", "C017", "C022"]
+    }
+  ]
+}

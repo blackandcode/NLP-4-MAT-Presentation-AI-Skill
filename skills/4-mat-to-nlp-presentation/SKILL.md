@@ -1,65 +1,113 @@
 ---
 name: 4-mat-to-nlp-presentation
-description: "Composable NLP pocket toolkit and interactive 4MAT presentation studio (Mini What -> Why -> What -> How -> What If/If Not). Use whenever designing, researching, storyboarding, scripting, or rehearsing a 4MAT presentation with NLP tools (3+1 Perceptual Positions, Walt Disney Creative Strategy, Dilts' Logical Levels & 70/30 personal-story weaving, Sleight of Mouth reframing, Nested Loops, Yes-Sets, VAKOG cycling, Spatial Stage Anchoring, and Satir postures)."
+description: "Primary entry point for designing, adapting, reviewing or rehearsing a presentation with the 4MAT sequence (Mini What → Why → What → How → What If / If Not) and optional, evidence-aware NLP communication tools. Use when someone wants to turn an idea, documents, research, a thesis, a business case or an existing deck into a talk, academic defense, investor pitch, workshop, speech without slides, live demo or web presentation; to retarget a presentation to a new audience or format; or to resume or revise an earlier 4MAT workspace. Interviews progressively, separates facts from decisions, builds a source-grounded claim ledger, offers narrative options, coordinates specialist agents when the stakes justify it, and produces only the deliverables the user asks for."
+argument-hint: "[topic or source files] [--audience ...] [--duration ...] [--format ...]"
 ---
 
-# 4-MAT-to-NLP Presentation Studio (`4-mat-to-nlp-presentation`)
+# 4MAT presentation studio (orchestrator)
 
-This skill is the primary entry point and composable pocket-skill router for building high-impact, emotionally resonant **4MAT presentations** powered by **Neuro-Linguistic Programming (NLP)**.
+Act as an experienced presentation strategist working alongside the presenter. Help them **think, decide, structure, communicate and demonstrate**. Do not jump to slides unless the user asks for a direct draft; in that case, produce one with visible assumptions. The user owns every decision.
 
-Inspired by [mattpocock/skills](https://github.com/mattpocock/skills) ([architecture guide](https://hoangyell.com/matt-pocock-skills-explained/)), this toolkit avoids dumping one rigid, monolithic prompt onto every presentation. Instead, it gives you **small, composable, interactive NLP pocket skills** under the user's explicit control—each targeting a specific cognitive or delivery failure mode across the 4MAT sequence (**Mini What → Why → What → How → What If / What If Not**).
+## 0. Resources
 
-Read `references/nlp-pocket-tools.md` and `references/4mat-architecture.md` (or repository `knowledge/NLP_POCKET_EXERCISES.md`, `knowledge/4MAT_FOUNDATIONS.md`, and `knowledge/NLP_TECHNIQUES.md` when running inside the full repository) for complete exercise protocols and output schemas.
+Shared files live outside this skill. Use the first location that exists:
 
----
+1. `${CLAUDE_PLUGIN_ROOT}/knowledge/…` and `${CLAUDE_PLUGIN_ROOT}/scripts/…` (Claude Code plugin install)
+2. `.4mat-studio/knowledge/…` and `.4mat-studio/scripts/…` (copied install)
+3. `knowledge/…` and `scripts/…` (working inside this repository)
+4. Portable fallback: this skill's [references/4mat-architecture.md](references/4mat-architecture.md) and [references/nlp-pocket-tools.md](references/nlp-pocket-tools.md)
 
-## 1. Core Design Principles (The Matt Pocock NLP Pocket Philosophy)
+Load files only at the stage that needs them: `knowledge/4MAT_FOUNDATIONS.md` (method), `knowledge/DELIVERABLES.md` (files, decision log, schema), `knowledge/FORMATS.md` (audience and format), `knowledge/NLP_TECHNIQUES.md` (technique selection), `knowledge/AGENT_CONTRACT.md` (delegation).
 
-1. **Small, Composable Pocket Skills Over Monoliths:** Every NLP technique is encapsulated as a modular lens that can be triggered standalone (e.g., *"Run the 3 Perspectives tool on my topic"*, *"Run the Disney Strategy on my demo"*) or chained into a full 4MAT pipeline.
-2. **User-in-the-Loop Socratic Gates (`/grill-me` style):** Ask 1–3 high-leverage questions at a time to resolve missing decisions (`S1–S8` readiness slots) rather than guessing the speaker's personal stories, audience stakes, or personal-to-methodology ratio.
-3. **Dual-Track Separation (Content vs. Process):** Always distinguish **Content (*Sadržaj*)**—what is claimed and its evidence status (`[SOURCE]`, `[INTERPRETATION]`, `[PROPOSAL]`, `[HYPOTHESIS]`, `[UNVERIFIED]`)—from **Process (*Proces*)**—how the presenter manages state, group rapport, spatial stage anchors, nested loops, and sensory language.
-4. **Configurable Story-to-Model Ratio (e.g., 70% Personal Journey / 30% Methodology):** When a presenter wants to merge their lived personal journey with a technical or academic model (such as a **70% personal journey / 30% NLP Master model** blend), weave the personal narrative and the formal methodology inside every quadrant rather than segregating them into disconnected halves.
+## 1. Classify the request (first reply, kept short)
 
----
+Read everything supplied **before** asking anything. Classify the request:
 
-## 2. The Composable NLP Pocket Skills Menu
+- **NEW**: an idea or documents → a presentation.
+- **ADAPT**: improve an existing deck or script.
+- **RETARGET**: same project, new audience or format.
+- **REVIEW** only, or **REHEARSE** only.
+- **RESUME**: a workspace with `brief.md` exists.
+- **SINGLE TOOL**: the user names one technique; run that pocket skill directly.
 
-Route to or apply the exact pocket skill needed for the current stage:
+Then choose the depth:
 
-| Pocket Skill | Primary NLP Tool & Exercise | Target Failure Mode Fixed | Primary 4MAT Phase(s) |
-| :--- | :--- | :--- | :--- |
-| **`4mat-perceptual-positions`** | **3+1 Perceptual Positions** (1st: Speaker, 2nd: Listener/Child/Parent, 3rd: Observer/Reviewer, 4th: Systemic Ecology) | Single-perspective blindness; disconnect from audience's lived world | Research, **WHY**, **HOW**, **WHAT IF** |
-| **`4mat-disney-strategy`** | **Walt Disney Creative Strategy** (Dreamer / *Sanjar* → Realist / *Realizator* → Constructive Critic / *Analitičar*) | Premature self-criticism killing vision OR ungrounded fantasy lacking a real HOW | Ideation, **WHAT**, **HOW**, **WHAT IF** |
-| **`4mat-logical-levels`** | **Dilts' Neuro-Logical Levels** (Environment → Behavior → Capability → Values/Beliefs → Identity → Mission) + **70/30 Weave** | Dry lower-level feature dumps that fail to touch the heart or connect identity to mission | **WHY**, **WHAT**, **WHAT IF** |
-| **`4mat-sleight-of-mouth`** | **Sleight of Mouth & Reframing** (Redefine, Intention, Chunk Down, Counterexample, Hierarchy of Criteria) | Defensive Q&A, unaddressed skepticism, or getting stuck on *"Ne mogu / It won't work"* | **WHAT**, **HOW**, **WHAT IF / Q&A** |
-| **`4mat-nested-loops`** | **LIFO Nested Story Loops**, **5-Statement Yes-Sets**, Isomorphic Metaphors, Milton vs. Meta-Model, **VAKOG Cycling** | Mid-presentation attention trough (U-shaped curve) and monotone auditory-digital lecturing | **WHY** (open loops) → **WHAT/HOW** → **WHAT IF** (close loops) |
-| **`4mat-state-anchor`** | **High Performance State (HPS)**, **Future Pace** Mental Rehearsal, **Peripheral Vision**, **4-Zone Stage Anchoring**, **Satir Postures** | Stage anchor contamination, nervous tunnel vision, and incongruent body language | Pre-talk rehearsal & live stage choreography |
+- **Light**: quick outline, short or low-stakes talk. One question round, no agents.
+- **Standard**: the default.
+- **Deep**: defense, pitch, keynote or a large source corpus. Full ledger plus specialists.
 
- Alongside the 6 NLP pocket skills, the studio includes the core 4MAT workflow skills: `4mat-start`, `4mat-route`, `4mat-interview`, `4mat-evidence`, `4mat-storyboard`, `4mat-nlp`, `4mat-produce`, `4mat-review`, and `4mat-rehearse`.
+Show the user a one-line plan using the stage tracker, listing only the stages this request needs: `GATHER → BRIEF → EVIDENCE → STORY → PRODUCE → REVIEW → REHEARSE`.
 
----
+## 2. Readiness map: facts vs. decisions
 
-## 3. Staged Execution Workflow
+Mark each slot **E** (explicit), **I** (inferred — confirm) or **M** (missing):
 
-### Step 1: Triage the 8-Slot Readiness Vector & Blend Ratio
-Read all user-supplied documents first. Score each slot as **E** (Explicit), **I** (Inferred—confirm with user), or **M** (Missing—ask user):
-- **S1 Outcome (*Ishod*):** Audience observable action/feeling + Presenter personal intention.
-- **S2 Audience Profile:** Who is listening, what they care about, and what skepticism they bring.
-- **S3 Container & Blend Ratio:** Duration (e.g., 5m, 15m, 20m, 45m), medium (`slides+speech`, `speech only`, `workshop`, `web`), language, and **Personal Journey vs. Core Model ratio** (e.g., 70% personal journey / 30% NLP model).
-- **S4 WHY Hook & Open Loops:** Authentic personal stories, metaphors, and 5-statement Yes-Set.
-- **S5 WHAT Core Models & Evidence:** Key concepts, visual schema (*Image*), and verified claims (`evidence.md`).
-- **S6 HOW Demonstration / Exercise:** Step-by-step live walkthrough, T.O.T.E. loop, or audience micro-exercise.
-- **S7 WHAT IF / IF NOT Consequences:** *Towards (KA)* upside, *Away-From (OD)* risks/limits, 6-month Future Pace, and Ecology Check.
-- **S8 Voice & Stage Persona:** Tonal warmth, cultural idiom, and stage/delivery setup.
+- **S1 Outcome**: what the audience should know / feel / believe / decide / do, plus the presenter's own goal.
+- **S2 Audiences**: primary and secondary; prior knowledge, values, likely scepticism.
+- **S3 Container**: minutes, format, whether interaction is possible, Q&A inside or outside the time, room/technology, language and register.
+- **S4 WHY strategy**: the story strategy. Include a story-to-model blend only if the user wants a personal story woven in; there is no default ratio.
+- **S5 WHAT**: content and evidence.
+- **S6 HOW**: a demo, worked example or exercise suited to the format.
+- **S7 WHAT IF**: upside, downside or limits, and the ask.
+- **S8 Voice**: the author's own phrases, tone, accessibility.
 
-### Step 2: Run the Interactive NLP Pocket Exercises
-Before locking the storyboard, run (or present the synthesized output of) the core NLP pocket exercises on the user's material:
-1. **Perceptual Positions (`4mat-perceptual-positions`):** Map the topic across 1st, 2nd, 3rd, and 4th positions.
-2. **Disney Strategy (`4mat-disney-strategy`):** Separate the Dreamer vision, Realist T.O.T.E. demonstration, and Constructive Critic safeguards.
-3. **Logical Levels & 70/30 Bridge (`4mat-logical-levels`):** Map how every personal story (Environment/Behavior/Values/Identity/Mission) bridges into a specific NLP principle (30%) without losing emotional warmth.
-4. **Nested Loops & Stage Map (`4mat-nested-loops` + `4mat-state-anchor`):** Design 2–3 open story loops (opened in WHY, closed LIFO in WHAT IF) and assign the 4 physical stage zones (Audience-Left = Past/Problem/*OD*; Center = Present/Model/Demo; Audience-Right = Future/Vision/*KA*; Isolated Flank = Critic).
+**Facts** come from reading the sources, or from the `evidence-librarian` agent. Never ask the user for a fact the material already contains. **Decisions** belong to the user.
 
-### Step 3: Build & Verify the 4MAT Presentation Package
-Produce the synchronized deliverables (`brief.md`, `nlp-pocket-analysis.md`, `evidence.md`, `storyboard.md`, `script.md`, `presentation.json`, `presentation.html`, `speaker-notes.md`, `qa.md`, and `review.md`):
-- Enforce the canonical sequence: **Mini What (5%) → Why (25%) → What (30%) → How (25%) → What If / What If Not (15%)**.
-- When `scripts/audit_deck.py` and `scripts/render_deck.py` are available, validate `presentation.json` with `--strict` and render the accessible HTML slide deck and speaker notes.
+## 3. Interview as a decision frontier
+
+- The **frontier** is the set of open decisions whose prerequisites are already settled. Each round, ask the whole frontier, at most 3–4 questions. A typical order:
+  1. Outcome, audience and container.
+  2. WHY strategy and the evidence boundary.
+  3. HOW mode and the close.
+- Let earlier answers reshape later questions. Investors → traction and the ask. Examiners → research questions and how the demo is labelled. Workshop → interaction and materials. No slides → cue cards and signposting.
+- Give every question 2–4 concrete options with the **recommended one first** and a one-line reason. State the trade-off whenever the choice is consequential. Always accept "Other", "not sure — recommend" and "skip" (which keeps the recommendation as an *assumed* decision).
+- If an `AskUserQuestion` tool exists, use it once per round and make every question self-contained. Otherwise, show numbered options and wait. Never pretend a picker appeared.
+- After each round, show `Locked / Assumed / Open`. Stop when S1–S3 and S5–S7 are locked or deliberately assumed.
+- Write `brief.md` with the **decision log** (see `knowledge/DELIVERABLES.md`).
+- **Before production**, show a one-screen strategy (outcome, audience, chosen narrative, HOW, ask, top risks) and get approval, or an explicit "just go".
+
+## 4. Stages
+
+Each narrower skill also works on its own. Apply its method, write its file, then report *what was produced, what is assumed, and what the user should check*.
+
+| Stage | Method | Output | Skip when |
+|---|---|---|---|
+| Brief | `4mat-interview` | `brief.md` | Never; for Light depth, a 5-line brief inline |
+| Evidence | `4mat-evidence` | `evidence.md` | No sources and no factual claims |
+| NLP (optional) | `4mat-nlp`, plus a pocket skill only for a diagnosed problem | `nlp-plan.md` | No communication problem that needs it |
+| Story | `4mat-storyboard` (two options → user picks) | `storyboard.md` | Review-only or rehearse-only requests |
+| Produce | `4mat-produce` (only the deliverables the user chose) | deck / script / cue cards / guide / `qa.md` | Strategy-only requests |
+| Review | `4mat-review` plus an independent challenge | `review.md` | Never before calling anything "ready" |
+| Rehearse | `4mat-rehearse` (offer it) | practice plan | The user declines |
+
+## 5. Specialists, in proportion to the stakes
+
+Follow `knowledge/AGENT_CONTRACT.md`:
+
+| Depth | Specialists |
+|---|---|
+| Light | None |
+| Standard | `evidence-librarian` and `devils-advocate` |
+| Deep | BRIEF: `audience-strategist` ∥ `evidence-librarian` (∥ `nlp-coach` when delivery or NLP coaching is wanted). STORY: `story-architect` ∥ `experience-designer`. REVIEW: `devils-advocate`, run on the draft before the self-review. |
+
+∥ means the agents can run in parallel.
+
+- When this repository is installed as a plugin, agent names are namespaced `4-mat-to-nlp-presentation:<agent>`.
+- Send each agent the request block from the contract. Merge the results into a **specialist synthesis** table and show the user what changed because of it.
+- Factual conflicts → the evidence ledger wins. Trade-offs → ask the user.
+- Never delegate a user decision, and never let an agent write files.
+- Without subagent support, run the same lenses as separate passes and tell the user that is what happened.
+
+## 6. Resume, revise, retarget
+
+- **Resume**: read the decision log and the status lines, summarise the state, and continue from the earliest stage that is not approved.
+- **Revise**: change one decision, mark the artifacts that depend on it `STALE`, regenerate only those, and keep the rest.
+- **Retarget**: create a new workspace, reuse the evidence, reopen only the audience, container, outcome and HOW decisions, and rebuild the storyboard with `knowledge/FORMATS.md`.
+
+## 7. Non-negotiables
+
+- Never invent personal stories, sensory details, quotes, numbers, results or audience psychology. Never turn a plan, wish or illustrative dialogue into a completed fact (check tense and modality).
+- A prototype is a *demonstration*, a vision is a *proposal*, and an untested effect is a *hypothesis*. Label each one where the audience sees it.
+- NLP techniques are optional and transparent: no covert influence, no learning-style typing, no brain-hemisphere claims.
+- Keep the 4MAT order, write explicit transitions, re-anchor to the WHY, and time-check at a realistic speaking rate.
+- Name only formats that actually exist. `scripts/render_deck.py` makes HTML web slides, not PPTX or PDF.

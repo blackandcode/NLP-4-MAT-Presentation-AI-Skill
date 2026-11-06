@@ -1,17 +1,40 @@
 ---
 name: 4mat-evidence
-description: "Turn research papers, course handouts, Markdown, DOCX, PDFs and notes into a sourced 4MAT claim ledger without false citations, speculative statistics or unsupported NLP claims."
+description: "Turn research papers, theses, course handouts, notes, Markdown, DOCX or PDF sources into a traceable 4MAT claim ledger (evidence.md): atomic claims with locators and status, prototype vs. vision vs. hypothesis separation, tense and modality checks, contradictions, gaps and safe wording. Use before any presentation states facts, results or personal history."
 ---
 
 # Evidence extraction and verification
 
-1. Inventory user-provided sources and current task. Use the user's source text as the primary basis. PDFs and office docs need suitable readers/tools; don't assert a page was read unless accessed. For oversized text, map document headings first, then extract relevant chunks; do not ingest huge base64 images as prose.
-2. Extract **atomic claims** with IDs `C001` etc. Record original wording, precise locator (filename, page/heading/line), candidate phase, confidence and link/source type. The user's own mission and future product idea are `[PROPOSAL]` or personal aims, not published evidence.
-3. For empirical statements, verify against authoritative original sources when web access is available and requested/allowed. Mark unchecked external claims `[UNVERIFIED]`; don't invent DOI, source title, study sample or certainty. Any empirical contradiction goes in `evidence.md` with recommended safe phrasing.
-4. Organize claims from general to specific, then into WHY / WHAT / HOW / WHAT IF. Some source facts belong in multiple quadrants with different purpose; deduplicate wording.
-5. Detect evidence holes: no baseline, no comparator, no demonstrated effect, no demo, no forecast basis, normative vs causal confusion. Tell the user what needs testing, not just what needs better slides.
-6. In academic contexts, check that early prototypes are identified as **demonstrations**, future features as **proposed**, hypothetical dialogue as **illustrative**, and effectiveness as **not yet evaluated**.
+**Shared files**: resolve `knowledge/…` under `${CLAUDE_PLUGIN_ROOT}/`, then `.4mat-studio/`, then the repository root. Status vocabulary: `knowledge/4MAT_FOUNDATIONS.md`.
 
-Special cautions from supplied documents: don't present 35/22/18/25 percent audience shares as validated; don't assert left/right hemisphere phases were confirmed by neuroscience; avoid learning-style classification; NLP techniques are possible communication prompts, not proven unconscious manipulation. These distinctions should appear in the research ledger, not erased from the historical source account.
+1. **Inventory** the sources: path, type, length, date or version, and whether each one is primary (the author's own work) or external. Only assert you read a page if you actually accessed it. For long documents, map the headings first and then extract the relevant sections. Skip embedded base64 images.
+2. **Extract atomic claims** as `C001`, `C002`, …. For each claim record:
+   - the original wording (quote short phrases in the source language);
+   - an exact locator (file + section/page/heading);
+   - the candidate 4MAT phase;
+   - the status: `SOURCE`, `INTERPRETATION`, `PROPOSAL`, `HYPOTHESIS` or `UNVERIFIED`.
+3. **Separate the layers explicitly**, especially for projects and theses:
+   - **Exists now**: what the current prototype or work actually does, in the source's own terms.
+   - **Planned or proposed**: future features, programmes, studies.
+   - **Illustrative**: imagined dialogues, example scenarios.
+   - **Hypothesised effect**: anything about impact or effectiveness that has not been tested.
+   - **Personal history**: only what the author wrote or confirmed.
+4. **Tense and modality check.** Flag every place where a downstream draft turns "could / would / plan / imagine" into "did / does / proved". Flag any personal anecdote enriched with details the source doesn't contain. These are blocking errors in a defense or pitch.
+5. **External claims**: verify against authoritative originals when web access is available and allowed. Otherwise mark them `UNVERIFIED`. Never invent a DOI, title, sample size or effect size.
+6. **Contradictions and staleness**: note conflicting statements between sources or versions, and state which one wins and why.
+7. **Gaps**: no baseline, no comparator, no demonstrated effect, no working demo, no basis for a forecast, or normative claims confused with causal ones. Say what would need *testing*, not just what needs better wording.
+8. **Map to 4MAT**: order the claims from general to specific, then assign them to WHY / WHAT / HOW / WHAT IF. One fact may serve several phases.
 
-Output: `evidence.md` table with ID, claim, provenance, status, why it matters, allowed wording, counterargument and target slide IDs when known. End with `Can say / Can show as hypothesis / Cannot presently claim`.
+**Standing cautions**:
+- The 4MAT handout's 35 / 22 / 18 / 25 % audience shares and any hemisphere-phase mapping are historical practitioner claims, not established findings.
+- Learning-style matching is unsupported.
+- NLP techniques are communication prompts, not proven mechanisms.
+
+## Output: `evidence.md`
+
+A table with columns ID | claim | locator | layer | status | allowed wording | counter-argument | target slides.
+
+After the table, add: source gaps; contradictions; and three closing lists:
+- **Can say**
+- **Can show as hypothesis or illustration**
+- **Cannot claim yet**

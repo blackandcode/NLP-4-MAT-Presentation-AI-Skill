@@ -1,165 +1,75 @@
-# NLP Pocket Exercises & Interactive Protocols for 4MAT Presentations
+# NLP pocket exercises: facilitation prompts
 
-This reference provides step-by-step, interactive NLP exercises designed for presentation preparation, topic exploration, emotional storytelling, and stage delivery across the five 4MAT phases (**Mini What → Why → What → How → What If / What If Not**). Following the composable design principles of [mattpocock/skills](https://github.com/mattpocock/skills) ([explained by Hoang Yell](https://hoangyell.com/matt-pocock-skills-explained/)), each exercise is a small, self-contained, user-controlled pocket protocol targeting a specific presentation failure mode.
+These are interactive prompts for the six pocket skills. Run them **with the presenter**, one or two prompts at a time, or synthesise a first draft from the presenter's material and ask them to correct it. Every exercise produces a short table that feeds a specific 4MAT phase. A worked example of all six on one real project is in `examples/danilo-wonderland-70-30/nlp-pocket-analysis.md`. That folder is a fixed test input; it is not a template to copy.
 
----
+Evidence status for all exercises: **craft** (see `knowledge/NLP_TECHNIQUES.md`). Use them to think better, not as claimed mechanisms.
 
-## 1. The 3+1 Perceptual Positions Exercise (`4mat-perceptual-positions`)
+## 1. Perceptual positions (`4mat-perceptual-positions`)
 
-**Target Failure Mode:** Single-perspective blindness—writing a presentation entirely from the speaker's internal obsession (1st Position) or dry academic detachment (3rd Position) without feeling the audience's lived reality (2nd Position) or the broader ecological system (4th Position).
-**Primary Grounding:** NLP Perceptual Positions ([Global NLP Training — 1st to 4th Perceptual Positions](https://globalnlptraining.com/simply/the-4th-perceptual-position-of-nlp/)), `4MAT_OCR_kompletno.md` (pp. 7, 12, 14), and `Wonderland_NLP_Master - Verzija 1.2.md` (§4.4–4.5).
+Target problem: a talk written from one point of view only.
 
-### Interactive 4-Step Exercise Protocol
+| Position | Prompts | Feeds |
+|---|---|---|
+| 1st — presenter | "What made this topic matter to you? Only use what actually happened." "What do you most fear being misunderstood?" | WHY (authentic motive), voice |
+| 2nd — each audience group | "Sitting in their chair: what do they already know, want, doubt?" "What would make them lean in, and what would make them pull back?" | WHY relevance, objections, HOW usability |
+| 3rd — neutral observer | "Which claims are shown, which are proposed, which are hoped?" "Where does the logic jump?" | WHAT structure, limitations |
+| 4th — the wider system | "Who else is affected if this succeeds or fails?" "What unintended consequence needs a safeguard?" | WHAT IF / ecology |
 
-1. **1st Position — Associated Speaker / Creator (*"Ja / Moja istina"*):**
-   - *Physical/Mental Setup:* Step into your own shoes completely associated, looking through your own eyes.
-   - *Socratic Prompts:*
-     - "What is the raw personal truth or lived moment that made this topic non-negotiable for me?"
-     - "What do I see, hear, and feel when I remember why I started this journey?"
-     - "What is my core outcome (*Ishod*), and what am I afraid might be misunderstood?"
-   - *4MAT Mapping:* Supplies the authentic emotional core of **WHY (Step 1: Connect)** and the presenter's personal congruence.
+Second-position answers are **hypotheses**. Mark them as such and check them with real audience members if possible.
 
-2. **2nd Position — Empathy with Target Listeners & Stakeholders (*"Ti / Drugi u sali"*):**
-   - *Physical/Mental Setup:* Step physically or imaginally into the shoes of a specific person in the audience (or a stakeholder affected by your idea—e.g., a skeptical examiner, an exhausted parent, a curious 7-year-old child, or even the "sea turtle" in the Wonderland robot dialogue).
-   - *Socratic Prompts:*
-     - "Sitting in this chair today, looking back at the speaker, what is on my mind before the talk even starts?"
-     - "When I hear this proposal, what excites me (*KA / Towards*), and what makes me hesitate or feel guarded (*OD / Away-From*)?"
-     - "What question do I secretly hope the speaker will answer without making me feel lectured?"
-   - *4MAT Mapping:* Supplies the **5-Statement Yes-Set** in **WHY**, the peer-learning prompts in **WHAT**, and the real-world usability constraints in **HOW**.
+## 2. Disney creative strategy (`4mat-disney-strategy`)
 
-3. **3rd Position — Detached Methodological Observer (*"Posmatrač / Kamera na zidu"*):**
-   - *Physical/Mental Setup:* Step back to an independent vantage point where you can see both the Speaker (1st) and the Audience (2nd) interacting.
-   - *Socratic Prompts:*
-     - "Looking objectively at the claim and the evidence, what is already demonstrated (`[SOURCE]`) vs. what is still a proposal (`[PROPOSAL]`) or testable hypothesis (`[HYPOTHESIS]`)?"
-     - "Where does the explanation jump too fast from abstract theory to complex execution without a clear bridge?"
-     - "What would an independent reviewer or academic committee ask to verify this?"
-   - *4MAT Mapping:* Supplies the structured conceptual model in **WHAT (Steps 3–4)** and the honest methodological boundaries in **WHAT IF (Step 7: Refine)**.
+Target problem: either a vision with no credible HOW, or an idea criticised to death before it has formed. Keep the rooms separate, and move the presenter (physically or mentally) between them.
 
-4. **4th Position — Systemic & Ecological Field (*"Mi / Sistem i buduće generacije"*):**
-   - *Physical/Mental Setup:* Sense the entire system over time—family, community, environment, and future generations ([4th Perceptual Position](https://globalnlptraining.com/simply/the-4th-perceptual-position-of-nlp/)).
-   - *Socratic Prompts:*
-     - "How does this idea affect the wider relationship system (e.g., parent-child authorship, classroom culture, community ethics)?"
-     - "What is the ecological check: if everyone adopted this tomorrow, what unintended consequence could arise, and how do we safeguard against it?"
-   - *4MAT Mapping:* Supplies the **Ecology Check** and intergenerational legacy close in **WHAT IF (Step 8: Perform)**.
+1. **Dreamer**: "If constraints didn't exist, what is the most valuable version of this?" "What image captures it?" No feasibility talk is allowed in this room. → WHY horizon, WHAT IF upside.
+2. **Realist**: "What can be shown or practised today, step by step?" "What does one T.O.T.E. loop look like (goal → attempt → compare → continue or stop)?" "What fits in the minutes we have?" → WHAT model, HOW demonstration.
+3. **Critic** (critiques the plan, never the person): "Where could the audience confuse vision with what is proven?" "Who could be harmed or left out?" "What would a sceptical expert ask?" → WHAT IF NOT, safeguards, Q&A.
+4. **Return**: take the Critic's points back to the Realist and the Dreamer, and show how the boundaries make the idea stronger.
 
----
+## 3. Logical levels and the story-to-model blend (`4mat-logical-levels`)
 
-## 2. The Walt Disney Creative Strategy Cycle (`4mat-disney-strategy`)
+Target problem: a talk stuck at feature level, or personal stories that are disconnected from the model being presented.
 
-**Target Failure Mode:** Premature self-censorship (letting the inner Critic kill a bold vision in Quadrant 1) OR ungrounded fantasy (presenting a visionary idea in Quadrants 2–4 with no practical operational path or risk awareness).
-**Primary Grounding:** Robert Dilts' 1994 modeling of Walt Disney ([NLP University — Walt Disney Strategy](https://www.nlpu.com/Articles/article7.htm); [NLP Now — Disney Creative Strategy](https://nlp-now.co.uk/use-disney-strategy/)), and `Wonderland_NLP_Master - Verzija 1.2.md` (§§2.2–2.3, 5.4).
+| Level | Question | Typical 4MAT role |
+|---|---|---|
+| Purpose | For whom, and for what larger aim? | WHY hook, WHAT IF close |
+| Identity | Who is the presenter in this story? Who could the audience or user become? | WHY, WHAT IF |
+| Beliefs and values | Why does it matter? What is assumed to be true? | WHY → WHAT bridge |
+| Capabilities | Which strategies or models make it work? | WHAT, HOW |
+| Behaviour | What does someone actually do? | HOW |
+| Environment | Where and when does it happen? | Mini What, WHY scene, HOW context |
 
-### Interactive 3-Room + Meta-Anchor Protocol
+**Story-to-model blend** (only when the user asks to combine a personal journey with a model or method):
 
-1. **Room 1: The Dreamer (*Sanjar* — Visual Up, Uncensored Possibility):**
-   - *Physiology:* Head and eyes slightly up, relaxed breathing, symmetrical open posture. Rule: *Zero criticism or "how-to" constraints allowed in this room.*
-   - *Questions:*
-     - "If there were no technical, financial, or time limits at all, what is the most inspiring version of this vision?"
-     - "What does it look like and feel like when it is working at its highest potential?"
-     - "What metaphor captures the magic of this idea?"
-   - *4MAT Output:* Generates the visionary horizon in **WHY** and the *Towards (KA)* future in **WHAT IF**.
+- The user decides the ratio. Common choices are *model-led* (about 20% story), *balanced* (about 50%) and *story-led* (about 70% story). There is **no default**.
+- Braid the two in each phase rather than putting biography first and theory last. Use the beat sequence *lived moment → reflection → named model or demonstration → what it means for the audience*.
+- Use only stories the presenter supplied or confirmed. Add no sensory or emotional details the presenter didn't provide unless they approve them.
 
-2. **Room 2: The Realist (*Realizator* — Kinesthetic/Procedural, Step-by-Step Action):**
-   - *Physiology:* Step into a second physical spot (Shake off the Dreamer state first). Eyes level, grounded forward-leaning posture, hands in *Show* gesture.
-   - *Questions:*
-     - "Given the time and tools we actually have today, what is the first concrete, observable step?"
-     - "How specifically does a user, learner, or child move from step 1 to step 2 (the **T.O.T.E.** loop: *Test → Operate → Test → Exit*)?"
-     - "What can we genuinely demonstrate live in 3 minutes?"
-   - *4MAT Output:* Generates the **WHAT** architecture and the concrete **HOW** demonstration/walkthrough.
+## 4. Reframing and objections (`4mat-sleight-of-mouth`)
 
-3. **Room 3: The Constructive Critic / Analyst (*Analitičar / Kritičar* — Ecological Stress-Test):**
-   - *Physiology:* Step into a third distinct spot (Shake off the Realist state). Composed analytical posture. Rule: *The Critic criticizes the plan, never the Dreamer! Every objection must be paired with "What is missing or needed to protect the vision?"*
-   - *Questions:*
-     - "Who could be left out, overwhelmed, or harmed if this is implemented poorly?"
-     - "Where might an audience member say 'That sounds nice in theory, but what about X?'"
-     - "What is the difference between our early prototype/story and proven long-term results?"
-   - *4MAT Output:* Generates the **WHAT IF / IF NOT** risk-refinement matrix, ethical guardrails, and Q&A defense.
+Target problem: a defensive Q&A, or unaddressed scepticism.
 
-4. **Return Loop (Dreamer ↔ Realist Synthesis):**
-   - Bring the Critic's questions back to the Dreamer and Realist to upgrade the presentation before locking `storyboard.md`.
+1. List the five strongest objections *this* audience would raise. Draw them from the evidence gaps, not from imagination.
+2. Sort each objection: **legitimate concern** (answer it with evidence or a limitation; don't reframe it), **misunderstanding** (clarify), or **limiting belief** (reframing may help).
+3. For limiting beliefs and misunderstandings, choose one pattern: *redefine*, *positive intention*, *chunk down to a testable step*, *counterexample*, *higher criterion*, or *meta-frame*.
+4. Write the spoken answer, cite claim IDs, and add a one-line honest limit where one applies.
 
----
+## 5. Narrative mechanics and language (`4mat-nested-loops`)
 
-## 3. Dilts' Neuro-Logical Levels & The 70/30 Emotional Story-to-Model Bridge (`4mat-logical-levels`)
+Target problem: a flat, abstract script, or a long talk with no narrative thread.
 
-**Target Failure Mode:** Disconnected layers—giving a presentation trapped at the lower levels (Environment & Behavior: "Here is my software/tool and what buttons it has") when the audience is moved by the upper levels (Values, Identity, Mission/Legacy), or failing to merge a deeply personal journey with a formal methodology.
-**Primary Grounding:** Robert Dilts' Neuro-Logical Levels ([SkillsYouNeed — Logical Levels](https://www.skillsyouneed.com/lead/logical-levels.html); [Stellenbosch Business School — Using Logical Levels](https://www.stellenboschbusiness.ac.za/news/neuro-linguistic-programming-series-using-logical-levels-change-coaching-tool)), `nlp-writing-feedback-motivation-about-danilo-journey.md`, and `Wonderland_NLP_Master - Verzija 1.2.md` (§3.3).
+- **Common-ground opening**: three to five *true, checkable* statements about the room and its shared purpose, then a curiosity question. Never fake agreement.
+- **Open loops** (talks of 10 minutes or more): open at most two or three genuine stories or questions in WHY or early WHAT, and close them in reverse order in HOW or WHAT IF. Never hold back safety-relevant or factual information for suspense.
+- **Open and precise language**: invitational language for imagining (WHY, WHAT IF); precise questions for structure and testing (WHAT, HOW).
+- **Sensory concreteness**: check that each phase contains something to see, hear or do. This is craft, not "representational-system matching".
 
-### The 6-Level Alignment Ladder
+## 6. Presenter state and stage use (`4mat-state-anchor`)
 
-| Logical Level | Core Question | Presentation Role (70% Personal Journey / 30% NLP Model Blend) | Primary 4MAT Phase |
-| :--- | :--- | :--- | :--- |
-| **6. Purpose / Mission** (*Svrha / Misija*) | *For whom? What larger legacy?* | The intergenerational horizon: leaving a better world; passing the torch from our ancestors' workshop to our children's future. | **WHY** (Deep Hook) & **WHAT IF** (Final Close) |
-| **5. Identity** (*Identitet*) | *Who am I / Who do they become?* | Speaker as parent, mentor, and lifelong learner (not a guru); child/listener as *"ja sam neko ko stvara"* (an author, not a copy). | **WHY** & **WHAT IF** |
-| **4. Beliefs & Values** (*Uvjerenja i vrijednosti*) | *Why does it matter? What is true?* | *"Mapa nije teritorija"*; mistakes are feedback, not failure; true mentoring creates autonomy, not 200 clones. | **WHY** → **WHAT** Bridge |
-| **3. Capabilities & Strategies** (*Sposobnosti i strategije*) | *How do we think and adapt?* | Modeling creative strategies: Disney roles, Meta-Model vs. Milton questions, Perceptual Positions, T.O.T.E. iteration. | **WHAT** & **HOW** |
-| **2. Behaviors** (*Ponašanja*) | *What specifically do we do?* | Asking a question instead of giving a ready answer; speaking, drawing, comparing, and revising a creation. | **HOW** (Live Demo / Practice) |
-| **1. Environment** (*Okruženje*) | *Where and when?* | Grandfather's wooden workshop, the family living room, parent-child workshops (*Kreativni geni*), and the digital Wonderland canvas. | **Mini What**, **WHY** Scene & **HOW** Context |
+Target problem: nerves, flat delivery, or stage movement that doesn't support the structure.
 
-### The 70/30 Emotional Story-to-Model Weave Formula
+1. **Mental rehearsal**: walk through the talk from your own point of view, including what success looks like (faces, questions, your own steady breathing). Rehearse the hardest moment and the demo failure too.
+2. **State routine**: slow breathing, an upright posture, a personal resource cue, and a wide-angle gaze to take in the whole room before the first word.
+3. **Stage map** (optional; live stage only): a consistent spot for past/problem, centre for the model and demo, another for the future/vision, and a side spot for voicing objections. Use the audience's left-to-right timeline, and mirror it for right-to-left reading cultures.
+4. **Gesture vocabulary** (optional): levelling (open, symmetrical) as the default. Warmer, open-palmed gestures suit empathy moments, and stiller ones suit precise explanation.
 
-When a speaker wants a presentation that is **70% Personal Journey** and **30% Technical/NLP Methodology**, never split the talk into "35 minutes of biography followed by 15 minutes of dry theory." Instead, **braid** them inside every 4MAT quadrant using the **Anchor Story → Universal Insight → NLP Principle → Human Echo** pattern:
-1. **Lived Moment (50% of segment):** Ground the audience in a sensory-rich personal scene (e.g., the smell of wood shavings in Grandfather's workshop; watching Ogi and Aleksa react differently to the same game; realizing while mentoring 200 engineers that the best ones didn't copy you).
-2. **Emotional Reflection & Shared Human Truth (20% of segment):** Connect that personal scene to the audience's own life as parents, mentors, or creators.
-3. **Named NLP Model / Demonstrator (30% of segment):** Show how the NLP tool (*Mapa nije teritorija*, Logical Levels, Disney Strategy, T.O.T.E., Wonder Creator + Lumi) is simply the formal language and practical instrument born out of that lived human truth.
-
----
-
-## 4. Sleight of Mouth & Objection Reframing (`4mat-sleight-of-mouth`)
-
-**Target Failure Mode:** Becoming defensive during Q&A, ignoring legitimate skepticism, or letting a limiting belief ("That's impossible," "AI will ruin children's imagination," "This is just a startup pitch") derail the presentation.
-**Primary Grounding:** Robert Dilts' Sleight of Mouth patterns, `4MAT_OCR_kompletno.md` (pp. 6, 10, 14), `4MAT Model and NLP Research.md`, and `Wonderland_NLP_Master - Verzija 1.2.md` (§§3.4, 4.3).
-
-### Core Presentation Reframing Patterns
-
-1. **Redefine:** Replace a loaded label with a process-oriented description (*"This isn't a startup pitch for another screen app; it is a long-term exploration of how adults and tools can ask better questions so children stay the authors of their ideas."*).
-2. **Intention:** Honor the positive protective motive behind the skeptic's objection (*"That concern about screen time comes from wanting to protect children's real-world play—which is the exact reason this approach starts with parent-child workshops and physical making."*).
-3. **Chunk Down (Meta-Model Split):** Break an overwhelming global belief (*"Ne mogu" / "It won't work"*) into the smallest testable step (*"Koji dio ti je težak?" / "What is the smallest useful thing we can test first with consenting families?"*).
-4. **Counterexample / Model of the World:** Show how a limitation in one context becomes a discovery in another (*"When the bridge doesn't reach the second tower on the first try, that isn't a failed drawing—it's the exact moment the child practices T.O.T.E. self-correction."*).
-5. **Hierarchy of Criteria:** Appeal to a higher shared value above the tactical disagreement (*"More important than how polished a digital drawing looks is whether the child leaves feeling 'my ideas matter and I can improve them.'"*).
-
----
-
-## 5. Nested Loops, Yes-Sets & Linguistic Engineering (`4mat-nested-loops`)
-
-**Target Failure Mode:** Mid-presentation attention drop (the U-shaped attention trough between minutes 5 and 12) and monotone "Auditory Digital" lecturing that starves Visual and Kinesthetic processing.
-**Primary Grounding:** `4MAT_OCR_kompletno.md` (pp. 9, 12, 14, Bilješka 4) and `4MAT Model and NLP Research.md`.
-
-### Step-by-Step Loop & Language Protocol
-
-1. **The 5-Statement Yes-Set + Curiosity Lead (Opening WHY):**
-   - Statements 1–2: Undeniable environmental/shared context truisms.
-   - Statements 3–4: Dual/inclusive pacing of audience expectations (*"Some of you may be looking at this through the lens of rigorous NLP modeling, while others may be thinking about your own children or students..."*).
-   - Statement 5 + Lead: Shared value + open curiosity question leading into Loop A.
-2. **LIFO Nested Story Loops (Zeigarnik Attention Bridge):**
-   - **Open Loop A (Outer Loop)** in early **WHY** (e.g., Grandfather's wooden workshop—pause right at the question of how we pass that freedom to a digital generation).
-   - **Open Loop B (Middle Loop)** in late **WHY / early WHAT** (e.g., Mentoring 200 engineers and watching two sons, Ogi and Aleksa, build completely different worlds).
-   - Deliver core **WHAT** and **HOW** inside the open loops while audience curiosity stays active.
-   - **Close Loop B** in late **HOW / early WHAT IF** (showing how Lumi and parent-child workshops honor each child's unique map rather than making copies).
-   - **Close Loop A** in the final **WHAT IF** conclusion (returning to Grandfather's workshop and handing the child's preserved creative world back to them on their 18th birthday—a message from their childhood self to their adult self).
-3. **VAKOG Sensory Predicate Cycling:**
-   - Every major section must intentionally rotate **Visual** (*vidjeti, slika, perspektiva, boje, oblik*), **Auditory** (*čuti, pitanje, razgovor, tišina, odjeknuti*), and **Kinesthetic/Emotional** (*osjetiti, držati u rukama, toplina, sigurnost, korak naprijed*) language.
-
----
-
-## 6. Presenter State, Spatial Stage Anchoring & Satir Choreography (`4mat-state-anchor`)
-
-**Target Failure Mode:** Stage anchor contamination (voicing doubts, fears, or criticisms while standing in your central authority/vision spot) and nervous foveal tunnel vision that disconnects the speaker from the room.
-**Primary Grounding:** `4MAT_OCR_kompletno.md` (pp. 12–15, Bilješka 3–4) and `4MAT Model and NLP Research.md`.
-
-### Pre-Talk & On-Stage Pocket Checklist
-
-1. **Associated Mental Rehearsal (*Future Pace* — 3 Minutes Before Speaking):**
-   - Close eyes, associate into your own body standing at the end of the talk, and verify your VAK **Evidence Procedure (*dokaz o uspjehu*)**: *See* the softened eyes and nods in the room, *hear* the thoughtful questions and warm applause, *feel* the calm, grounded warmth in your chest.
-2. **High Performance State (HPS) & Peripheral Vision:**
-   - Take 3 deep diaphragmatic breaths, trigger your kinesthetic Resource Anchor (calm certainty + warmth), step to **Center Stage**, soften gaze into **180° Peripheral Vision** (silencing internal dialogue and taking in the whole room at once), pause 2 seconds, and speak on the breath.
-3. **4-Zone Stage Psychogeography (From Audience's Perspective):**
-   - **Center Stage (Present / Authority / Connection):** Use for **Mini What**, core **WHY** mission, **WHAT** models, and **HOW** demonstrations.
-   - **Audience-Left (Stage Right — Past / Problem / *OD* Away-From):** Step here when describing adult habits that shut children down (*"To ne može"*), past obstacles, or the risks of *What If Not*.
-   - **Audience-Right (Stage Left — Future / Vision / *KA* Towards):** Step here when painting the long-term future, the 18th-birthday archive gift, and the *What If Yes* horizon.
-   - **Isolated Critic Flank (Far Edge):** Step or gesture here only when voicing a harsh skeptical objection, then step back to Center Stage to answer it cleanly.
-4. **Virginia Satir Postures & Hand Gestures:**
-   - **Leveller (*Ujednačivač*):** Symmetrical, open, grounded—use for Mini What, personal truth, and final close.
-   - **Placater (*Pomiritelj*):** Warm, open upturned palms (*Give* gesture)—use when pacing parental vulnerability and child empathy in WHY.
-   - **Computer (*Kompjuter*):** Calm, upright, composed (*Show* gesture)—use when explaining the 30% NLP Master architecture and ethical boundaries in WHAT.
-   - **Distractor (*Ometač*) / Pattern Interrupt:** Gentle humor or shift in pace when transitioning between quadrants.
+Output these cues as `process_notes` or as bracketed cues in `script.md`, never mixed into the spoken text.

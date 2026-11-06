@@ -1,26 +1,48 @@
-# Reference: 4MAT Macro & 8-Step Architecture
+# Reference: 4MAT architecture (portable summary)
 
-## 1. The 5-Phase Macro Sequence
-Every 4MAT presentation follows this sequence (`4MAT_OCR_kompletno.md`, pp. 5–15; [About Learning](https://www.aboutlearning.com/)):
-1. **MINI WHAT / MINI ŠTA (~5% time):** Brief 30–60 second orientation stating what the audience can expect and setting the frame.
-2. **WHY / ZAŠTO (~25% time):** Connect to shared experience, values, and emotional meaning. Engage listeners who ask *"Why should I care?"* Use a 5-statement Yes-Set, personal origin story (Open Loop A), and isomorphic metaphor.
-3. **WHAT / ŠTA (~30% time):** Present the conceptual model, core principles, and honest evidence boundaries. Bridge from a holistic mental picture (*Image*) to clear definitions and facts (*Inform*).
-4. **HOW / KAKO (~25% time):** Show how it works in practice through a concrete demonstration, T.O.T.E. walkthrough, parent-child dialogue, or hands-on audience exercise. Follow novice-accessible steps rather than complex showmanship.
-5. **WHAT IF / ŠTA AKO I ŠTA AKO NE (~15% time):** Explore future applications, *Towards (KA)* benefits, *Away-From (OD)* risks and limitations, ecological safeguards, LIFO story loop closure, and a clear next step.
+This file lets the orchestrator work without the repository's `knowledge/` folder. The fuller versions are `knowledge/4MAT_FOUNDATIONS.md` and `knowledge/FORMATS.md`.
 
-## 2. Optional 8-Step McCarthy Wheel
-For deeper storyboarding (`4MAT Model and NLP Research.md`):
-- **Q1 WHY:** Step 1 *Connect* (Experiential/Story) → Step 2 *Attend* (Reflective Gap Analysis)
-- **Q2 WHAT:** Step 3 *Image* (Visual Metaphor/Schema) → Step 4 *Inform* (Structured Theory & Evidence)
-- **Q3 HOW:** Step 5 *Practice* (Guided Demo/Walkthrough) → Step 6 *Extend* (Personalization & Variation)
-- **Q4 WHAT IF:** Step 7 *Refine* (Pros/Cons, Limits & Safeguards) → Step 8 *Perform* (Future Pace, Loop Closure & Call to Action)
+## The five-phase sequence
 
-## 3. Master Deliverable Package
-A complete presentation run produces:
-1. **4MAT Brief & 8-Slot Readiness Table** (`brief.md`)
-2. **NLP Pocket Analysis** (`nlp-pocket-analysis.md`: 3+1 Perceptual Positions, Disney Strategy, Dilts Logical Levels 70/30 map, Nested Loops, Stage Psychogeography)
-3. **Evidence & Claim Status Ledger** (`evidence.md`: `[SOURCE]`, `[INTERPRETATION]`, `[PROPOSAL]`, `[HYPOTHESIS]`)
-4. **Time-Boxed 4MAT Storyboard** (`storyboard.md`)
-5. **Dual-Track Verbatim Emotional Script** (`script.md`: Spoken text + bracketed `[STAGE]`, `[SATIR]`, `[LOOP]`, `[VAKOG]`, and `[TONE]` cues)
-6. **Interactive Slide Deck & Speaker Notes** (`presentation.json`, `presentation.html`, `speaker-notes.md`)
-7. **Skeptical Q&A & Sleight of Mouth Defense Matrix** (`qa.md` and `review.md`)
+| Phase | Audience question | Job | Starting time share* |
+|---|---|---|---|
+| **Mini What** | "What should I expect?" | A 30–60 second orientation. It is not the WHY. | ~5% |
+| **WHY** | "Why should *I* care?" | Connect to this audience's goals, a real problem or an authentic story; find out or state their outcomes | ~25% |
+| **WHAT** | "What is it, exactly?" | Model, concepts, evidence and boundaries. Move from overview (Image) to detail (Inform). | ~30% |
+| **HOW** | "How does it work, and how could I use it?" | Demonstrate, walk through, or let them do it | ~25% |
+| **WHAT IF / IF NOT** | "What changes if we act, or don't?" | Upside, downside, limits, transfer to their future, a concrete next step | ~15% |
+
+\*These shares are heuristics. They vary by format: pitches spend longer on WHAT IF/ask, workshops on HOW, defenses on WHAT.
+
+**Transitions**: each phase answers the question the previous phase raised. Write a bridge sentence for every transition and re-anchor to the WHY after heavy WHAT sections.
+
+## Optional eight-step lens (planning vocabulary for longer sessions)
+
+Connect → Attend (WHY) · Image → Inform (WHAT) · Practice → Extend (HOW) · Refine → Perform (WHAT IF).
+
+These are planning labels. They are not claims about brain hemispheres or fixed learner types.
+
+## Nested cycles
+
+A workshop or course is an outer 4MAT (Mini What + WHY … WHAT IF close) containing one mini 4MAT per module. In `presentation.json`, mark each module's slides with `"cycle": "<module-id>"`.
+
+## Deliverables menu (produce only what the user chose)
+
+| Need | Deliverable |
+|---|---|
+| Decide the strategy | `brief.md` (with decision log) and a one-screen strategy summary |
+| Ground the claims | `evidence.md` claim ledger |
+| Structure the talk | `storyboard.md` (two options, one chosen) |
+| Slides | `presentation.json` → `presentation.html` + `speaker-notes.md` |
+| Spoken talk without slides | `script.md` and/or `cue-cards.md` |
+| Workshop | facilitator guide with timed activities and a debrief |
+| Defense or pitch preparation | `qa.md` (hard questions, honest answers) |
+| Quality gate | `review.md` |
+
+## Format quick rules
+
+- **Academic defense**: research questions, theory and method, the prototype labelled as a demonstration, limitations, validation plan.
+- **Investor pitch** (≈5 min): problem, solution, *measured* traction only, a specific ask, milestones, risks.
+- **Workshop**: at least 40% hands-on, with debrief and transfer.
+- **No slides**: spoken signposts, one recurring image, at most three numbers, a recap at each phase end.
+- **Recorded**: chunks of 8 minutes or less, each a mini 4MAT, with captions.

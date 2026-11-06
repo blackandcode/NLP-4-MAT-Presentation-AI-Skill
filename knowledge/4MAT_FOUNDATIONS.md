@@ -32,7 +32,18 @@ Do **not** present this eight-stage labeling or 'right/left hemisphere modes' as
 2. Chunk from general themes to specific evidence/examples; group by common denominator.
 3. Start with the audience **outcome** and plan dependencies backward.
 4. Allocate every included chunk to Mini What / WHY / WHAT / HOW / WHAT IF. Estimate times. Explicitly mark nonincluded material as appendix/parking lot.
-5. For long workshops, nest short 4MAT units within the overall sequence. For a five-minute pitch, compress each phase but do not remove HOW or WHAT IF.
+5. For long workshops, nest short 4MAT units within the overall sequence, and mark each unit with a `cycle` id in `presentation.json`. For a five-minute pitch, compress each phase but do not remove HOW or WHAT IF. Format-specific shapes are in `knowledge/FORMATS.md`.
+
+## Transitions are part of the method
+
+Each phase answers the question the previous phase raised:
+
+- **Mini What → WHY**: "here is what we'll cover" becomes "here is why it matters to *you*".
+- **WHY → WHAT**: "so what is it, exactly?"
+- **WHAT → HOW**: "how does it work in practice?"
+- **HOW → WHAT IF**: "what becomes possible, and what if we don't?"
+
+Write an explicit bridge sentence for each transition, and re-anchor to the WHY after heavy WHAT sections. A deck whose sections could be shuffled without anyone noticing is four presentations, not one.
 
 ## Audience / outcomes
 
@@ -50,6 +61,8 @@ Short talk: 5% Mini What; 25% Why; 30% What; 25% How; 15% What If. These ratios 
 - `[INTERPRETATION]` — reasoning based on source, not an empirical finding.
 - `[PROPOSAL]` — invented or user-designed exercise, metaphor, feature, or step.
 - `[HYPOTHESIS]` — testable claim not yet demonstrated.
-- `[UNVERIFIED]` — source itself weak/unclear, missing reference or unresolved number.
+- `[UNVERIFIED]` — the source itself is weak or unclear, a reference is missing, or a number is unresolved.
+
+**Tense and modality check**: a source's "I could observe", "we plan to" or "imagine a child who…" is a `[PROPOSAL]` or an illustration. It must never become "I observed", "we built" or "children did" in a script. Personal experiences count as `[SOURCE]` only in the words the presenter actually supplied. Any sensory or emotional detail added for effect needs the presenter's explicit approval.
 
 Cite URLs in evidence.md and attach claim IDs to script/slides, especially on numbers, impacts, outcomes and future predictions.

@@ -67,9 +67,10 @@ def render(data):
             if shape=="cycle":
                 nodes.append('<span class="arrow" aria-hidden="true">↺</span>')
             visual = f'<div class="diagram {shape}" role="group" aria-label="{esc(shape)} diagram">{"".join(nodes)}</div>'
+        cycle = f" · {esc(s['cycle'])}" if s.get("cycle") else ""
         body.append(f'''<section class="slide {esc(phase)}" id="slide-{i}" role="group" aria-roledescription="slide" aria-label="Slide {i}: {esc(s['title'])}">
 <div class="phase">{LABELS[phase]}</div><h1>{esc(s['title'])}</h1><h2>{esc(s['headline'])}</h2>
-<ul>{bullets}</ul>{visual}{prompt}<div class="meta">{i:02d} · {esc(s['minutes'])} min</div></section>''')
+<ul>{bullets}</ul>{visual}{prompt}<div class="meta">{i:02d}{cycle} · {esc(s['minutes'])} min</div></section>''')
     return f'''<!doctype html><html lang="{esc(data.get('language','en'))}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b1020"><title>{title}</title><style>{CSS}</style></head>
 <body><main class="shell"><header class="top"><div><div class="brand">4MAT / PRESENTATION STUDIO</div><div class="deck-title">{title}</div></div><div class="counter">{audience}</div></header>
 <div class="stage">{''.join(body)}</div><nav class="controls" aria-label="Slides navigation"><div class="buttons"><button type="button" id="prev" aria-label="Previous slide">Previous</button><button type="button" id="next" aria-label="Next slide">Next</button></div><div class="counter" id="counter" aria-live="polite"></div></nav><div class="bar" aria-hidden="true"><div id="progress"></div></div><div class="help">Keyboard: ← / → · Space · Home / End. Print to PDF from your browser. Notes are in the companion Markdown file.</div></main><script>{JS}</script></body></html>'''
@@ -78,7 +79,8 @@ def render(data):
 def speaker_notes(data):
     out = [f"# {data['title']} — speaker notes", "", f"Audience: {data['audience']} | Duration: {data['duration_minutes']} minutes | Medium: {data['medium']}", ""]
     for i, s in enumerate(data["slides"], 1):
-        out += [f"## {i:02d}. {s['title']} — {LABELS[s['phase']]} ({s['minutes']} min)", "", s['speaker_notes'], ""]
+        cycle = f" [{s['cycle']}]" if s.get("cycle") else ""
+        out += [f"## {i:02d}. {s['title']} — {LABELS[s['phase']]}{cycle} ({s['minutes']} min)", "", s['speaker_notes'], ""]
         if s.get("process_notes"):
             out += ["**Process cue:** " + s["process_notes"], ""]
         if s.get("visual"):

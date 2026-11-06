@@ -1,0 +1,107 @@
+{
+  "title": "Wonderland — Modeling Creative Strategies for Children with NLP",
+  "audience": "NLP Master examiners",
+  "duration_minutes": 18,
+  "language": "en",
+  "medium": "slides+speech",
+  "slides": [
+    {
+      "phase": "mini-what", "minutes": 0.75,
+      "title": "What you'll see in 18 minutes",
+      "headline": "An idea and a method, one working demonstrator, and a plan to test it",
+      "body": ["The question behind the work", "The model: creative roles + NLP questions", "A live demonstrator", "What is proven, planned and hoped"],
+      "diagram": {"type": "roadmap", "nodes": ["Question", "Model", "Demonstrator", "Validation plan"]},
+      "speaker_notes": "CUE NOTES: Thank the panel. One sentence of framing: this thesis is about modeling creative strategies, and Wonderland is one way to apply them. Say plainly: this is a long-term vision with a first demonstrator, not a completed study with results.",
+      "evidence_ids": ["C002", "C004", "C016"]
+    },
+    {
+      "phase": "why", "minutes": 2.0,
+      "title": "\"That can't work\"",
+      "headline": "The first sentence a child hears often decides whether an idea survives",
+      "body": ["Adults answer fast, from the best intentions", "Alternative first answer: \"Let's see what you imagine\"", "Creative thinking = generating, evaluating and improving ideas"],
+      "visual": "Two speech bubbles side by side: 'That can't work' vs 'Let's see what you imagine'",
+      "speaker_notes": "CUE NOTES: Quote the three adult replies from the thesis (that can't work / makes no sense / first learn how). Contrast with the Wonderland answer. Link to creative thinking as generating, evaluating, improving ideas (OECD PISA 2022, as cited). Pause. Pose the question: what helps a child keep going with an unusual idea?",
+      "evidence_ids": ["C028", "C026"]
+    },
+    {
+      "phase": "why", "minutes": 1.5,
+      "title": "Why me — and why NLP",
+      "headline": "Modeling transfers a strategy, not an identity",
+      "body": ["Life goal: leave a better world for the next generations", "Mentoring ~200 engineers: never \"200 copies of myself\"", "NLP modeling: learn the steps, build your own way"],
+      "speaker_notes": "CUE NOTES: In my own words: one of my life goals is to leave the planet better for those after us. As an engineer I trained about 200 engineers; the aim was never 200 copies of myself but people who find their own way and in places surpass me. That is what NLP modeling means to me, and what I want to adapt for children.",
+      "evidence_ids": ["C001", "C020"]
+    },
+    {
+      "phase": "what", "minutes": 2.0,
+      "title": "Four research questions",
+      "headline": "What this thesis sets out to explore — not yet answer",
+      "body": ["1. Does separating imagining from planning and checking help?", "2. How can Lumi ask for clarification without taking over the idea?", "3. How do 'What do you want? Why does it matter? How will you know?' shape creation?", "4. Can seeing and changing a drawing make learning-by-trying easier?"],
+      "speaker_notes": "CUE NOTES: Read the four questions slowly. State scope: the thesis describes the idea, the method and possible future checks; no results on children's long-term progress exist yet, and assumptions are not presented as findings.",
+      "evidence_ids": ["C005", "C016"]
+    },
+    {
+      "phase": "what", "minutes": 2.25,
+      "title": "Dreamer → Realist → Analyst",
+      "headline": "One starting point for structuring creative work — an assumption to test",
+      "body": ["Dreamer: imagine without early criticism (open, Milton-style invitations)", "Realist: turn the idea into steps (precise, Meta Model questions)", "Analyst: what is missing, what could go wrong, what to improve", "Children move between roles; creation is not linear"],
+      "diagram": {"type": "cycle", "nodes": ["Dreamer", "Realist", "Analyst"]},
+      "speaker_notes": "CUE NOTES: Present Disney roles as one starting point, not the method. Name the assumption explicitly: separating roles may help when a child gives up too early. Give the Meta Model example 'Huge compared to what?' and the Milton-style 'What if your house could travel among the clouds?' — and the thesis line: this is not hypnosis or hidden influence.",
+      "evidence_ids": ["C006", "C008"]
+    },
+    {
+      "phase": "what", "minutes": 1.75,
+      "title": "Feedback, not failure",
+      "headline": "A T.O.T.E. loop where the child makes the last decision",
+      "body": ["Goal → attempt → re-check → continue or finish", "Bridge too short? \"Does it reach both towers?\"", "Praise the choice, not the label (\"You tried three wing shapes\")"],
+      "diagram": {"type": "steps", "nodes": ["Check goal", "Try", "Re-check", "Continue or finish"]},
+      "speaker_notes": "CUE NOTES: Walk the bridge example from the thesis table. Connect to logical levels in one breath: behaviour (trying), capability (setting and checking a goal), belief (mistakes are allowed), identity ('I am someone who creates'). Contrast specific praise with 'you're a genius'. Re-anchor: the child decides.",
+      "evidence_ids": ["C007", "C029"]
+    },
+    {
+      "phase": "how", "minutes": 2.5,
+      "title": "Live: from a spoken idea to a drawing",
+      "headline": "What the current demonstrator does today — watch who makes each decision",
+      "body": ["Empty world → \"Draw a car\" → \"Add a dog\" → \"Make the dog smaller\"", "Every change is visible; the child compares it with the idea in their head", "Fallback: 60-second recording"],
+      "diagram": {"type": "steps", "nodes": ["Say", "See", "Compare", "Change"]},
+      "visual": "Live prototype on the presentation laptop; recorded clip ready in a second tab",
+      "process_notes": "[time-box 2:30] [if the demo fails: 'Here is the same sequence recorded last week' — play clip, keep talking through the decisions]",
+      "speaker_notes": "CUE NOTES: Pre-frame: watch who decides. Run the four commands. Narrate the compare step. Say explicitly what the build does today (voice changes the drawing) and what it does not yet do (Lumi's adaptive questioning is a design target).",
+      "evidence_ids": ["C003"]
+    },
+    {
+      "phase": "how", "minutes": 1.5,
+      "title": "Illustration: how Lumi should ask",
+      "headline": "An imagined dialogue — the design target, not a recorded session",
+      "body": ["\"What could the robot do?\" → \"How will we know the turtle is safe?\"", "\"If you were the turtle, would anything scare you?\" → \"How could we make it quieter?\"", "The child chooses each next step"],
+      "visual": "Dialogue panel with a visible label: ILLUSTRATIVE — not a real session",
+      "speaker_notes": "CUE NOTES: Say first: this conversation is imagined, as stated in the thesis. Show the three perspectives (what I want / the turtle / the beach) and the ecology question. Point out that Lumi never adds ten ready-made solutions; the child decides.",
+      "evidence_ids": ["C009", "C010", "C011"]
+    },
+    {
+      "phase": "what-if", "minutes": 1.5,
+      "title": "Exists · planned · hoped",
+      "headline": "A marathon, not a sprint",
+      "body": ["Exists: voice-to-drawing demonstrator", "Planned: drawing and shape input, 3D, returning to your world, shared worlds", "Hoped (not yet tested): Lumi adapting to each child without labels", "Direction: workshops with parents and children; a physical creative space"],
+      "diagram": {"type": "roadmap", "nodes": ["Exists", "Planned", "Hoped", "Beyond digital"]},
+      "speaker_notes": "CUE NOTES: Walk left to right. Name each layer. Mention the parent/environment direction from my later reflection as a future direction, not part of the thesis results.",
+      "evidence_ids": ["C003", "C014", "C013", "C023"]
+    },
+    {
+      "phase": "what-if", "minutes": 1.25,
+      "title": "What if not — risks and the validation ladder",
+      "headline": "A pretty AI drawing is not evidence of learning",
+      "body": ["Risk: AI takes over authorship → the child must stay the main creator", "Limit: not therapy; the child can refuse, pause, stop", "Ladder: adult usability → small consented pilot → independent raters → transfer without Lumi"],
+      "diagram": {"type": "steps", "nodes": ["Adult usability", "Consented pilot", "Independent rating", "Transfer without Lumi"]},
+      "speaker_notes": "CUE NOTES: State the risks without softening. Then the ladder from the thesis evaluation plan, with two indicators named aloud: child-initiated changes, and 'I changed this because…'. Add: this is not a startup pitch; it needs further study of developmental psychology and child safety.",
+      "evidence_ids": ["C012", "C017", "C015", "C025"]
+    },
+    {
+      "phase": "what-if", "minutes": 1.0,
+      "title": "Help me choose the first indicators",
+      "headline": "Which two signals would convince you that a child — not the tool — did the creating?",
+      "body": ["Ideas proposed by the child", "Self-initiated changes", "\"I changed this because…\"", "Transfer without Lumi"],
+      "speaker_notes": "CUE NOTES: Close the opening loop: as a boy I watched in my grandfather's workshop how something new was made from a piece of wood. That is the experience I want to protect. Then the ask: which two of these indicators would you test first? Hand over to questions.",
+      "evidence_ids": ["C024", "C015"]
+    }
+  ]
+}

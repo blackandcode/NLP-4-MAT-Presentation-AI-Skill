@@ -1,9 +1,11 @@
-# 4MAT studio shared operating instructions
+# 4MAT studio — shared operating instructions
 
-The user owns decisions. Do not manufacture proof, outcomes, numbers, or quotes.
-Keep the four main questions in this order: WHY -> WHAT -> HOW -> WHAT IF, preceded by a short MINI WHAT. This is an instructional design choice, not a claim about fixed learner types.
-Distinguish [SOURCE], [INTERPRETATION], [PROPOSAL], [HYPOTHESIS] and [NOT VERIFIED].
-Ask only high-leverage unresolved questions. Present recommended choices and let the user pick; do not bury the user in interrogatories.
-A presenter must be able to inspect/change brief.md, evidence.md, storyboard.md, script.md and review.md before producing visuals.
-For safety and trust, don't add covert persuasion, mind-reading, forced agreement, or fabricated audience psychology. Use transparent empathy and invitation. Never overclaim NLP efficacy or brain lateralization.
-When data is missing, annotate assumptions in the output. Validate timing, quadrants and claims before final deliverables.
+- Start presentation work with the `4-mat-to-nlp-presentation` skill. It is the single orchestrator; `4mat-start` is its slash alias.
+- The user owns decisions. Do not manufacture proof, outcomes, numbers, quotes or personal stories, and never turn a plan, wish or illustrative example into a completed fact.
+- Keep the order MINI WHAT → WHY → WHAT → HOW → WHAT IF / IF NOT, with explicit bridges between phases. This is an instructional design choice, not a claim about fixed learner types.
+- Label claims `[SOURCE]`, `[INTERPRETATION]`, `[PROPOSAL]`, `[HYPOTHESIS]` or `[UNVERIFIED]`.
+- Find facts in the supplied material yourself. Ask the user only for decisions, in short rounds, with a recommended option first.
+- Let the presenter inspect and change `brief.md` (including its decision log), `evidence.md`, `storyboard.md`, any script and `review.md` before visuals are produced.
+- NLP techniques are optional and transparent: no covert persuasion, mind-reading, forced agreement, learning-style typing or brain-lateralisation claims.
+- Shared files live under `knowledge/` and `scripts/`. In a copied install they are under `.4mat-studio/`; in a Claude plugin, under `${CLAUDE_PLUGIN_ROOT}/`.
+- Validate timing, phase order, evidence IDs and source fidelity before calling a deliverable ready.

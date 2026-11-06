@@ -1,86 +1,99 @@
 # 4-MAT-to-NLP Presentation Studio (`4-mat-to-nlp-presentation`)
 
-A composable **NLP Pocket Skills & 4MAT Presentation Studio** for researching, designing, storyboarding, scripting, testing, and rehearsing emotionally resonant presentations using the 4MAT sequence: **Mini What → Why → What → How → What If / What If Not**.
+A set of composable agent skills that help someone turn an idea, documents or an existing deck into an **audience-specific, evidence-grounded 4MAT presentation**: **Mini What → Why → What → How → What If / What If Not**. NLP-informed communication tools are available, but they are optional.
 
-Inspired architecturally by [mattpocock/skills](https://github.com/mattpocock/skills) ([explained by Hoang Yell](https://hoangyell.com/matt-pocock-skills-explained/)), this repository keeps skills **small, composable, interactive, and under the user's control**—targeting specific cognitive and presentation failure modes rather than forcing everything through one monolithic prompt.
+The architecture is inspired by [mattpocock/skills](https://github.com/mattpocock/skills): small single-purpose skills, a decision-frontier interview ("grill me" style), facts gathered by the agent and decisions made by the user, and state kept in files so later skills (and later sessions) can pick it up.
 
-**Status:** v0.2 (`4-mat-to-nlp-presentation`). Ships **16 composable Markdown skills** (including the primary `4-mat-to-nlp-presentation` orchestrator and 6 dedicated NLP pocket tools), **8 specialist subagents**, Claude and OpenAI-compatible plugin manifests, portable installers (`claude`, `gemini`, `codex`), a browser slide renderer, deterministic presentation checks, the English `examples/wonderland/` fixture, and the full **70% Personal Journey / 30% NLP Master** emotional presentation package (`examples/danilo-wonderland-70-30/`).
+**Status: v0.3.0.** 16 skills (one orchestrator, one slash alias, eight workflow skills, six NLP pocket skills), 6 read-only specialist agents, Claude Code plugin manifests, a portable installer (Claude Code / Gemini CLI / Codex), an HTML slide renderer, a deterministic deck auditor and repository validator, unit tests, and two worked examples that serve as fixed test inputs. See `VISION_QA_REPORT.md` for what has and hasn't been verified.
 
----
+## Start here
 
-## Quick Start — Claude Code Plugin (Recommended)
+Say what you need in plain language, for example *"Help me turn my thesis and these notes into a 15-minute defense for my examiners"*. The **`4-mat-to-nlp-presentation`** skill is the single entry point. It:
+
+1. reads everything you supplied before asking anything;
+2. asks only the decisions still open, in short rounds with a recommended option first;
+3. builds a claim ledger that separates *what exists now*, *what is planned* and *what is hoped*;
+4. offers two narrative options and lets you choose;
+5. produces only the deliverables you ask for;
+6. runs an independent critique before calling anything ready.
+
+`/4mat-start` is a slash alias for the same orchestrator, and `/4mat-route` suggests the shortest path.
+
+## Install
+
+### Claude Code plugin (recommended)
 
 ```bash
-# From this repository's parent directory after cloning/unzipping:
-claude plugin validate ./4-mat-to-nlp-presentation
-claude plugin marketplace add ./4-mat-to-nlp-presentation
+# from the directory that contains this repository
+claude plugin validate ./nlp-4-mat-presentation-skill
+claude plugin marketplace add ./nlp-4-mat-presentation-skill
 claude plugin install 4-mat-to-nlp-presentation@4mat-studio-marketplace
-
-# Inside a session:
-/4-mat-to-nlp-presentation:4-mat-to-nlp-presentation
-# or invoke any composable pocket skill directly:
-/4-mat-to-nlp-presentation:4mat-perceptual-positions
-/4-mat-to-nlp-presentation:4mat-disney-strategy
-/4-mat-to-nlp-presentation:4mat-logical-levels
 ```
 
-### Alternative — Copy Skills and Agents into a Project or User Scope
+Inside a session, plugin skills are namespaced: `/4-mat-to-nlp-presentation:4mat-start` or `/4-mat-to-nlp-presentation:4mat-review`. A natural-language request also triggers the orchestrator. Shared files are resolved through `${CLAUDE_PLUGIN_ROOT}`.
+
+### Copy into a project or user scope
 
 ```bash
 python scripts/install.py --target claude --scope project --destination /path/to/project
-# or for Gemini CLI / Codex:
-python scripts/install.py --target gemini --scope project --destination /path/to/project
-python scripts/install.py --target codex --scope project --destination /path/to/project
+python scripts/install.py --target gemini --scope project --destination /path/to/project   # .gemini/skills
+python scripts/install.py --target codex  --scope project --destination /path/to/project   # .agents/skills
 ```
 
----
+The installer copies skills, the shared `knowledge/` and `scripts/` folders (into `.4mat-studio/`), and, for the Claude target only, the agents. See `docs/CROSS_PLATFORM.md` for what each platform does and doesn't support.
 
-## Composable Skill Inventory (16 Skills)
+## Skills
 
-### Master Entry & Workflow Skills
+| Skill | Role |
+|---|---|
+| **`4-mat-to-nlp-presentation`** | Orchestrator: classify the request → readiness map → decision-frontier interview → stages → specialists in proportion to the stakes → resume, revise or retarget |
+| `4mat-start` | Slash alias for the orchestrator (user-invoked) |
+| `4mat-route` | Recommends the shortest skill path (user-invoked) |
+| `4mat-interview` | Separates facts from decisions; progressive rounds; writes `brief.md` with a decision log |
+| `4mat-evidence` | Claim ledger: locators, exists / planned / illustrative / hypothesis layers, tense and modality checks, gaps |
+| `4mat-storyboard` | Backward planning from the outcome, two narratives, bridges, format shapes, time budget |
+| `4mat-nlp` | Selects 0–4 transparent techniques for diagnosed problems ("none" is valid) |
+| `4mat-produce` | Slides (JSON → HTML), script, cue cards, workshop guide, pitch, demo run sheet, web, recorded, `qa.md` |
+| `4mat-review` | Independent challenge, source-fidelity check, fixed 12-dimension rubric, deterministic audit |
+| `4mat-rehearse` | Timing estimate, audience-specific Q&A drills, demo-failure drills |
 
-| Skill | Invocation | Role |
-| :--- | :--- | :--- |
-| **`4-mat-to-nlp-presentation`** | `/4-mat-to-nlp-presentation` | Primary entry point & composable NLP pocket-skill studio |
-| **`4mat-start`** | `/4mat-start` | Full interactive 8-slot Socratic orchestrator |
-| **`4mat-route`** | `/4mat-route` | Recommend the minimal workflow or NLP pocket skill chain |
-| **`4mat-interview`** | `/4mat-interview` | Elicit brief, audience, constraints, and personal-to-model ratio |
-| **`4mat-evidence`** | `/4mat-evidence` | Source mapping and epistemic claim ledger (`C001`, etc.) |
-| **`4mat-storyboard`** | `/4mat-storyboard` | 5-phase / 8-step 4MAT narrative and timing architecture |
-| **`4mat-nlp`** | `/4mat-nlp` | Dual-track Content + Process NLP integration hub |
-| **`4mat-produce`** | `/4mat-produce` | Produce slides JSON, HTML deck, verbatim script, workshop, or pitch |
-| **`4mat-review`** | `/4mat-review` | 12-dimension quality gate & deterministic audit |
-| **`4mat-rehearse`** | `/4mat-rehearse` | Speaker rehearsal, timing check, and skeptical Q&A |
+**NLP pocket skills**, each optional and each targeting one diagnosed problem:
 
-### Composable NLP Pocket Skills (Matt Pocock Style)
+| Pocket skill | Problem it targets |
+|---|---|
+| `4mat-perceptual-positions` | A one-sided talk |
+| `4mat-disney-strategy` | A vision with no HOW, or an idea criticised too early |
+| `4mat-logical-levels` | Features disconnected from meaning; optional story-to-model blend at the ratio you choose |
+| `4mat-sleight-of-mouth` | Objections and a defensive Q&A |
+| `4mat-nested-loops` | A flat script, or a long talk with no thread |
+| `4mat-state-anchor` | Nerves and delivery |
 
-| Pocket Skill | Core NLP Framework | Failure Mode Prevented |
-| :--- | :--- | :--- |
-| **`4mat-perceptual-positions`** | **3+1 Perceptual Positions** (1st: Speaker, 2nd: Listener/Child/Parent, 3rd: Observer, 4th: Ecology) ([Global NLP](https://globalnlptraining.com/simply/the-4th-perceptual-position-of-nlp/)) | Single-perspective blindness; disconnect from audience's lived world |
-| **`4mat-disney-strategy`** | **Walt Disney Creative Strategy** (Dreamer / *Sanjar* → Realist / *Realizator* → Critic / *Analitičar*) ([NLP University](https://www.nlpu.com/Articles/article7.htm)) | Premature self-criticism killing vision OR ungrounded fantasy lacking a real HOW |
-| **`4mat-logical-levels`** | **Dilts' Neuro-Logical Levels** + **70/30 Personal Story-to-Model Weave** ([SkillsYouNeed](https://www.skillsyouneed.com/lead/logical-levels.html)) | Dry lower-level technical talks that fail to touch the heart or connect identity to mission |
-| **`4mat-sleight-of-mouth`** | **Sleight of Mouth & Reframing** (Redefine, Intention, Chunk Down, Counterexample, Hierarchy of Criteria) | Defensive Q&A, unaddressed skepticism, or getting stuck on *"Ne mogu / It won't work"* |
-| **`4mat-nested-loops`** | **LIFO Nested Story Loops**, **5-Statement Yes-Sets**, Metaphors, Milton/Meta Balance & **VAKOG Cycling** | Mid-presentation attention collapse (U-shaped curve) and monotone lecturing |
-| **`4mat-state-anchor`** | **High Performance State (HPS)**, **Future Pace**, **180° Peripheral Vision**, **4-Zone Stage Anchoring**, **Satir Postures** | Stage anchor contamination, nervous tunnel vision, and flat delivery |
+**Agents** (read-only; used only when the stakes justify it): `audience-strategist`, `evidence-librarian`, `nlp-coach`, `story-architect`, `experience-designer`, `devils-advocate`. Their shared contract is in `knowledge/AGENT_CONTRACT.md`.
 
----
+## Knowledge
 
-## Worked Examples Included
+| File | Purpose |
+|---|---|
+| `knowledge/4MAT_FOUNDATIONS.md` | Method, transitions, proof-status vocabulary |
+| `knowledge/FORMATS.md` | Audience × format playbook: changing either one changes the content, not just the theme |
+| `knowledge/NLP_TECHNIQUES.md` | Selection matrix with "skip when" and an honest evidence status |
+| `knowledge/NLP_POCKET_EXERCISES.md` | Facilitation prompts for the pocket skills |
+| `knowledge/DELIVERABLES.md` | Workspace files, decision log, resume and revise protocol, JSON schema, gates |
+| `knowledge/SOURCES.md`, `knowledge/LITERATURE_TRIAGE.md` | Provenance and credibility triage |
 
-1. **`examples/danilo-wonderland-70-30/` (70% Personal Journey / 30% NLP Master Emotional Presentation Package):**
-   - Merges Danilo's personal journey (`nlp-writing-feedback-motivation-about-danilo-journey.md` — 70%: Grandfather's wooden workshop, mentoring ~200 engineers without making copies, parenting Ogi and Aleksa with Vesna and living *"Mapa nije teritorija"*, 2 years of parent conversations, *Kreativni geni* workshops, and gifting a child their preserved creative world at age 18) with his NLP Master thesis (`Wonderland_NLP_Master - Verzija 1.2.md` — 30%: Wonderland, Wonder Creator, Lumi the owl, Disney Strategy, T.O.T.E., 3 Perceptual Positions, Meta/Milton Models, Sleight of Mouth, and Dilts' Logical Levels).
-   - Includes `brief.md`, `nlp-pocket-analysis.md`, `evidence.md`, `storyboard.md`, `script-70-30-emotivni-govor.md`, `presentation.json`, `presentation.html`, `speaker-notes.md`, `qa.md`, and `review.md`.
-2. **`examples/wonderland/` (English Academic Defense Baseline Fixture):**
-   - 15-minute, 10-slide baseline fixture used by automated regression tests.
+## Examples (fixed test inputs, not templates)
 
----
+- `examples/wonderland/`: a 15-minute English academic-defense fixture.
+- `examples/danilo-wonderland-70-30/`: one presenter's real 20-minute defense package. The *70% personal / 30% model* blend was that talk's own goal; it is not a default.
+- `tests/e2e/`: scenario outputs from the end-to-end evaluation (5-minute investor pitch, 45-minute workshop with nested cycles, speech without slides, 15-minute examiner defense).
 
-## Local Generation and Testing
+## Local checks
 
 ```bash
 python scripts/validate_repo.py
-python scripts/audit_deck.py examples/wonderland/presentation.json --strict
-python scripts/audit_deck.py examples/danilo-wonderland-70-30/presentation.json --strict
-python scripts/render_deck.py examples/danilo-wonderland-70-30/presentation.json --out examples/danilo-wonderland-70-30/presentation.html
 python -m unittest discover -s tests -v
+python scripts/audit_deck.py examples/wonderland/presentation.json --strict --evidence examples/wonderland/evidence.md
+python scripts/render_deck.py examples/wonderland/presentation.json --out /tmp/wonderland.html
 ```
+
+`validate_repo.py` checks structure, spec-compliant names, file references and the absence of personal content in generic files. It does not replace `claude plugin validate`, and it cannot tell whether the model will ask good questions. See `END_TO_END_TEST_RESULTS.md`.

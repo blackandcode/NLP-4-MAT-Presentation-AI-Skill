@@ -1,20 +1,31 @@
 ---
 name: 4mat-storyboard
-description: "Build and time an audience-centered 4MAT narrative from a brief and source ledger, choosing Why→What→How→What-If progression and optional 8-step teaching expansion."
+description: "Design and time an audience-centred 4MAT narrative from a brief and claim ledger: backward planning from the audience outcome, two contrasting narrative options, explicit phase transitions, format-specific shapes (defense, pitch, workshop with nested cycles, speech without slides, demo, web, recorded) and a realistic time budget."
 ---
 
-# 4MAT story design
+# 4MAT storyboard
 
-Input: approved `brief.md`, `evidence.md`, raw user notes. If missing, annotate assumptions instead of fabricating. Begin at the **final audience outcome** and plan backward.
+**Shared files**: resolve `knowledge/…` under `${CLAUDE_PLUGIN_ROOT}/`, then `.4mat-studio/`, then the repository root. Use `knowledge/4MAT_FOUNDATIONS.md` and `knowledge/FORMATS.md`.
 
-1. Digital Post-Its: extract independent ideas, facts, visuals, cases, questions, demos, limitations and potential closing decisions, each with claim ID or PROPOSAL.
-2. Chunk from thematic pillars to examples; identify the one essential point that connects each pillar to outcome. Cut nonessential material; park it as appendix.
-3. Offer **two different narratives**: e.g. human-story-first vs. problem-and-solution-first, or visionary vs. decision-oriented. Each requires a preview, WHY, evidenced WHAT, actionable HOW, balanced WHAT IF. Present a recommended path and decision tradeoff, ask user to choose only if not already delegated.
-4. Generate storyboard table: phase, segment title, key audience question, actual content, source IDs, visual or delivery cue, action/interactivity, duration, bridge sentence, audience success indicator.
-5. Use optional eight-stage lens as a *planning vocabulary* for long sessions: Connect/Attend; Image/Inform; Practice/Extend; Refine/Perform. These stages do not justify neurological claims.
-6. Timebox: default **5/25/30/25/15%** of duration for Mini What/Why/What/How/What If, explicitly a starting heuristic. Change by medium. Keep Q&A and demo setup inside total time; reserve failure fallback for live demos.
-7. Add why-reanchors after heavy evidence; avoid unmotivated information dumps. Close with a decision or reflective question rather than only a slogan.
+**Inputs**: an approved `brief.md` and `evidence.md` (or visibly marked assumptions). Start from the **final audience outcome** and plan backward.
 
-For no-slides speeches output cue cards; for website output sections, interaction states and page flow; for investor pitch distinguish opportunity, evidence, offer and request; for academic defense distinguish thesis, rationale, method, prototype, untested hypotheses, limitations and next validation.
+1. **Post-its**: list independent ideas, facts, examples, demos, limitations, questions and possible closes. Tag each with a claim ID or `PROPOSAL`.
+2. **Chunk** from pillars down to examples. Find the single point that connects each pillar to the outcome. Move everything else to a **parking lot** (appendix or Q&A backup).
+3. **Two contrasting narratives.** Examples: story-first vs. problem-first; vision-led vs. decision-led; demo-first vs. theory-first. Each one needs a Mini What, an audience-specific WHY, an evidenced WHAT, an actionable HOW and a two-sided WHAT IF. Recommend one, state the trade-off, and let the user choose unless they delegated the choice.
+4. **Shape for the format** (see `knowledge/FORMATS.md`):
+   - Academic defense: research questions, method, a labelled prototype, limitations, validation plan.
+   - Pitch: problem, solution, measured traction, ask, milestones, risks.
+   - Workshop: an outer frame plus one mini 4MAT per module (`cycle`), with at least 40% hands-on.
+   - No slides: cue cards, spoken signposts, one recurring image.
+   - Demo: what to watch for, plus a fallback.
+   - Web: one section per 4MAT job.
+   - Recorded: chunks of 8 minutes or less.
+5. **Storyboard table**: phase (and cycle) | segment | the audience's question | content | claim IDs | HOW activity or visual | minutes | **bridge sentence into the next segment** | signal that it worked.
+6. **Time budget.** Start from the 5 / 25 / 30 / 25 / 15 % heuristic and adjust it for the format. Budget speech at about 130 words per minute (110–150) and subtract demo, activity and pause time. Keep Q&A and demo setup inside the total, or state that they sit outside it. Flag any duration that is impossible for the amount of material.
+7. **Coherence checks**:
+   - Every transition answers the previous phase's question.
+   - WHY is re-anchored after heavy WHAT sections.
+   - Any personal story serves the subject rather than overshadowing it.
+   - The close is a decision, a next step or a reflective question, not only a slogan.
 
-Output `storyboard.md` plus a condensed 1-minute phase map. Include the exact total minutes and flag durations impossible for material density.
+**Output**: `storyboard.md` containing both options (with the chosen one marked), the table, a one-minute phase map, the exact total minutes, and a list of open assumptions.

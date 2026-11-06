@@ -1,12 +1,12 @@
 {
   "name": "4mat-studio-marketplace",
-  "description": "Composable 4MAT to NLP presentation pocket skills and coordinated review agents",
+  "description": "Composable 4MAT presentation skills with optional NLP communication tools and coordinated review agents",
   "owner": {"name": "4MAT NLP Skills Contributors"},
   "plugins": [
     {
       "name": "4-mat-to-nlp-presentation",
       "source": "./",
-      "description": "Interactive 4MAT/NLP presentation design, 3+1 Perceptual Positions, Disney Strategy, Logical Levels 70/30 storytelling, delivery and quality review",
+      "description": "Interactive 4MAT presentation design: progressive interview, claim ledger, audience/format adaptation, storyboard, production, independent review and rehearsal",
       "category": "productivity",
       "keywords": ["4mat", "4-mat-to-nlp-presentation", "presentation", "learning", "nlp", "claude-code"]
     }

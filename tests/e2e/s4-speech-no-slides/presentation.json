@@ -1,0 +1,51 @@
+{
+  "title": "Ask Before You Answer",
+  "audience": "Parents at a school evening (no projector)",
+  "duration_minutes": 6,
+  "language": "en",
+  "medium": "speech",
+  "slides": [
+    {
+      "phase": "mini-what", "minutes": 0.5,
+      "title": "Card 1 — Three things",
+      "headline": "A sentence to notice, a question to try, an honest limit",
+      "body": [],
+      "speaker_notes": "Good evening. I have six minutes and no slides, so I'll give you three things to take home: one sentence to notice, one question to try, and one honest limit. Nothing to write down. If you remember only one thing, remember the question.",
+      "evidence_ids": []
+    },
+    {
+      "phase": "why", "minutes": 1.5,
+      "title": "Card 2 — \"That can't work\"",
+      "headline": "What should a child's idea hear first?",
+      "body": [],
+      "speaker_notes": "Here's the sentence. A child runs up to you with an idea — a house that flies, a robot that cleans the sea — and before we even think, we say: That can't work. Or that makes no sense. Or first learn how it's done. We say it with the best intentions. We're tired, we're busy, we want to protect them from disappointment. I'm a parent of two young boys. Every day I see how differently they react to the same situation, and I see that my partner and I sometimes approach the same moment differently too. In NLP there's a phrase for this: the map is not the territory. Each of us sees the world through our own map. And a child's map is still being drawn. So the question I keep asking myself is: when a child's idea arrives, what should it hear first?",
+      "evidence_ids": ["C028", "C019"]
+    },
+    {
+      "phase": "what", "minutes": 1.5,
+      "title": "Card 3 — The loop",
+      "headline": "Limits matter, but not as the first sentence",
+      "body": [],
+      "speaker_notes": "For about two years I've talked with parents around me about creativity, play and technology. Those were everyday conversations, not research, so I won't tell you what they prove. But they shaped one simple idea: the real limits of the world matter, but they don't have to be the first sentence a child hears. There's a small loop that helps. First, check the goal: what do you want it to do? Then try something. Then look again: does it do what you wanted? Then decide: keep it, or change it. The important part is who decides. Not me. The child. And when it works, we can praise the choice, not the label. Instead of you're a genius, try you tried three different wings and picked the one you liked. That tells the child what they actually did.",
+      "evidence_ids": ["C021", "C028", "C007", "C029"]
+    },
+    {
+      "phase": "how", "minutes": 1.5,
+      "title": "Card 4 — Try it now",
+      "headline": "The bridge is too short — what do you say?",
+      "body": [],
+      "audience_prompt": "Imagine your child's bridge doesn't reach the second tower. Notice your first reflex, then try a question.",
+      "process_notes": "[pause 3 s after 'too short'] [pause after the two questions]",
+      "speaker_notes": "Let's try it right now, in your head. Imagine your child says: I want to build a bridge between two towers. They draw it. It's too short. Notice your first reflex. Maybe: here, let me fix it. Now try a question instead: does it reach both towers? And then: what do you want to change? That's the whole technique. Goal, try, look again, decide — and you ask, the child answers. This week, pick one moment — at the kitchen table, in homework, in play — and ask before you answer. Just once. Notice what happens. My next step could be small parent-and-child workshops to explore exactly this. I can't tell you yet what we'd find.",
+      "evidence_ids": ["C007", "C022"]
+    },
+    {
+      "phase": "what-if", "minutes": 1.0,
+      "title": "Card 5 — What if, and what if not",
+      "headline": "Ask before you answer",
+      "body": ["If we do: an idea survives a little longer", "If not: the first sentence keeps doing its quiet work", "Limit: no study has shown this makes children more creative yet"],
+      "speaker_notes": "So what if we do this? Maybe nothing dramatic. Maybe a child keeps an idea a little longer, and learns that a first try doesn't have to be the last. And what if we don't? Then that first sentence, that can't work, keeps doing its quiet work. I'll be honest about the limit: no study has shown yet that this makes children more creative. That's work still ahead. When I was a boy, I watched in my grandfather's workshop how something new was made from a piece of wood. I'd like our children to have that kind of room for their ideas. Ask before you answer. Thank you.",
+      "evidence_ids": ["C016", "C024"]
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 {
   "name": "4-mat-to-nlp-presentation",
-  "version": "0.2.0",
-  "description": "Composable 4MAT & NLP presentation pocket skills studio (Mini What -> Why -> What -> How -> What If) with 16 interactive skills and 8 coordinated specialists",
+  "version": "0.3.0",
+  "description": "Interactive 4MAT presentation studio (Mini What -> Why -> What -> How -> What If) with evidence-grounded claim ledgers, audience/format adaptation, optional NLP communication tools and 6 read-only specialist agents",
   "author": {
     "name": "4MAT NLP Skills Contributors"
   },
@@ -11,9 +11,9 @@
     "4-mat-to-nlp-presentation",
     "presentations",
     "nlp",
-    "perceptual-positions",
-    "disney-strategy",
-    "logical-levels",
-    "storyboarding"
+    "storyboarding",
+    "academic-defense",
+    "pitch",
+    "workshop"
   ]
 }

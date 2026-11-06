@@ -1,40 +1,36 @@
 ---
 name: 4mat-nested-loops
-description: "Interactive Nested Story Loops, 5-Statement Yes-Sets, Isomorphic Metaphor, Milton/Meta-Model Balance, and VAKOG Sensory Cycling skill. Use to hold audience attention across the entire 4MAT curve and make spoken language vivid and emotionally unforgettable."
+description: "Narrative and language pass for 4MAT scripts: a truthful common-ground opening, up to three genuine open story loops closed in reverse order, metaphor, open vs. precise language (Milton/Meta Model) and sensory concreteness. Use to give long talks a narrative thread and make abstract scripts vivid without manipulation."
 ---
 
-# 4MAT Nested Loops, Metaphor & Linguistic Engineering (`4mat-nested-loops`)
+# Narrative mechanics and language (`4mat-nested-loops`)
 
-Grounded in `4MAT_OCR_kompletno.md` (pp. 9, 12, 14, Bilješka 4) and `4MAT Model and NLP Research.md`, this pocket skill engineers the **narrative architecture** and **sensory language** that prevent the mid-presentation attention drop (the U-shaped attention trough).
+Grounding:
+- **Training handout**: open with a series of statements the audience can agree with (the "DA-set"); leave example stories unfinished in the WHY; tie back to the WHY regularly.
+- **Research synthesis** (practitioner tradition): nested loops closed in last-in, first-out order; Milton/Meta Model balance.
 
-**Target Failure Mode:** Closing stories too early in **WHY** (leaving no narrative tension to carry listeners through **WHAT** and **HOW**), opening with falsifiable claims that trigger internal "No" responses, or speaking in flat, abstract "Auditory Digital" prose.
+**Target problem**: a talk of 10 minutes or more with no narrative thread; a flat, abstract script; an opening that starts with a contestable claim.
 
-## 1. Four Composable Narrative & Linguistic Mechanics
+**Evidence status**: craft. Open loops create *narrative curiosity*. Don't claim they keep content "in working memory", bypass judgement, or rely on a robust Zeigarnik memory effect (its replication record is inconsistent). Concrete language aids comprehension, but "representational-system matching" is unsupported.
 
-### A. The 5-Statement Yes-Set + Curiosity Lead (`DA-set`)
-In the opening of **WHY**, construct 5 undeniable pacing statements before introducing your thesis:
-- **1–2 (Shared Context & Reality):** Pace why everyone is in the room today and the shared moment.
-- **3–4 (Dual/Inclusive Pacing):** Pace diverse perspectives in the room (*"Some of you may be listening today as NLP practitioners looking at how we model strategies, while others may be listening as parents, educators, or mentors thinking about the children in your life..."*).
-- **5 + Lead (Shared Value → Curiosity Hook):** Pace a universal human truth and open the first story loop.
+Prompts: `knowledge/NLP_POCKET_EXERCISES.md` §5. Resolve the path under `${CLAUDE_PLUGIN_ROOT}/`, then `.4mat-studio/`, then the repository root.
 
-### B. LIFO Nested Story Loops (Last-In, First-Out)
-Instead of telling one story and finishing it immediately, weave **2 to 3 nested loops** across the 4MAT cycle:
-- **Open Loop A (Outer Heart Loop — Early WHY):** Begin your deepest personal origin story (e.g., standing as a boy in Grandfather's wooden workshop watching a raw piece of wood become something new) and pause at the unresolved question: *How do we preserve that workshop freedom for our children today?*
-- **Open Loop B (Middle Bridge Loop — Late WHY / Early WHAT):** Introduce the second lived tension (e.g., mentoring 200 engineers and watching two young sons, Ogi and Aleksa, see the exact same situation through completely different maps).
-- **Core WHAT & HOW Delivery:** Deliver the 30% NLP Master models and live/illustrative demonstration while Loops A and B remain open in the audience's working memory.
-- **Close Loop B (Early WHAT IF):** Resolve the mentoring/parenting loop by showing how parent-child workshops (*Kreativni geni*) and Lumi adapt to each child's unique map rather than producing copies.
-- **Close Loop A (Final Recency Close in WHAT IF):** Return to Grandfather's workshop—showing how the child's preserved creative world becomes a gift handed back to them at age 18, a message from their childhood self to their future adult self.
+## Mechanics (pick only what the talk needs)
 
-### C. Milton Model (Open Dreaming) vs. Meta-Model (Precise Action)
-- **In WHY & WHAT IF (Dreamer / Meaning):** Use open, permissive Milton-inspired invitations (*"Zamislite trenutak..."*, *"A šta kada bi tvoja kuća mogla da putuje među oblacima?"*, *"Možda možete da se sjetite..."*).
-- **In WHAT & HOW (Realist / Analyst):** Shift to crisp Meta-Model clarifying questions (*"Šta tačno želiš da promijenimo?"*, *"Ogromnu u odnosu na šta?"*, *"Kako ćemo znati da je kornjača bezbjedna?"*).
+**A. Common-ground opening** (WHY): three to five *true, checkable* statements about why the room is here and what its members want. Acknowledge different groups ("Some of you are here as…, others as…"). End with a curiosity question that leads into the topic. Never manufacture agreement, and never use the opening to slip in a claim people haven't examined.
 
-### D. VAKOG Sensory Predicate Cycling
-Audit every paragraph of `script.md` and `speaker-notes.md` so each 4MAT phase explicitly cycles through:
-- **Visual (V):** *vidjeti, slika, boje, oblik, perspektiva, osvijetliti, pogledati iz drugog ugla*
-- **Auditory (A):** *čuti, pitanje, razgovor, glas, tišina, odjeknuti, saslušati*
-- **Kinesthetic / Emotional (K):** *osjetiti, držati u rukama, toplina, komad drveta, korak po korak, sigurnost, dodirnuti*
+**B. Open loops**:
+- Open one to three *genuine* stories or questions in WHY or early WHAT, and pause at a real turning point.
+- Deliver WHAT and HOW, then close the loops in reverse order in HOW or WHAT IF so the final close lands the outermost story.
+- For talks under about 8 minutes, use at most one loop.
+- Never withhold safety-relevant or factual information for the sake of suspense.
 
-## 2. Output Contract
+**C. Open vs. precise language**: invitational, imaginative phrasing for dreaming and meaning (WHY, WHAT IF); precise questions ("what specifically?", "how will we know?") for structure and testing (WHAT, HOW).
 
-Provide a **Nested Loop & Linguistic Map** (in `nlp-pocket-analysis.md` or `storyboard.md`) showing the exact 5-statement Yes-Set, the Open/Close timestamps for Loops A, B, and C, the central Isomorphic Metaphor, and VAKOG predicate highlights per slide.
+**D. Concreteness pass**: check that every phase contains something the audience can picture, hear or do. Replace abstractions with one specific example.
+
+**E. One central metaphor**: an image that fits the idea's structure. Return to it at the transitions.
+
+## Output
+
+A **narrative map**: the opening statements (marked true and checkable), the loops (opened where, closed where, which source), the central metaphor, and a list of the language and concreteness edits per slide or paragraph.

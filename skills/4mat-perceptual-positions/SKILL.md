@@ -1,38 +1,29 @@
 ---
 name: 4mat-perceptual-positions
-description: "Interactive 3+1 Perceptual Positions NLP pocket skill (1st: Speaker/Creator, 2nd: Listener/Stakeholder empathy, 3rd: Detached Observer/Reviewer, 4th: Systemic Ecology). Use to research a presentation topic from multiple perspectives, build authentic WHY rapport, and uncover blind spots before storyboarding."
+description: "Interactive NLP perceptual-positions exercise (1st presenter, 2nd each audience or stakeholder, 3rd neutral observer, 4th wider system) to research a presentation topic from several perspectives, sharpen an audience-specific WHY, surface objections and plan the ecology check in WHAT IF."
 ---
 
-# 4MAT Perceptual Positions Pocket Skill (`4mat-perceptual-positions`)
+# Perceptual positions (`4mat-perceptual-positions`)
 
-This composable pocket skill walks the user (or their source material) through **NLP's 3+1 Perceptual Positions** ([Global NLP Training — 1st to 4th Perceptual Positions](https://globalnlptraining.com/simply/the-4th-perceptual-position-of-nlp/)) to research a presentation topic deeply from every angle before locking the 4MAT storyboard.
+**Target problem**: a talk written from only one point of view. It is either trapped in the speaker's enthusiasm (1st position) or stuck in detached abstraction (3rd position), and it misses how the audience experiences the topic (2nd) or the wider consequences (4th).
 
-**Target Failure Mode:** Single-perspective blindness—writing a talk trapped inside the speaker's own head (1st Position) or dry third-person abstraction (3rd Position) without feeling the audience's emotional reality (2nd Position) or systemic consequences (4th Position).
+**Evidence status**: craft built on general perspective-taking. Second-position statements are **hypotheses** about the audience. Check them with real audience members where possible, and never present them as known feelings.
 
-## 1. Interactive Execution Protocol
+Prompts: `knowledge/NLP_POCKET_EXERCISES.md` §1. Resolve the path under `${CLAUDE_PLUGIN_ROOT}/`, then `.4mat-studio/`, then the repository root.
 
-Read the user's topic and attached files first. Either guide the user interactively through 1–2 positions at a time (`/grill-me` style) or synthesize a complete 4-Perspective Matrix from their materials and invite them to refine it:
+## Protocol
 
-1. **1st Position — Associated Presenter / Creator (*"Ja / Moja lična istina"*):**
-   - Look through the presenter's own eyes.
-   - Extract or ask: What personal experience, childhood memory, mentoring insight, or core value gave birth to this idea? What does the speaker feel in their chest when speaking about this truth?
-   - **4MAT Feed:** Powers the emotional core of **WHY (Step 1: Connect)** and the presenter's congruent voice.
+Read the topic and the sources first. Then either guide the presenter through one or two positions per turn, or draft all four from their material and ask them to correct the draft.
 
-2. **2nd Position — Associated Listener & Stakeholder Empathy (*"Ti / U cipelama publike i korisnika"*):**
-   - Step into each key listener/stakeholder persona (e.g., an NLP Master examiner, a busy parent, a 7-year-old child, or even an affected character in a demo such as the sea turtle in the Wonderland robot scenario).
-   - Extract or ask: What do they care about right now? Where do they feel overwhelmed or skeptical? What makes them lean forward (*KA / Towards*) vs. pull back (*OD / Away-From*)?
-   - **4MAT Feed:** Powers the **5-Statement Yes-Set** in **WHY**, peer reflection in **WHAT**, and user-centered questions in **HOW**.
+1. **1st — presenter**: what made this topic matter to them, *in their own words only*; their outcome; what they fear will be misunderstood. → WHY motive, voice.
+2. **2nd — each audience group or stakeholder**: one row per group (for example examiners, investors, teachers, end users). What they already know, care about and doubt; what would make them lean in or pull back. → WHY relevance, objections, HOW usability.
+3. **3rd — neutral observer**: which claims are demonstrated, which are proposed, which are hoped for; where the logic jumps; what an independent reviewer would ask. → WHAT structure, limitations.
+4. **4th — wider system**: who else is affected over time; unintended consequences; the safeguards needed. → WHAT IF / ecology check.
 
-3. **3rd Position — Detached Methodological Observer (*"Posmatrač / Nezavisni analitičar"*):**
-   - Step outside the relationship as a fair, independent observer watching both the speaker and the audience.
-   - Extract or ask: Which claims are proven facts (`[SOURCE]`) vs. early prototypes, personal reflections, or testable hypotheses (`[HYPOTHESIS]`)? Is the balance between personal story and formal model (e.g., 70% personal / 30% NLP model) clear and well-paced?
-   - **4MAT Feed:** Powers **WHAT (Steps 3–4)** and honest methodological boundaries in **WHAT IF (Step 7: Refine)**.
+## Output
 
-4. **4th Position — Systemic & Ecological Field (*"Mi / Širi sistem i buduće generacije"*):**
-   - Sense the whole relational system across time (family dynamics, educational culture, child authorship, privacy, and future generations).
-   - Extract or ask: How does this idea change the environment around the individual? What safeguards protect autonomy and ecology?
-   - **4MAT Feed:** Powers the **Ecology Check** and intergenerational legacy close in **WHAT IF (Step 8: Perform)**.
+A **perceptual-positions table**: position | insight | source pointer, or `HYPOTHESIS` | 4MAT phase it feeds.
 
-## 2. Output Contract
+Add 2–3 perspective-shifting questions the presenter could ask the audience, worded in plain language without NLP jargon unless the audience is an NLP audience.
 
-Write a structured **Perceptual Positions Table** (into `nlp-pocket-analysis.md` or inline) mapping Position 1, 2, 3, and 4 insights directly to **WHY**, **WHAT**, **HOW**, and **WHAT IF**, and highlight 2–3 concrete perspective-shifting questions the presenter will ask the audience during the talk.
+Write it to `nlp-plan.md` or show it inline.

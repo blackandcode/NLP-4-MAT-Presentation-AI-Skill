@@ -1,22 +1,26 @@
 ---
 name: 4mat-nlp
-description: "Enhance a 4MAT presentation with composable NLP content and process tools: Outcome framing, 5-statement Yes-Sets, 3+1 Perceptual Positions, Disney Strategy, Dilts' Logical Levels (including 70/30 personal story weave), Nested Loops, Sleight of Mouth, VAKOG cycling, Spatial Stage Anchoring, and Satir categories."
+description: "Select a small set of transparent, evidence-aware NLP-informed communication techniques for a 4MAT presentation, based on diagnosed problems, audience and format; route to a pocket skill only when deeper work is needed. Produces nlp-plan.md with content and process tracks. Use when a talk needs stronger relevance, clarity, objection handling, narrative thread or delivery."
 ---
 
-# NLP-Aware Content AND Process (`4mat-nlp`)
+# NLP selection: content and process
 
-Read `knowledge/NLP_TECHNIQUES.md` and `knowledge/NLP_POCKET_EXERCISES.md` (or `.4mat-studio/knowledge/` for manual installations). Maintain **two separate tracks**:
-1. **Content (*Sadržaj*):** What is claimed, which story or NLP model is presented, and why it is supported (`[SOURCE]`, `[INTERPRETATION]`, `[PROPOSAL]`, `[HYPOTHESIS]`).
-2. **Process (*Proces*):** How the presenter manages internal state (HPS, Peripheral Vision), builds group rapport, paces and leads, opens and closes Nested Loops, moves across Spatial Stage Zones, and cycles VAKOG predicates.
+**Shared files**: resolve `knowledge/…` under `${CLAUDE_PLUGIN_ROOT}/`, then `.4mat-studio/`, then the repository root. Read `knowledge/NLP_TECHNIQUES.md` (selection matrix with evidence status) and, for exercises, `knowledge/NLP_POCKET_EXERCISES.md`.
 
-## Composable Pocket Skills Integration
+1. **Diagnose** the 1–3 real communication problems in the current brief, storyboard or script. Examples: a generic WHY, expected scepticism, an abstract HOW, a lost thread in a long talk, presenter nerves. If there are no problems, say so. **"No NLP technique needed" is a valid result.**
+2. **Select 0–4 techniques** from the matrix. For each one write: *problem → technique → 4MAT placement → how it stays transparent → evidence status*. Check the "skip when" column, the format (for example, no stage map for an online talk) and the audience (for example, no Milton-style language with a sceptical technical panel).
+3. **Deeper work, only if needed**:
+   - `4mat-perceptual-positions`: stakeholder views and ecology.
+   - `4mat-disney-strategy`: vision → HOW → safeguards.
+   - `4mat-logical-levels`: concrete ↔ meaning alignment, and the story-to-model blend at the user's chosen ratio.
+   - `4mat-sleight-of-mouth`: objections.
+   - `4mat-nested-loops`: opening, loops, language.
+   - `4mat-state-anchor`: rehearsal, state, stage.
+4. **Keep two tracks**:
+   - **Content**: what is claimed and its status.
+   - **Process**: presenter preparation, pacing, questions, pauses, movement, calibration.
 
-When a specific dimension needs deep work, chain or invoke the dedicated pocket skill:
-- **`4mat-perceptual-positions`:** Map 1st (Speaker), 2nd (Audience/Child/Parent), 3rd (Observer), and 4th (Systemic Ecology) perspectives.
-- **`4mat-disney-strategy`:** Run the Dreamer (*Sanjar*) → Realist (*Realizator*) → Constructive Critic (*Analitičar*) cycle.
-- **`4mat-logical-levels`:** Align Environment → Behavior → Capabilities → Beliefs/Values → Identity → Mission, and weave personal narrative with methodology (e.g., **70% personal journey / 30% NLP model**).
-- **`4mat-sleight-of-mouth`:** Reframe limiting beliefs (*"Ne mogu"*) and pre-frame audience skepticism using Redefine, Intention, Chunk Down, Counterexample, and Hierarchy of Criteria.
-- **`4mat-nested-loops`:** Build the 5-statement Yes-Set (*DA-set*), isomorphic metaphors, LIFO Nested Story Loops (opened in **WHY**, closed in inverse order in **WHAT IF**), Milton/Meta-Model balance, and VAKOG predicate rotation.
-- **`4mat-state-anchor`:** Configure Associated Mental Rehearsal (*Future Pace* with VAK evidence), High Performance State (HPS), 180° Peripheral Vision, 4-Zone Stage Psychogeography (Audience-Left = Past/*OD*; Center = Present/Model; Audience-Right = Future/*KA*; Flank = Critic), and Virginia Satir postures (*Leveller, Placater, Computer, Blamer, Distractor*).
+   Process cues go in `process_notes` or in bracketed script cues, never mixed into the spoken words.
+5. **Terminology**: the audience hears NLP names only if the talk is about NLP. Otherwise use plain language ("let's look at this from the user's side").
 
-Output `nlp-pocket-analysis.md` or a side-by-side `content/process` enhancement of the storyboard and script. Keep all NLP techniques transparent, ethical, and respectful of audience and child autonomy.
+**Output**: `nlp-plan.md`, or a short section in `storyboard.md`. Every technique must pass the transparency test, and nothing may use covert commands, learning-style typing or claims about brain mechanisms.

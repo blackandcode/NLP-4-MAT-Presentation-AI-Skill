@@ -1,72 +1,68 @@
-# Coordination architecture and executable project contract
+# Architecture
 
 ## What is implemented
 
-This package defines **nine composable SKILL.md instructions**, **six named, read-only Claude Code custom agents**, two plugin manifests, an interactive terminal fallback, a static slide renderer and deterministic validators. It **does not** include a bespoke multi-agent runtime, a server, an automatic PowerPoint generator or a native web form. Claude Code controls actual agent invocation and optional visual question-picker UI.
+- **16 SKILL.md skills**:
+  - one model-invocable orchestrator (`4-mat-to-nlp-presentation`);
+  - two user-invoked commands (`4mat-start`, an alias; `4mat-route`, a path recommender);
+  - eight workflow skills (`interview`, `evidence`, `storyboard`, `nlp`, `produce`, `review`, `rehearse`);
+  - six optional NLP pocket skills.
+- **6 read-only Claude Code agents** with a shared request/report contract (`knowledge/AGENT_CONTRACT.md`).
+- **Shared knowledge**: method, formats, NLP selection, deliverables and protocol.
+- **Python tools** (standard library only): `audit_deck.py`, `render_deck.py`, `validate_repo.py`, `install.py`, `brief_wizard.py`.
 
-## Coordinator state machine
+There is no bespoke runtime, server, PPTX generator or web form. The host model follows the skill text; Claude Code controls the question picker and subagent invocation.
+
+## Composition rules
+
+These are adapted from mattpocock/skills:
+
+- The **orchestrator** is model-invocable, so plain-language requests reach it.
+- **User-invoked commands** (`4mat-start`, `4mat-route`) may load model-invocable skills, but never another user-invoked one.
+- **Workflow and pocket skills** are model-invocable, usable on their own, and communicate only through workspace files: `brief.md`, `evidence.md`, `storyboard.md`, and so on.
+- **Facts** are found by the agent (or the `evidence-librarian`). **Decisions** are asked of the user, as a decision frontier.
+
+## Orchestrator state machine
 
 ```
-NEW REQUEST
-   |
+NEW / ADAPT / RETARGET / REVIEW / REHEARSE / RESUME / SINGLE TOOL
+   │  classify, choose depth (Light / Standard / Deep), show stage tracker
    v
-S0  Read files, determine goal and available facts
-   |  If only review requested, route directly to REVIEW
+GATHER   read all sources; readiness map S1–S8 (E / I / M); facts ≠ decisions
    v
-S1  Interview for essential *decisions*, not discoverable facts
-   |  User can choose recommendation, edit, skip with stated assumption
+BRIEF    decision-frontier rounds (≤3–4 questions, recommended first) → brief.md + decision log
+   │  Deep: audience-strategist ∥ evidence-librarian (∥ nlp-coach)
    v
-S2  Brief locked (S1/S2/S3/S5/S6/S7 of readiness vector satisfied)
-   |  Independent, read-only research lenses (parallel if available)
+EVIDENCE claim ledger: exists / planned / illustrative / hypothesis; tense & modality checks
    v
-S3  Evidence ledger: supported facts / hypotheses / proposals / gaps
-   |
+STORY    two narratives → user picks → storyboard.md (bridges, time budget, format shape)
+   │  Deep: story-architect ∥ experience-designer → specialist synthesis → user trade-offs
    v
-S4  Story choices → meaningful user selection → approved storyboard
-   |  Story architect and experience designer produce scoped proposals
+PRODUCE  only the chosen deliverables; audit_deck --strict --evidence
    v
-S5  Draft in selected medium, preserve source IDs and time contract
-   |
+REVIEW   devils-advocate first → fidelity check → rubric → review.md (READY FOR REHEARSAL / REVISE / NOT EVIDENCE-READY)
    v
-S6  Deterministic audit + independent devil's-advocate report
-   |  Must repair severe blockers before claiming readiness
-   v
-S7  Rehearsal choices (optional) + delivery instructions
+REHEARSE optional drills
 ```
 
-### Readiness vector
+**Resume / revise / retarget** follow the protocol in `knowledge/DELIVERABLES.md`. Every artifact carries a status line and the decision IDs it depends on. Changing one decision marks only the dependent artifacts STALE.
 
-| Slot | Needed? | Default | Decision owner |
+## Agents
+
+| Agent | Lane | Stage | Runs alongside |
 |---|---|---|---|
-| S1 audience outcome + speaker intent | required | none; ask | user |
-| S2 target audience and knowledge | required | unknown until user/source | user |
-| S3 medium and duration | required | 15m + slide/talk **only if accepted** | user |
-| S4 WHY hook / metaphor / story | flexible | provide 2–3 options | user |
-| S5 factual core and evidence | required | extract source or label unknown | evidence agent |
-| S6 HOW activity/demo | required | offer medium-specific options | user |
-| S7 WHAT IF consequences + decision | required | mark forecast as hypothetical | user + evidence |
-| S8 tone/language/accessibility | infer safely | prompt language | user |
+| `audience-strategist` | relevance, outcomes, objections | BRIEF | evidence-librarian, nlp-coach |
+| `evidence-librarian` | claims, locators, fidelity | BRIEF / REVIEW | audience-strategist |
+| `nlp-coach` | technique selection; perceptual-positions, Disney and logical-levels lenses on request | BRIEF / STORY | audience-strategist |
+| `story-architect` | two narratives, bridges, timing | STORY | experience-designer |
+| `experience-designer` | format, density, interaction, fallbacks | STORY | story-architect |
+| `devils-advocate` | independent challenge | REVIEW (before self-scoring) | none |
 
-**Interactive fallback:** The controller asks through Claude Code's supported picker tool when available, or plain numbered questions. This is intentional rather than implementing a custom UI that other harnesses cannot call.
+Specialists are used in proportion to the stakes: none for Light depth, two for Standard, the full set for Deep. The orchestrator reconciles their findings in a specialist synthesis table. Facts follow the ledger; trade-offs go to the user. Without subagents, the same lenses run as separate passes and the user is told.
 
-## Agent contracts and arbitration
+## Known limits
 
-`audience-strategist`, `evidence-librarian` and `nlp-coach` can begin together because their scopes do not depend on one another's output. `story-architect` and `experience-designer` begin after approved brief/claims, and their different story vs. medium constraints produce a tradeoff the user can decide. `devils-advocate` starts only after a complete draft exists.
-
-Each agent must return **findings + claim/source pointers + uncertainties + recommendation**; none can approve an audience action, create unsupported statistics, or overwrite a shared artifact. In a Claude Code session the coordinator may invoke them in parallel; on other platforms it applies the same analytic lenses in sequence. The main agent reconciles contradictions explicitly, prioritizing verifiable facts over presentation polish.
-
-For illustrative Wonderland work:
-
-- The audience strategist might recommend opening with the importance of child agency rather than showing the software logo.
-- The evidence librarian should reject the statement that children's creativity improved, because no child study has been completed.
-- The NLP coach should advise the transparent Meta Model clarification and a TOTE iteration demo, not covert suggestions.
-- The story architect orders the WHY/WHAT/HOW/WHAT IF progression around the desired scholarly outcome.
-- The experience designer plans a live demo and screenshot fallback.
-- The devil's advocate asks how effects will be measured independently and what happens if the tool generates too much itself.
-
-## Runtime and quality limitations
-
-- The declarative skill content depends on the host model following instructions. Static validation of metadata does not demonstrate that it will ask ideal questions.
-- Native question UI exists only where the chosen host exposes it; the agent must degrade gracefully.
-- A deck can pass deterministic phase/timing checks while still being boring, wrong or inaccessible. Human rehearsal and a source audit are always needed.
-- This is an independent skills project, not an official 4MAT or NLP certification.
+- Static checks can't show that the model will ask good questions or write a moving talk. Only real sessions can (see `END_TO_END_TEST_RESULTS.md`).
+- A native question UI exists only where the host exposes one.
+- A deck can pass `audit_deck.py` and still be boring, wrong or inaccessible. Human rehearsal and a source audit are still needed.
+- This is an independent project, not an official 4MAT or NLP certification.
