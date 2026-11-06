@@ -1,0 +1,313 @@
+{
+  "title": "Zemlja čuda (Wonderland): Od djedove radionice do svijeta dječije mašte",
+  "audience": "NLP Master treneri, ispitivači, edukatori i roditelji (70% lični put / 30% NLP Master)",
+  "medium": "slides+speech",
+  "language": "sr-Latn-ME",
+  "duration_minutes": 20,
+  "slides": [
+    {
+      "phase": "mini-what",
+      "minutes": 1.0,
+      "title": "Od djedove radionice do Zemlje čuda",
+      "headline": "Kako su djedova radionica, 200 inženjera i roditeljstvo oblikovali NLP model podrške dječijoj kreativnosti",
+      "body": [
+        "70% lični put: unuk u radionici, mentor 200 inženjera i otac dva dječaka",
+        "30% NLP Master: modelovanje kreativnih strategija uz Wonder Creator i Lumi",
+        "Jasna granica između vizije, početnog demonstratora i buduće provjere"
+      ],
+      "visual": "Tri povezana kruga: Djedova radionica (drvo) -> Inženjersko mentorstvo -> Zemlja čuda (porodica i Lumi)",
+      "speaker_notes": "Dobar dan svima. U narednih dvadeset minuta želim da vas povedem na putovanje kroz tri životna prostora koja su me oblikovala: od djedove radionice u kojoj sam gledao kako od komada drveta nastaje nešto novo, preko obučavanja približno 200 inženjera, do mog doma sa Ogijem, Aleksom i Vesnom. Pokazaću kako se to životno iskustvo (70%) spaja sa NLP Master modelom kreativnih strategija i demonstratorom Wonderland (30%).",
+      "process_notes": "[STAGE: Centar | SATIR: Ujednačivač (Leveller) | HPS stanje + 180° periferni vid]",
+      "evidence_ids": [
+        "C001",
+        "C003",
+        "C004",
+        "C014"
+      ],
+      "diagram": {
+        "type": "steps",
+        "nodes": [
+          "Djedova radionica",
+          "200 inženjera",
+          "Porodični dom",
+          "Zemlja čuda (NLP)"
+        ]
+      }
+    },
+    {
+      "phase": "why",
+      "minutes": 2.5,
+      "title": "Miris drveta i pitanje: Šta ako?",
+      "headline": "Šta se događa sa dječijim kreativnim potencijalom dok odrasta među našim pravilima?",
+      "body": [
+        "Sloboda u djedovoj radionici: gledati kako iz komada drveta nastaje nešto novo",
+        "Nesvjesna zamka odraslih: prebrzo 'To ne može' ili 'Prvo nauči kako se to radi'",
+        "Prva rečenica koju dijete čuje treba da bude: 'Hajde da vidimo šta zamišljaš'"
+      ],
+      "visual": "Kontrast: djedova stolarska radionica puna topline naspram zatvorenih vrata 'To ne može'",
+      "audience_prompt": "Sjetite se mjesta iz svog djetinjstva u kojem ste smjeli slobodno da pokušate i pogriješite.",
+      "speaker_notes": "Uspostavljamo grupni raport kroz 5-izjavni DA-set i otvaramo Petlju A: sjećanje na miris drveta u djedovoj radionici i slobodu stvaranja. Pitamo se koliko ideja odrasli nesvjesno ograniče sopstvenim strahovima i očekivanjima prije nego što dijete uopšte pokuša.",
+      "process_notes": "[STAGE: Desno za djedovu radionicu -> Lijevo za 'To ne može' -> Centar | PETLJA: Otvori Petlju A]",
+      "evidence_ids": [
+        "C001",
+        "C002"
+      ]
+    },
+    {
+      "phase": "why",
+      "minutes": 2.5,
+      "title": "Mapa nije teritorija u našem domu",
+      "headline": "Zašto ne možemo podržati dječiju kreativnost ako ne uključimo roditelje i okruženje",
+      "body": [
+        "Ogi i Aleksa: dva brata, ista kuća, a potpuno različiti načini razmišljanja i igre",
+        "Vesna i ja: kako dva roditelja različito pristupaju istim situacijama",
+        "Zadatak odraslog nije da nametne svoju mapu, već da podrži razvoj djetetove mape"
+      ],
+      "visual": "Porodični sto sa dvije različite dječije mape istog svijeta",
+      "speaker_notes": "Kroz svakodnevno iskustvo sa sinovima Ogijem i Aleksom i suprugom Vesnom živim najvažniji NLP princip: Mapa nije teritorija. Prvo okruženje djeteta je porodica i zato ova ideja jednim svojim važnim dijelom mora biti namijenjena i roditeljima.",
+      "process_notes": "[STAGE: Centar | SATIR: Pomiritelj -> Ujednačivač | GEST: Give | PETLJA: Otvori Petlju C]",
+      "evidence_ids": [
+        "C002",
+        "C003"
+      ]
+    },
+    {
+      "phase": "what",
+      "minutes": 2.0,
+      "title": "Lekcija od 200 inženjera",
+      "headline": "Vrijednost modelovanja nije u pravljenju kopija, već u razvoju sopstvenih sposobnosti",
+      "body": [
+        "Iskustvo obučavanja i usmjeravanja približno 200 inženjera tokom karijere",
+        "Nikada nijesam želio da napravim dvije stotine kopija sebe",
+        "Najveći uspjeh mentora je kada učenik pronađe svoj put i postane bolji od njega",
+        "Isti princip prenijeti na djecu: podrška sopstvenim sposobnostima, a ne kopiranju"
+      ],
+      "visual": "Most mentorstva: jedan uzor koji se grana u 200 jedinstvenih, autentičnih puteva",
+      "speaker_notes": "Tokom karijere obučavao sam oko 200 inženjera. Kroz NLP Master edukaciju prepoznao sam da je to bilo modelovanje — ali cilj nikada nije bio napraviti 200 kopija sebe, već pomoći ljudima da razviju sopstvene sposobnosti i postanu bolji od mene. Tu istu vrijednost želim da povežem sa razvojem dječije kreativnosti.",
+      "process_notes": "[STAGE: Centar | SATIR: Ujednačivač | GEST: Show | PETLJA: Otvori Petlju B]",
+      "evidence_ids": [
+        "C004",
+        "C005"
+      ],
+      "diagram": {
+        "type": "steps",
+        "nodes": [
+          "Posmatranje uzora",
+          "Prilagođavanje sebi",
+          "Sopstveni put",
+          "Prevazilaženje mentora"
+        ]
+      }
+    },
+    {
+      "phase": "what",
+      "minutes": 2.0,
+      "title": "Od okruženja do: Ja sam neko ko stvara",
+      "headline": "Povezivanje Diltsovih neuro-logičkih nivoa sa porodičnim i digitalnim okruženjem",
+      "body": [
+        "Okruženje i ponašanje: sigurno mjesto gdje dijete govori, crta, pokušava i mijenja",
+        "Sposobnosti i uvjerenja: greška nije neuspjeh već korisna informacija za novi pokušaj",
+        "Identitet: umjesto praznog 'Ti si genije', gradimo osjećaj 'Ja sam neko ko stvara'",
+        "Strategija je glavni projekat; Wonderland i Lumi su prvi praktični demonstrator"
+      ],
+      "visual": "Piramida neuro-logičkih nivoa od Okruženja (porodica/radionica) do Identiteta i Misije",
+      "speaker_notes": "Spajamo ličnu priču sa neuro-logičkim nivoima Roberta Diltsa. Lumi ne govori djetetu 'Ti si genije', već primjećuje konkretan trud i izbor: 'Probao si tri različita oblika krila i sam izabrao onaj koji ti se dopada.' Tako se gradi identitet stvaraoca.",
+      "process_notes": "[STAGE: Centar | SATIR: Kompjuter -> Ujednačivač | Why Re-anchor: dijete je uvijek autor]",
+      "evidence_ids": [
+        "C002",
+        "C005",
+        "C008"
+      ],
+      "diagram": {
+        "type": "layers",
+        "nodes": [
+          "Misija i Identitet: Ja stvaram",
+          "Uvjerenja i Sposobnosti: Smijem probati",
+          "Ponašanje i Okruženje: Porodica i Wonderland"
+        ]
+      }
+    },
+    {
+      "phase": "what",
+      "minutes": 2.0,
+      "title": "Sanjar, Realizator i Analitičar",
+      "headline": "Disney kreativna strategija i prilagođavanje djetetu kroz igru sa sovom Lumi",
+      "body": [
+        "Sanjar (Miltonov model): slobodno maštanje bez prerane kritike ('Šta kada bi...?')",
+        "Realizator (Meta model): pretvaranje želje u prvi korak ('Od čega ćemo početi?')",
+        "Analitičar (Ekologija): provjera šta nedostaje i kako rješenje utiče na druge",
+        "Alat prati čulne kanale (glas, crtež, oblici) i metaprograme bez fiksnih etiketa"
+      ],
+      "visual": "Kružni tok tri Disney uloge sa djetetovom odlukom u centru",
+      "speaker_notes": "Disney strategija razdvaja slobodno maštanje (Sanjar), planiranje koraka (Realizator) i provjeru (Analitičar) kako dijete ne bi prerano odustalo. Lumi se prilagođava tome da li dijete radije govori, crta ili slaže oblike, bez svrstavanja djece u trajne kalupe.",
+      "process_notes": "[STAGE: Centar | GEST: Kružno vođenje kroz 3 uloge | VAKOG rotacija]",
+      "evidence_ids": [
+        "C006",
+        "C008"
+      ],
+      "diagram": {
+        "type": "cycle",
+        "nodes": [
+          "Sanjar (Mašta)",
+          "Realizator (Koraci)",
+          "Analitičar (Provjera)"
+        ]
+      }
+    },
+    {
+      "phase": "how",
+      "minutes": 1.5,
+      "title": "Pitanje umjesto gotovog rješenja",
+      "headline": "Dvije godine razgovora sa roditeljima i vježbe u svakodnevnom životu bez tehnologije",
+      "body": [
+        "Dvije godine neformalnih razgovora sa roditeljima i posmatranja igre sa Ogijem i Aleksom",
+        "Jasna razlika između ličnih zapažanja i formalnih naučnih istraživanja",
+        "Praktični test: šta se mijenja kada roditelj ne ponudi odmah rješenje, već postavi pitanje",
+        "Pristup koji počinje od jednostavne zajedničke aktivnosti roditelja i djeteta"
+      ],
+      "visual": "Dva puta u razgovoru roditelja i djeteta: 'Evo kako se to radi' naspram 'Šta bi volio da probaš prvo?'",
+      "audience_prompt": "Osjetite razliku između: 'Daj da ti ja nacrtam' i 'Koji dio ti je najteži i šta ćemo probati prvo?'",
+      "speaker_notes": "Zatvaramo Petlju C o porodičnom domu: već dvije godine kroz razgovore sa roditeljima i igru sa Ogijem i Aleksom posmatram koliko se proces mijenja kada odrasli zastane i postavi pitanje umjesto da odmah ponudi gotovo rješenje. Ne moramo početi od kompleksne aplikacije — počinjemo od načina na koji razgovaramo.",
+      "process_notes": "[STAGE: Korak bliže publici | SATIR: Pomiritelj -> Ujednačivač | PETLJA: Zatvori Petlju C]",
+      "evidence_ids": [
+        "C003",
+        "C007"
+      ]
+    },
+    {
+      "phase": "how",
+      "minutes": 2.0,
+      "title": "Most između dvije kule: T.O.T.E. petlja",
+      "headline": "Pokušaj, uporedi sa zamisli i sam odluči šta želiš da promijeniš",
+      "body": [
+        "Provjeri cilj (Test): 'Hoću most između dvije kule' — šta most treba da poveže?",
+        "Pokušaj (Operate): nastaje prva vidljiva skica u Wonder Creator-u",
+        "Ponovo provjeri (Test): 'Da li most dodiruje obje kule? Šta je drugačije nego u zamisli?'",
+        "Sleight of Mouth za 'Krila nijesu uspjela': 'Sada znamo koji dio krila treba promijeniti'"
+      ],
+      "visual": "Četiri koraka T.O.T.E. petlje na primjeru produžavanja mosta između dvije kule",
+      "speaker_notes": "U prototipu Wonder Creator dijete prolazi kroz T.O.T.E. ciklus. Kada most ne stigne do druge kule ili krila zmaja ne uspiju iz prve, Lumi ne preuzima crtež niti obeshrabruje dijete, već kroz Sleight of Mouth i poređenje submodaliteta pita šta dijete želi da promijeni. Posljednja odluka uvijek ostaje djetetova.",
+      "process_notes": "[STAGE: Centar | SATIR: Kompjuter / Demonstrator | GEST: Show]",
+      "evidence_ids": [
+        "C008",
+        "C009"
+      ],
+      "diagram": {
+        "type": "cycle",
+        "nodes": [
+          "Provjeri cilj",
+          "Pokušaj (Skica)",
+          "Uporedi sa zamisli",
+          "Promijeni ili završi"
+        ]
+      }
+    },
+    {
+      "phase": "how",
+      "minutes": 1.5,
+      "title": "Robot koji čisti more i pogled kornjače",
+      "headline": "Kako 3 perceptivne pozicije i ekologija promjene spajaju maštu sa empatijom",
+      "body": [
+        "1. pozicija (Dijete): 'Hoću robota koji čisti more — prvo pravimo dio koji vidi smeće'",
+        "2. pozicija (Kornjača): 'Kada bi ti bio kornjača, da li bi te nešto na robotu plašilo?'",
+        "Dječiji uvid: 'Možda bi bio previše glasan — hajde da ga napravimo tišim!'",
+        "3. i 4. pozicija (Ekologija): bezbjednost životinja i cijele plaže"
+      ],
+      "visual": "Ilustrativni dijalog djeteta i Lumi: robot za čišćenje mora posmatran iz tri ugla",
+      "audience_prompt": "Koje jedno pitanje biste vi postavili djetetu da pogleda svoju kreaciju iz ugla drugog bića?",
+      "speaker_notes": "Zatvaramo Petlju B o 200 inženjera kroz ilustrativni dijalog o robotu koji čisti more. Lumi ne daje deset gotovih rješenja, već vodi dijete kroz 1., 2. i 3. perceptivnu poziciju ('Kako bi bilo kornjači kada bi joj robot prišao?'). Dijete samo otkriva da robot treba biti tiši.",
+      "process_notes": "[STAGE: Centar | SATIR: Ujednačivač | PETLJA: Zatvori Petlju B]",
+      "evidence_ids": [
+        "C004",
+        "C008",
+        "C010"
+      ],
+      "diagram": {
+        "type": "steps",
+        "nodes": [
+          "1. Moja zamisao",
+          "2. Oči kornjače",
+          "3. Cijela plaža",
+          "Tiši, bolji robot"
+        ]
+      }
+    },
+    {
+      "phase": "what-if",
+      "minutes": 1.0,
+      "title": "Šta ako je Zemlja čuda cijeli ekosistem?",
+      "headline": "Od radionica 'Kreativni geni' i fizičkog prostora do digitalne arhive odrastanja (KA)",
+      "body": [
+        "Kreativni geni: zajedničke radionice za djecu i roditelje u svakodnevnom životu",
+        "Stvarni fizički prostor: savremena radionica za konstruisanje i 3D štampu nalik djedovoj",
+        "Digitalni Wonderland kao most koji povezuje i čuva kreacije sa radionice i kod kuće"
+      ],
+      "visual": "Tri povezana stuba: Radionice Kreativni geni <-> Fizička radionica <-> Digitalni Wonderland",
+      "speaker_notes": "Šta ako Zemlja čuda nije jedno mjesto, već cijeli pristup? Ona može živjeti kroz edukativne radionice 'Kreativni geni' za djecu i roditelje, kroz stvarni fizički prostor koji podsjeća na slobodu iz moje djedove radionice, i kroz digitalni alat koji sve to povezuje i čuva.",
+      "process_notes": "[STAGE: Korak udesno (Audience-Right — Budućnost / KA sidro) | SATIR: Ujednačivač]",
+      "evidence_ids": [
+        "C001",
+        "C011",
+        "C012"
+      ],
+      "diagram": {
+        "type": "roadmap",
+        "nodes": [
+          "Radionice Kreativni geni",
+          "Fizička radionica",
+          "Povezani digitalni svijet"
+        ]
+      }
+    },
+    {
+      "phase": "what-if",
+      "minutes": 1.0,
+      "title": "Odgovornost, ograničenja i provjera",
+      "headline": "Šta ako ne postavimo jasne granice? Maraton učenja, bezbjednosti i provjere u praksi (OD)",
+      "body": [
+        "Rizik ( ako ne pazimo): da AI preuzme odluke djeteta ili da nadzor uguši dječije autorstvo",
+        "Granica: Wonderland je kreativna igra i učenje, nikada zamjena za terapiju ili roditelje",
+        "Plan provjere: odrasli testeri -> pilot uz saglasnost roditelja -> nezavisna procjena",
+        "Lična odgovornost: nastavak učenja razvojne psihologije, pedagogije i bezbjednosti djece"
+      ],
+      "visual": "Stepenice odgovorne provjere: Upotrebljivost -> Saglasnost roditelja -> Pilot -> Transfer bez Lumi",
+      "speaker_notes": "Kao roditelj i inženjer osjećam veliku odgovornost. Nije dovoljno imati dobru namjeru. Zato postavljamo jasna ograničenja: sprečavamo rizik da AI razmišlja umjesto djeteta, štitimo privatnost uz roditeljsku saglasnost i planiramo postupnu provjeru — od odraslih testera do pažljivog pilota koji mjeri samostalnost djeteta i bez alata.",
+      "process_notes": "[STAGE: Korak ulijevo za rizike (OD) -> Povratak u Centar za plan provjere | GEST: Chop]",
+      "evidence_ids": [
+        "C007",
+        "C012",
+        "C013"
+      ],
+      "diagram": {
+        "type": "steps",
+        "nodes": [
+          "Odrasli testeri",
+          "Saglasnost roditelja",
+          "Nezavisni pilot",
+          "Samostalni transfer"
+        ]
+      }
+    },
+    {
+      "phase": "what-if",
+      "minutes": 1.0,
+      "title": "Poruka budućem odraslom sebi: Novi početak",
+      "headline": "Svijet koji dijete stvara pripada njemu — poklon za 18. rođendan i početak dugog puta",
+      "body": [
+        "Roditelji čuvaju bezbjedne granice, ali dijete ostaje vlasnik i autor svoje mašte",
+        "Sa 18 godina mlada osoba dobija ključeve svog sačuvanog svijeta kreacija iz djetinjstva",
+        "Poruka koju je dijete ostavilo svom budućem odraslom sebi",
+        "Ovaj NLP Master rad nije kraj niti startup — on predstavlja novi početak"
+      ],
+      "audience_prompt": "Kakvu biste poruku iz sopstvenog djetinjstva voljeli da danas možete otvoriti?",
+      "visual": "Od komada drveta u djedovoj radionici do ključa sačuvanog svijeta za 18. rođendan",
+      "speaker_notes": "Zatvaramo Petlju A iz djedove radionice: zamišljam trenutak kada dijete postane punoljetno i dobije samostalnu kontrolu nad svojim sačuvanim svijetom — kao poruku koju je ostavilo svom budućem odraslom sebi. Nekada sam u djedovoj radionici gledao kako od drveta nastaje nešto novo; zatim sam pomagao 200 inženjera da pronađu svoj put; danas kao roditelj i NLP Master polaznik spajam ta iskustva. Zato ovaj rad za mene ne predstavlja kraj. On predstavlja novi početak.",
+      "process_notes": "[STAGE: Centar -> Desno (Future/Legacy) | PETLJA: Zatvori Petlju A | TON: Mikro-pauza i spušten ton ↘ na 'On predstavlja novi početak']",
+      "evidence_ids": [
+        "C001",
+        "C012",
+        "C014"
+      ]
+    }
+  ]
+}

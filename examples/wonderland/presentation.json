@@ -1,0 +1,248 @@
+{
+  "title": "Wonderland: From Children's Imagination to Creative Action",
+  "audience": "NLP Master trainers and academic examiners",
+  "medium": "slides+speech",
+  "language": "en",
+  "duration_minutes": 15,
+  "slides": [
+    {
+      "phase": "mini-what",
+      "minutes": 0.5,
+      "title": "Wonderland",
+      "headline": "Modeling creative strategies and translating them into playful learning experiences",
+      "body": [
+        "A long-term educational vision",
+        "One early digital demonstrator",
+        "Clear boundaries between what exists and what still needs testing"
+      ],
+      "visual": "A blank world gradually receiving a child's creations (proposed illustration)",
+      "speaker_notes": "Today I will introduce a question behind my NLP Master project: how can we support children in turning imagination into something they can explore, revise and make their own? I will distinguish the educational approach from its first digital demonstration, Wonderland.",
+      "process_notes": "Open with a concise map of the presentation; do not describe expected effects as proven.",
+      "evidence_ids": [
+        "C001",
+        "C002"
+      ],
+      "diagram": {
+        "type": "steps",
+        "nodes": [
+          "Educational vision",
+          "Early demo",
+          "Future validation"
+        ]
+      }
+    },
+    {
+      "phase": "why",
+      "minutes": 1.5,
+      "title": "Whose imagination leads?",
+      "headline": "What changes when an adult responds with a question rather than a verdict?",
+      "body": [
+        "Children will face problems that we cannot yet fully describe",
+        "The design principle is to listen before correcting",
+        "Creative agency matters more than an impressive generated image"
+      ],
+      "visual": "Two contrasting response paths: 'That won't work' versus 'What do you imagine?'",
+      "audience_prompt": "Think of a time someone helped you develop an idea instead of replacing it.",
+      "speaker_notes": "The origin of this project is a personal educational value: children should have room to ask unusual questions, try alternatives and discover their own ways to build ideas. I am not claiming that one application can guarantee those qualities. I am arguing that the process of supporting a child's authorship is worth designing and evaluating.",
+      "process_notes": "Pause briefly for recognition; don't ask for a public confession.",
+      "evidence_ids": [
+        "C001",
+        "C003"
+      ]
+    },
+    {
+      "phase": "why",
+      "minutes": 2,
+      "title": "A future worth leaving behind",
+      "headline": "The ambition is larger than a game: help future generations create their own possibilities",
+      "body": [
+        "Improve the opportunities available to children",
+        "Support imagination, thoughtful choices and iteration",
+        "Use a digital prototype to make an abstract approach concrete"
+      ],
+      "visual": "From child-led question to potential future benefit; a scenario, not measured causality",
+      "speaker_notes": "My broader motivation is intergenerational: I want to leave a better world for those who follow us. As an engineer, I translated one version of that ambition into a digital creative environment. But the theory and the child-centered values matter more than the application. It could eventually take many forms beyond software.",
+      "evidence_ids": [
+        "C001",
+        "C004"
+      ]
+    },
+    {
+      "phase": "what",
+      "minutes": 1.5,
+      "title": "The strategy is the project",
+      "headline": "Wonderland implements one possible form of a larger educational approach",
+      "body": [
+        "Model how creative ideas are developed",
+        "Translate useful questions and practices into child-friendly interactions",
+        "Preserve the child's choices throughout the process"
+      ],
+      "visual": "Two-layer model: creative-strategy principles above, Wonderland/Wonder Creator below",
+      "speaker_notes": "This project is about modeling creativity-supporting processes using selected NLP concepts, not about proving a technological product. Wonderland is one proposed implementation of those principles. Wonder Creator is an initial tool and Lumi is the owl-shaped guide that asks questions. The child remains the author.",
+      "evidence_ids": [
+        "C002",
+        "C005"
+      ],
+      "diagram": {
+        "type": "layers",
+        "nodes": [
+          "Creative-strategy principles",
+          "Wonderland / Wonder Creator"
+        ]
+      }
+    },
+    {
+      "phase": "what",
+      "minutes": 2,
+      "title": "Three roles, one creative cycle",
+      "headline": "Dreamer → Realist → Analyst, supported by precise questions and feedback",
+      "body": [
+        "Dreamer: explore possibilities before judging them",
+        "Realist: choose a first feasible step",
+        "Analyst: inspect what works, what fails and what to change",
+        "Related ideas: Meta Model, perspective-taking, and the T.O.T.E. cycle"
+      ],
+      "visual": "Circular concept diagram with the child's decision at the center",
+      "speaker_notes": "The Disney creative strategy offers an accessible organizing metaphor: Dreamer, Realist and Critic or Analyst. In our proposed child-friendly adaptation, these are not permanent labels. The child can return to any role. Other NLP-inspired tools can improve questions, for example by asking 'What specifically?' when a request is too broad, or by reflecting on the impact on a turtle or another character.",
+      "evidence_ids": [
+        "C005",
+        "C006"
+      ],
+      "diagram": {
+        "type": "cycle",
+        "nodes": [
+          "Dreamer",
+          "Realist",
+          "Analyst"
+        ]
+      }
+    },
+    {
+      "phase": "how",
+      "minutes": 2,
+      "title": "An empty world becomes an idea",
+      "headline": "A child describes, sees, compares and changes a creation",
+      "body": [
+        "Start with a blank scene",
+        "Request an object by voice",
+        "Review the image and ask for one change",
+        "Repeat until the child chooses to continue or stop"
+      ],
+      "visual": "LIVE DEMO: show the current Wonder Creator if available; otherwise use preapproved screenshots of the working prototype",
+      "audience_prompt": "What one question would help the child decide the next change?",
+      "speaker_notes": "The practical demonstration is intentionally simple. We begin with a blank world and ask to create an object. We then request a change. The point is not to showcase AI image quality. It is to show a loop where the child's description and decisions cause visible changes. This shows an interaction concept; it does not establish educational efficacy.",
+      "process_notes": "Prepare an offline fallback; never promise a live capability not verified immediately before presenting.",
+      "evidence_ids": [
+        "C002",
+        "C007"
+      ],
+      "diagram": {
+        "type": "steps",
+        "nodes": [
+          "Describe",
+          "Generate",
+          "Compare",
+          "Revise"
+        ]
+      }
+    },
+    {
+      "phase": "how",
+      "minutes": 1,
+      "title": "Lumi asks, children decide",
+      "headline": "Support creative ownership without supplying the child's answer",
+      "body": [
+        "Ask: 'What should the robot do?'",
+        "Clarify: 'How will we know it works?'",
+        "Reflect: 'Would this be safe for the turtle?'"
+      ],
+      "visual": "Illustrative dialog, clearly labeled imagined example",
+      "speaker_notes": "Imagine a child proposing a robot that cleans the ocean. Lumi does not design the entire robot. It asks what the child wants it to do, how a first attempt could be checked, and whether it affects a turtle. This is an illustrative conversation from the project document, not an observed result of a user study.",
+      "evidence_ids": [
+        "C005",
+        "C008"
+      ]
+    },
+    {
+      "phase": "how",
+      "minutes": 1.5,
+      "title": "Try. Check. Improve.",
+      "headline": "The T.O.T.E. loop makes revision a normal part of creating",
+      "body": [
+        "Test the desired state",
+        "Operate: make an initial version",
+        "Test the result against the child's aim",
+        "Exit or repeat: the child chooses"
+      ],
+      "visual": "Four-step loop with an example: extend a bridge until it connects two towers",
+      "speaker_notes": "The T.O.T.E. sequence means Test, Operate, Test, Exit. For example, a bridge may fail to reach both towers. Rather than dismissing the attempt, Lumi can ask what difference the child sees. The child may decide to make the bridge longer. The loop is useful as a design scaffold, but whether using it improves transferable creativity remains to be tested.",
+      "evidence_ids": [
+        "C006",
+        "C009"
+      ],
+      "diagram": {
+        "type": "cycle",
+        "nodes": [
+          "Test aim",
+          "Operate",
+          "Test result",
+          "Exit or retry"
+        ]
+      }
+    },
+    {
+      "phase": "what-if",
+      "minutes": 1.5,
+      "title": "What if we expand the canvas?",
+      "headline": "Beyond a first 2D demo: imagined 3D creations, collaboration and new questions",
+      "body": [
+        "Potential: more ways for children to express and revise ideas",
+        "Potential: investigate creative strategies in carefully designed voluntary studies",
+        "Risk: AI may take over decisions or obscure children's actual learning"
+      ],
+      "visual": "Roadmap layers clearly separated into current demo, next experiment and long-term vision",
+      "speaker_notes": "What if we gradually moved from voice-guided drawings to three-dimensional objects or shared creative worlds? Those are future plans, not current working capabilities. We must also ask what could go wrong: a polished AI-generated result may conceal that the child did little thinking. Product decisions would need careful attention to consent, accessibility and privacy.",
+      "evidence_ids": [
+        "C007",
+        "C010"
+      ],
+      "diagram": {
+        "type": "roadmap",
+        "nodes": [
+          "Current 2D demo",
+          "Responsible pilot",
+          "Possible 3D / shared world"
+        ]
+      }
+    },
+    {
+      "phase": "what-if",
+      "minutes": 1.5,
+      "title": "Vision is not evidence—yet",
+      "headline": "The next step is a responsible evaluation, not a claim of proven impact",
+      "body": [
+        "Present the prototype as a demonstration",
+        "Propose small, consent-based studies and meaningful measures",
+        "Ask whether children can transfer creative decisions beyond the tool",
+        "What if we do not test? We risk confusing novelty with learning"
+      ],
+      "audience_prompt": "Which one observable indicator would make a pilot genuinely informative?",
+      "visual": "Evaluation ladder: feasibility → pilot → independent assessment → long-term validation",
+      "speaker_notes": "The existing prototype demonstrates that a digital object can be created or changed through an interaction. It does not show that children's creativity has improved. A sensible next step would be testing usability with adults first, then considering a child-centered pilot with parental consent and appropriate safeguarding. We should assess the child's ideas, reasons and revisions, not only the generated picture. I invite feedback on what should be measured first and what would make this approach worth developing further.",
+      "process_notes": "End with the honest limitation and one concrete invitation; do not end on an unsupported success claim.",
+      "evidence_ids": [
+        "C010",
+        "C011"
+      ],
+      "diagram": {
+        "type": "steps",
+        "nodes": [
+          "Feasibility",
+          "Consented pilot",
+          "Independent review",
+          "Transfer test"
+        ]
+      }
+    }
+  ]
+}
