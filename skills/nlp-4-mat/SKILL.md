@@ -78,6 +78,8 @@ Commands are case-insensitive, and the user may type them in any language: "preg
 
 **Shared files**: resolve `knowledge/…` and `scripts/…` under `${CLAUDE_PLUGIN_ROOT}/`, then `.4mat-studio/`, then the repository root. Portable summaries are in this skill's [references/4mat-architecture.md](references/4mat-architecture.md) and [references/nlp-pocket-tools.md](references/nlp-pocket-tools.md).
 
+**Workspace**: read the user's material from the current project folder (and any paths or uploads they name). Write all outputs to `outputs/<slug>/` inside that folder, unless the user names another folder. State the path in your first reply. If `outputs/` already contains a workspace for this talk, resume it (§6).
+
 Load files only at the stage that needs them: `knowledge/4MAT_FOUNDATIONS.md` (method), `knowledge/DELIVERABLES.md` (files, decision log, schema), `knowledge/FORMATS.md` (audience and format), `knowledge/NLP_TECHNIQUES.md` (technique selection), `knowledge/AGENT_CONTRACT.md` (delegation).
 
 ## 1. Classify the request (first reply, kept short)
